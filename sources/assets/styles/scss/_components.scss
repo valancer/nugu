@@ -1,0 +1,37 @@
+
+
+/* buttons */
+.btn-nugu { display: block; text-indent: -9999px; @include retina-sprite($sm-btn-nugu-group);
+	@include desktop { @include sprite($sd-btn-nugu);
+
+	}
+}
+
+.btn-menu { display: block; text-indent: -9999px; @include retina-sprite($sm-btn-menus-group); }
+
+.btn-login { display: block; text-indent: -9999px; @include retina-sprite($sm-btn-login-group);
+	@include desktop { @include sprite($sd-btn-login);
+
+	}
+}
+
+
+/* top navigation */
+.shortcut-menus {
+	@include mobile { 
+		display: none;
+	}
+
+	@include desktop { 
+		ul { text-align: center; }
+		li { display: inline-block; padding: 0 36px 0 40px;
+			> a { display: block; font-family: $font-roboto-stack; font-size: 1.125rem; font-weight: 500; color: #666; line-height: 100px;
+				&:hover { color: #ed6627; }
+			}
+
+			&.is-selected {
+				> a { color: #ed6627; }
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+@import url(roboto.css);
+@import url(notosanskr.css);
+
+
+/**
+ * variable
+ */
+$font-base-stack: 'Noto Sans KR', sans-serif;
+$font-roboto-stack: 'Roboto', sans-serif;
+$phone-max-width: 767px;
+$tablet-min-width: 768px;
+$tablet-max-width: 1024px;
+
+
+
+body { background-color: #fff; }
+
+@import "base";
+@import "sprites_desktop";
+@import "sprites_mobile";
+
+
+
+/* media queries */
+@mixin mobile {
+	@media only screen and (min-width: 320px) and (max-width: #{$phone-max-width}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: #{$tablet-min-width}) {
+		@content;
+	}
+}
+
+
+/* z-index */
+$z-layers: (
+	'modal':            1000,
+	'modaless':          900,
+	'gnb':	             800,
+	'dropdown':          500,
+	'hover':             200,
+	'tooltip':           100,
+	'default':             1,
+	'bottomless-pit': -10000
+);
+
+@function z($layer) {
+	@if not map-has-key($z-layers, $layer) {
+		@warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+	}
+
+	@return map-get($z-layers, $layer);
+}
+
+
+/* retina */
+@mixin retina {
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min--moz-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+			@content;
+		}
+}
+
+
+/* aspect ratio */
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	> .inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+
+
+/**
+ * import
+ */
+/** layout **/
+@import "components";
+@import "layout";
