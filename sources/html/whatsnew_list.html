@@ -1,0 +1,205 @@
+@@include('./head.html')
+<body class="community">
+
+	<!-- 상단 영역 -->
+	@@include('./header.html')
+
+
+	<!-- 본문 영역 -->
+	<main role="main" class="layout-contents">
+
+		<h1 class="page-title">WHAT'S NEW</h1>
+
+
+		<!-- 필터 -->
+		<fieldset class="filter-container">
+			<legend>게시판 카테고리 및 검색 필터</legend>
+
+			<fieldset class="search-container">
+				<legend>검색 필터</legend>
+				
+				<select name="" id="">
+					<option value="">전체</option>
+					<option value="">제목</option>
+					<option value="">내용</option>
+				</select>
+				<p>
+					<input type="text" name="" id="">
+				</p>
+				<input type="submit" value="검색" class="btn-submit">
+			</fieldset>
+
+
+			<fieldset class="category-container">
+				<legend>게시판 카테고리</legend>
+
+				<!-- 모바일 용 -->
+				<select name="" id="" class="btn-category">
+					<option value="">전체보기</option>
+					<option value="">Weekly 가이드</option>
+					<option value="">전문가리뷰</option>
+					<option value="">신규기능</option>
+					<option value="">활용팁</option>
+					<option value="">이벤트</option>
+					<option value="">장애공지</option>
+					<option value="">업데이트</option>
+					<option value="">보도자료</option>
+				</select>
+
+				<!-- 데스크탑 용 -->
+				<ul class="list-category">
+					<li class="is-selected"><a href="#">전체보기</a></li>
+					<li><a href="#">Weekly 가이드</a></li>
+					<li><a href="#">전문가리뷰</a></li>
+					<li><a href="#">신규기능</a></li>
+					<li><a href="#">활용팁</a></li>
+					<li><a href="#">이벤트</a></li>
+					<li><a href="#">장애공지</a></li>
+					<li><a href="#">업데이트</a></li>
+					<li><a href="#">보도자료</a></li>
+				</ul>
+			</fieldset>
+		</fieldset>
+
+
+		<!-- 관리자 선택 리스트 -->
+		<section>
+			<h2 class="hidden-title">주요 컨텐츠</h2>
+
+			<ul class="list-by-admin">
+				<li>
+					<a href="#" class="list-bbs-item">
+						<article>
+							<figure>
+								<div class="thumb"><img src="/assets/images/@temp/temp01.png" alt="9월 1주차 NUGU와 즐기는 모닝뮤직! 대표 이미지"></div>
+								<figcaption class="item-info">
+									<span class="category">Weekly 가이드</span>
+									<h2 class="title">9월 1주차 NUGU와 즐기는 모닝뮤직! 9월 1주차 NUGU와 <span class="new">[새로운 글입니다.]</span></h2>
+									<p class="options">
+										<time datetime="2016-09-05">2016.09.05</time>
+										<em class="number hit"><span>조회수</span> 390</em>
+										<em class="number recommend"><span>추천</span> 390</em>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="list-bbs-item">
+						<article>
+							<figure>
+								<div class="thumb"><img src="/assets/images/@temp/temp02.png" alt="NUGU로 인한 삶의 변화 대표 이미지"></div>
+								<figcaption class="item-info">
+									<span class="category">전문가리뷰</span>
+									<h2 class="title">NUGU로 인한 삶의 변화</h2>
+									<p class="options">
+										<time datetime="2016-09-05">2016.09.05</time>
+										<em class="number hit"><span>조회수</span> 390</em>
+										<em class="number recommend"><span>추천</span> 390</em>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="list-bbs-item">
+						<article>
+							<figure>
+								<div class="thumb"><img src="/assets/images/@temp/temp03.png" alt="NUGU 1차 미션! 발표! 대표 이미지"></div>
+								<figcaption class="item-info">
+									<span class="category">이벤트</span>
+									<h2 class="title">NUGU 1차 미션! 발표!</h2>
+									<p class="options">
+										<time datetime="2016-09-05">2016.09.05</time>
+										<em class="number hit"><span>조회수</span> 390</em>
+										<em class="number recommend"><span>추천</span> 390</em>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+					</a>
+				</li>
+			</ul>
+		</section>
+
+
+		<!-- 컨텐츠 리스트 -->
+		<section>
+			<h2 class="hidden-title">What's New 게시글</h2>
+			<ol class="list-bbs">
+				<li>
+					<a href="#" class="list-bbs-item">
+						<article class="item-info">
+							<span class="category">사용리뷰</span>
+							<h2 class="title">취향저격! 이제 진짜 몸을 움직이지 않아도 되니 살 찔 일만</h2>
+							<p class="options">
+								<time datetime="2016-09-05">2016.09.05</time>
+								<em class="number hit"><span>조회수</span> 390</em>
+								<em class="number recommend"><span>추천</span> 390</em>
+							</p>
+						</article>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="list-bbs-item">
+						<article class="item-info">
+							<span class="category">사용리뷰</span>
+							<h2 class="title">취향저격! 이제 진짜 몸을 움직이지 않아도 되니 살 찔 일만</h2>
+							<p class="options">
+								<time datetime="2016-09-05">2016.09.05</time>
+								<em class="number hit"><span>조회수</span> 390</em>
+								<em class="number recommend"><span>추천</span> 390</em>
+							</p>
+						</article>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="list-bbs-item">
+						<article class="item-info">
+							<span class="category">사용리뷰</span>
+							<h2 class="title">취향저격! 이제 진짜 몸을 움직이지 않아도 되니 살 찔 일만</h2>
+							<p class="options">
+								<time datetime="2016-09-05">2016.09.05</time>
+								<em class="number hit"><span>조회수</span> 390</em>
+								<em class="number recommend"><span>추천</span> 390</em>
+							</p>
+						</article>
+					</a>
+				</li>
+			</ol>
+
+			<div class="list-bbs-navigation">
+				<!-- 모바일 용 -->
+				<a href="#" class="btn-more">더보기</a>
+
+				<!-- 데스크탑 용 -->
+				<div class="only-desktop">
+					<a href="#" class="btns first">처음 페이지로 이동</a>
+					<a href="#" class="btns prev">이전 페이지로 이동</a>
+					<a href="#" class="is-selected">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="btns next">다음 페이지로 이동</a>
+					<a href="#" class="btns last">마지막 페이지로 이동</a>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+
+	
+	<!-- 하단 영역 -->
+	@@include('./footer.html')
+
+</body>
+</html>

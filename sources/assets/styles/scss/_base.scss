@@ -14,7 +14,7 @@ html, body { height: 100%; }
 caption,legend { position: absolute; top: -9999px; left: -9999px; width:0; height: 0; font-size: 0; overflow: hidden; visibility: hidden; }
 caption { display: none; }
 img { border: none; vertical-align: top; width: 100%; }
-select, input { vertical-align: top; }
+select, input { vertical-align: top; border: 0px; border-radius: 0; background-color: transparent; }
 hr { display: none; border: 0 none; }
 ol, ul, ul li{ list-style: none; }
 em { font-style: normal; }
@@ -38,6 +38,7 @@ a:hover { text-decoration: none; }
 
 /* forms */
 fieldset { appearance: none; }
+select,
 input[type=submit],
 input[type=search] { appearance: none; cursor: pointer; border: 0px; }
 

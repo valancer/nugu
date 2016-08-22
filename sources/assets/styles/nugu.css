@@ -55,7 +55,10 @@ img {
   width: 100%; }
 
 select, input {
-  vertical-align: top; }
+  vertical-align: top;
+  border: 0px;
+  border-radius: 0;
+  background-color: transparent; }
 
 hr {
   display: none;
@@ -124,6 +127,7 @@ fieldset {
      -moz-appearance: none;
           appearance: none; }
 
+select,
 input[type=submit],
 input[type=search] {
   -webkit-appearance: none;
@@ -263,15 +267,17 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
 /* buttons */
 .btn-nugu {
   display: block;
-  text-indent: -9999px;
-  background-image: url(../images/mobile/sprites.png);
-  background-position: 0px 0px;
-  width: 40px;
-  height: 28px; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  text-indent: -9999px; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .btn-nugu {
+      background-image: url(../images/mobile/sprites.png);
+      background-position: 0px 0px;
+      width: 40px;
+      height: 28px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .btn-nugu {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 76px 64px; } }
+      background-size: 94px 81px; } }
   @media only screen and (min-width: 768px) {
     .btn-nugu {
       background-image: url(../images/desktop/sprites.png);
@@ -289,19 +295,21 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .btn-menu {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 76px 64px; } }
+      background-size: 94px 81px; } }
 
 .btn-login {
   display: block;
-  text-indent: -9999px;
-  background-image: url(../images/mobile/sprites.png);
-  background-position: 0px -34px;
-  width: 30px;
-  height: 30px; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  text-indent: -9999px; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .btn-login {
+      background-image: url(../images/mobile/sprites.png);
+      background-position: 0px -34px;
+      width: 30px;
+      height: 30px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .btn-login {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 76px 64px; } }
+      background-size: 94px 81px; } }
   @media only screen and (min-width: 768px) {
     .btn-login {
       background-image: url(../images/desktop/sprites.png);
@@ -315,13 +323,16 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
     display: none; } }
 
 @media only screen and (min-width: 768px) {
+  .shortcut-menus .shortcut-menus-title {
+    display: none; }
   .shortcut-menus ul {
     text-align: center; }
   .shortcut-menus li {
     display: inline-block;
-    padding: 0 36px 0 40px; }
+    padding: 0 30px 0 30px; }
     .shortcut-menus li > a {
       display: block;
+      position: relative;
       font-family: "Roboto", sans-serif;
       font-size: 1.125rem;
       font-weight: 500;
@@ -330,10 +341,420 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .shortcut-menus li > a:hover {
         color: #ed6627; }
     .shortcut-menus li.is-selected > a {
-      color: #ed6627; } }
+      color: #ed6627; }
+      .shortcut-menus li.is-selected > a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        height: 4px;
+        width: 100%;
+        background-color: #ed6627; } }
+
+/* filter(search & category) container */
+.search-container {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 6.122448979592%;
+  height: 37px;
+  width: 76.5625%;
+  border-radius: 37px;
+  background-color: #f2f2f2; }
+  .search-container select {
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 6px;
+    width: 22.857142857143%;
+    font-size: 0.750rem;
+    color: #a9a9a9;
+    vertical-align: middle;
+    background: url("/assets/images/mobile/bg_search_select@2x.png") right center no-repeat;
+    background-size: 11px 20px; }
+  .search-container p {
+    display: inline-block;
+    position: relative;
+    width: 61.224489795918%; }
+    .search-container p:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -5px;
+      height: 11px;
+      width: 1px;
+      background-color: #d5d5d5; }
+    .search-container p input[type=text] {
+      display: block;
+      box-sizing: border-box;
+      padding-left: 10px;
+      height: 37px;
+      width: 100%;
+      font-size: 0.750rem;
+      color: #252525;
+      line-height: 37px;
+      vertical-align: middle; }
+  .search-container .btn-submit {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 6.122448979592%;
+    margin-top: -8px;
+    text-indent: -9999px; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .search-container .btn-submit {
+      background-image: url(../images/mobile/sprites.png);
+      background-position: -46px -36px;
+      width: 16px;
+      height: 16px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+    .search-container .btn-submit {
+      background-image: url(../images/mobile/sprites@2x.png);
+      background-size: 94px 81px; } }
+  @media only screen and (min-width: 768px) {
+    .search-container {
+      padding: 0 30px 0 20px;
+      height: 56px;
+      width: 430px;
+      border-radius: 56px; }
+      .search-container select {
+        margin-top: -4px;
+        margin-right: 16px;
+        font-size: 1.000rem;
+        background: url("/assets/images/desktop/bg_search_select.png") right center no-repeat;
+        background-size: 12px 26px; }
+      .search-container p:before {
+        margin-top: -8px;
+        height: 16px; }
+      .search-container p input[type=text] {
+        height: 56px;
+        font-size: 1.000rem;
+        line-height: 56px; }
+      .search-container .btn-submit {
+        right: 30px;
+        margin-top: -12px;
+        background-image: url(../images/desktop/sprites.png);
+        background-position: -86px 0px;
+        width: 24px;
+        height: 24px; } }
+
+.category-container {
+  text-align: center; }
+  .category-container .btn-category {
+    display: inline-block;
+    padding-right: 21px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ed6829;
+    background: url("/assets/images/mobile/bg_search_select@2x.png") right center no-repeat;
+    background-size: 11px 20px; }
+  .category-container .list-category {
+    text-align: center; }
+    .category-container .list-category > li {
+      display: inline-block;
+      padding: 0 16px 0 20px; }
+      .category-container .list-category > li a {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #999;
+        line-height: 1em; }
+        .category-container .list-category > li a:hover {
+          color: #ed6829; }
+      .category-container .list-category > li.is-selected a {
+        color: #ed6829; }
+      .category-container .list-category > li + li {
+        border-left: 1px solid #d6d6d6; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .category-container {
+      margin-top: 15px; }
+      .category-container .list-category {
+        display: none; } }
+  @media only screen and (min-width: 768px) {
+    .category-container {
+      margin-top: 60px; }
+      .category-container .btn-category {
+        display: none; } }
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .filter-container {
+    padding-top: 13px;
+    padding-bottom: 17px; } }
+
+@media only screen and (min-width: 768px) {
+  .filter-container {
+    padding-top: 60px;
+    padding-bottom: 30px; } }
+
+/* bbs */
+.item-info .category {
+  display: block;
+  position: relative;
+  margin-top: 0px;
+  height: 28px;
+  font-size: 0.750rem;
+  font-weight: 500;
+  color: #ed7d7d; }
+  .item-info .category:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 20px;
+    background-color: #ccc; }
+
+.item-info .title {
+  display: block;
+  margin-top: 7px;
+  font-size: 1.000rem;
+  font-weight: 400;
+  color: #252525;
+  line-height: 1.313em; }
+
+.item-info .new {
+  display: inline-block;
+  margin-top: -4px;
+  text-indent: -9999px;
+  vertical-align: middle; }
+
+.item-info .options {
+  margin-top: 10px;
+  font-size: 0.750rem;
+  font-weight: 400;
+  color: #939393; }
+  .item-info .options time {
+    display: inline-block;
+    vertical-align: middle; }
+  .item-info .options .number {
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle; }
+    .item-info .options .number:before {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      vertical-align: middle;
+      background-color: #f2f2f2; }
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .item-info .new {
+    background-image: url(../images/mobile/sprites.png);
+    background-position: -82px 0px;
+    width: 12px;
+    height: 12px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+    .item-info .new {
+      background-image: url(../images/mobile/sprites@2x.png);
+      background-size: 94px 81px; } }
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .item-info .options {
+    font-family: "Roboto", sans-serif; }
+    .item-info .options .number {
+      line-height: 11px; }
+      .item-info .options .number:before {
+        display: inline-block;
+        margin: -2px 10px 0 0;
+        height: 11px;
+        width: 1px;
+        background-color: #f2f2f2; }
+      .item-info .options .number > span {
+        display: inline-block;
+        margin-top: -2px;
+        margin-right: 1px;
+        text-indent: -9999px;
+        vertical-align: middle; }
+      .item-info .options .number.hit > span {
+        background-image: url(../images/mobile/sprites.png);
+        background-position: 0px -70px;
+        width: 13px;
+        height: 11px; } }
+      @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+        .item-info .options .number.hit > span {
+          background-image: url(../images/mobile/sprites@2x.png);
+          background-size: 94px 81px; } }
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+      .item-info .options .number.recommend > span {
+        background-image: url(../images/mobile/sprites.png);
+        background-position: -82px -18px;
+        width: 9px;
+        height: 11px; } }
+      @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+        .item-info .options .number.recommend > span {
+          background-image: url(../images/mobile/sprites@2x.png);
+          background-size: 94px 81px; } }
+
+@media only screen and (min-width: 768px) {
+  .item-info .category {
+    height: 35px;
+    font-size: 1.000rem; }
+  .item-info .title {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 1.375rem; }
+  .item-info .new {
+    background-image: url(../images/desktop/sprites.png);
+    background-position: -116px -61px;
+    width: 16px;
+    height: 16px; }
+  .item-info .options {
+    display: inline-block;
+    margin-left: 26px;
+    font-size: 1.000rem;
+    font-weight: 300;
+    vertical-align: top; }
+    .item-info .options .number {
+      margin-left: 16px; }
+      .item-info .options .number:before {
+        margin-top: -4px;
+        margin-right: 20px;
+        height: 14px;
+        background-color: #e0e0e0; }
+  .list-by-admin .item-info .title {
+    display: block;
+    height: 56px; }
+  .list-by-admin .item-info .options {
+    margin-left: 0; } }
+
+.list-bbs-item {
+  display: block;
+  position: relative; }
+  .list-bbs-item .thumb + .item-info .category {
+    margin-top: 14px; }
+  @media only screen and (min-width: 768px) {
+    .list-bbs .list-bbs-item:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      margin-top: -13px;
+      background-image: url(../images/desktop/sprites.png);
+      background-position: -116px -29px;
+      width: 14px;
+      height: 26px; }
+    .list-bbs-item .thumb {
+      height: 175px; }
+      .list-bbs-item .thumb img {
+        height: 175px;
+        width: 350px; } }
+
+.list-by-admin {
+  border-top: 2px solid #717171; }
+  .list-by-admin > li {
+    padding: 20px 4.6875% 17px;
+    border-top: 1px solid #e9ecef; }
+    .list-by-admin > li:first-child {
+      border-top: 0; }
+  @media only screen and (min-width: 768px) {
+    .list-by-admin {
+      overflow: hidden;
+      padding: 40px 0;
+      width: 100%;
+      border-top: 2px solid #9b9b9b; }
+      .list-by-admin > li {
+        float: left;
+        padding: 0 17px;
+        width: 350px;
+        border-top: 0px; }
+        .list-by-admin > li:nth-child(3n+1) {
+          padding-left: 0; }
+        .list-by-admin > li:nth-child(3n+3) {
+          padding-right: 0; }
+        .list-by-admin > li + li {
+          width: 349px;
+          border-left: 1px solid #dde2e6; } }
+
+.list-bbs > li {
+  padding: 20px 4.6875% 17px;
+  border-top: 1px solid #e9ecef; }
+  .list-bbs > li:last-child {
+    border-bottom: 1px solid #e9ecef; }
+
+@media only screen and (min-width: 768px) {
+  .list-bbs > li {
+    padding: 38px 0 37px 0;
+    border-top: 1px solid #dde2e6; } }
+
+/* bbs navigation */
+.list-bbs-navigation {
+  padding-top: 20px; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .list-bbs-navigation .btn-more {
+      display: block;
+      margin: 0 auto;
+      height: 30px;
+      width: 52.5%;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #868686;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid #b6b6b6;
+      border-radius: 30px; } }
+  @media only screen and (min-width: 768px) {
+    .list-bbs-navigation {
+      padding-top: 35px;
+      text-align: center; }
+      .list-bbs-navigation .btn-more {
+        display: none; }
+      .list-bbs-navigation a {
+        display: inline-block;
+        margin: 0 9px 0 13px;
+        padding: 0 2px;
+        height: 21px;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.000rem;
+        font-weight: 500;
+        color: #949494;
+        line-height: 21px;
+        border-bottom: 2px solid #fff; }
+        .list-bbs-navigation a:hover {
+          color: #ed6829;
+          border-bottom: 2px solid #ed6829; }
+        .list-bbs-navigation a.is-selected {
+          color: #ed6829;
+          border-bottom: 2px solid #ed6829; }
+      .list-bbs-navigation .btns {
+        margin: 0;
+        padding: 0;
+        text-indent: -9999px; }
+        .list-bbs-navigation .btns:hover {
+          border-bottom: 2px solid #fff; }
+        .list-bbs-navigation .btns.first {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: -86px -30px;
+          width: 23px;
+          height: 23px; }
+        .list-bbs-navigation .btns.prev {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: -116px 0px;
+          width: 23px;
+          height: 23px; }
+        .list-bbs-navigation .btns.next {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: -86px -88px;
+          width: 23px;
+          height: 23px; }
+        .list-bbs-navigation .btns.last {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: -86px -59px;
+          width: 23px;
+          height: 23px; } }
 
 body {
   background-color: #fff; }
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .only-desktop {
+    display: none; } }
+
+@media only screen and (min-width: 768px) {
+  .only-mobile {
+    display: none; } }
 
 /* header */
 .layout-header {
@@ -372,6 +793,30 @@ body {
         margin-top: -28px; } }
 
 /* contents */
+.layout-contents {
+  margin: 0 auto;
+  padding-bottom: 120px; }
+  .layout-contents .page-title {
+    margin-top: 24px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.500rem;
+    font-weight: 500;
+    color: #252525;
+    text-align: center; }
+  .layout-contents .hidden-title {
+    display: none; }
+  @media only screen and (min-width: 768px) {
+    .layout-contents {
+      width: 1120px; }
+      .layout-contents .page-title {
+        display: none; } }
+
 /* footer */
 .layout-footer {
-  text-align: center; }
+  padding: 30px 0 0 0;
+  text-align: center;
+  border-top: 1px solid #ddd; }
+  @media only screen and (min-width: 768px) {
+    .layout-footer {
+      padding: 80px 0 0 0;
+      min-width: 1120px; } }
