@@ -30,11 +30,11 @@ body { background-color: #fff; }
 
 
 /* contents */
-.layout-contents { margin: 0 auto; padding-bottom: 120px;
+.layout-contents { margin: 0 auto; padding-bottom: 60px;
 	.page-title { margin-top: 24px; font-family: $font-roboto-stack; font-size: 1.500rem; font-weight: 500; color: #252525; text-align: center; }
 	.hidden-title { display: none; }
 
-	@include desktop { width: $desktop-min-width; 
+	@include desktop { padding-bottom: 120px; width: $desktop-min-width; 
 		.page-title { display: none; }
 	}
 }
