@@ -594,8 +594,13 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
     font-size: 1.000rem; }
   .item-info .title {
     display: inline-block;
+    overflow: hidden;
     margin-top: 6px;
-    font-size: 1.375rem; }
+    height: 28px;
+    max-width: 700px;
+    font-size: 1.375rem;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
   .item-info .new {
     background-image: url(../images/desktop/sprites.png);
     background-position: -116px -101px;
@@ -616,7 +621,9 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         background-color: #e0e0e0; }
   .list-by-admin .item-info .title {
     display: block;
-    height: 56px; }
+    height: 56px;
+    text-overflow: none;
+    white-space: normal; }
   .list-by-admin .item-info .options {
     margin-left: 0; } }
 
@@ -1061,7 +1068,9 @@ body {
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .only-desktop {
-    display: none; } }
+    display: none; }
+  img {
+    width: 100%; } }
 
 @media only screen and (min-width: 768px) {
   .only-mobile {

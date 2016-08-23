@@ -130,7 +130,7 @@
 
 	@include desktop {
 		.category { height: 35px; font-size: 1.000rem; }
-		.title { display: inline-block; margin-top: 6px; font-size: 1.375rem; }
+		.title { display: inline-block; overflow: hidden; margin-top: 6px; height: 28px; max-width: 700px; font-size: 1.375rem; text-overflow: ellipsis; white-space: nowrap; }
 		.new { @include sprite($sd-icon-new); }
 		.options { display: inline-block; margin-left: 26px; font-size: 1.000rem; font-weight: 300; vertical-align: top;
 			.number { margin-left: 16px;
@@ -140,7 +140,7 @@
 
 
 		.list-by-admin & { 
-			.title { display: block; height: 56px; }
+			.title { display: block; height: 56px; text-overflow: none; white-space: normal; }
 			.options { margin-left: 0; }
 		}
 

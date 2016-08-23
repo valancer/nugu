@@ -1,0 +1,218 @@
+
+
+body { min-width: 1280px; background-color: #fff; }
+
+
+/* header */
+.layout-header { display: block; position: fixed; top: 0; bottom: 0; left: 0; z-index: z("gnb"); height: 100%; width: 259px; border-top: 6px solid #ed6527; border-right: 1px solid #e7e6eb; background-color: #fff;
+	.btn-nugu { display: block; position: relative; height: 145px; text-indent: -9999px; border-bottom: 1px solid #e7e6eb;
+		&:before { content: ''; display: block; position: absolute; top: 50%; left: 50%; margin-top: -$sa-nugu-height/2; margin-left: -$sa-nugu-width/2; @include sprite($sa-nugu); }
+	}
+
+	.shortcut-menus { padding: 0 29px 0 28px;
+		.shortcut-menus-title { display: none; }
+
+		.list-menus {
+			> li { border-bottom: 1px solid #e7e6eb;
+				> a { font-size: 16px; font-weight: bold; color: #222; line-height: 55px;
+					&:hover { color: #ed6627; }
+				}
+
+				&.is-selected {
+					> a { color: #ed6627; }
+				}
+			}
+		}
+
+		.list-sub-menus { margin-bottom: 20px;
+			> li { 
+				a { font-size: 14px; color: #444; line-height: 23px;
+					&:before { content: ''; display: inline-block; margin: -2px 3px 0 0; height: 3px; width: 3px; vertical-align: middle; background-color: #434343; }
+
+					&:hover { color: #26afbd;
+						&:before { background: #3dadec; }
+					}
+				}
+
+				&.is-selected {
+					a { color: #26afbd;
+						&:before { background: #3dadec; }
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.layout-users { display: block; position: fixed; top: 0; right: 0; left: 260px; z-index: z("gnb"); padding: 0 30px 0 0px; height: 50px; min-width: $content-min-width; text-align: right; border-top: 6px solid #ed6527; background-color: #f4f5f7;
+	.user { font-size: 13px; color: #444; line-height: 50px; }
+	.btn-logout { margin-left: 10px; font-size: 13px; color: #ed6627; line-height: 50px; }
+}
+
+
+/* contents */
+.layout-contents { padding: 96px 30px 100px 290px; min-width: $content-min-width;
+	.page-title { font-size: 22px; font-weight: bold; color: #222; }
+}
+
+
+.search-container { margin-top: 13px;
+	.btns { padding-top: 20px; text-align: center;
+		.btn { display: inline-block; height: 38px; width: 98px; font-size: 16px; font-weight: normal; color: #444; line-height: 40px;
+			&.search { color: #fff; border: 1px solid #6c6f71; background-color: #6c6f71; }
+			&.reset { border: 1px solid #bbb; background-color: #f4f5f7; }
+		}
+	}
+}
+
+.forms {
+	.btn-date { display: inline-block; margin-left: -4px; text-indent: -9999px; vertical-align: middle; @include sprite($sa-btn-date); }
+	input[type=text] { box-sizing: border-box; padding: 0 0 0 15px; height: 40px; width: 100%; font-size: 14px; color: #222; line-height: 38px; border: 1px solid #bbb; background-color: #fafafa;
+		&.date { width: 100px; }
+	}
+
+	input[type=checkbox] { margin: 9px 0 10px 0; height: 18px; width: 18px; border: 1px solid #999; border-radius: 2px;
+		&:checked { background: url('/assets/admin/images/bg_checkbox_selected.png') center center no-repeat; }
+
+		+ label { display: inline-block; cursor: pointer; margin-left: 6px; padding: 10px 0; font-size: 14px; color: #222; }
+	}
+
+	input[type=radio] { margin: 9px 0 10px 0; height: 20px; width: 20px; background: url('/assets/admin/images/bg_radio.png') center center no-repeat;
+		&:checked { background-image: url('/assets/admin/images/bg_radio_selected.png'); }
+
+		+ label { display: inline-block; cursor: pointer; margin-left: 6px; margin-right: 20px; padding: 10px 0; font-size: 14px; color: #222; }
+	}
+
+	select { display: inline-block; padding: 0 40px 0 10px; min-width: 135px; font-size: 14px; color: #222; line-height: 38px; border: 1px solid #bbb; background: #fff url('/assets/admin/images/bg_select.png') right center no-repeat;
+		&.small { padding: 0 30px 0 10px; min-width: 80px; line-height: 28px; background: #fff url('/assets/admin/images/bg_select_small.png') right center no-repeat; }
+	}
+
+	.editor-container { padding: 15px; min-height: 300px; }
+
+	/* 파일 선택 */
+	.select-file { padding: 15px 0 10px 0;
+		.filebox { float: left; position: relative;
+			label { display: inline-block; cursor: pointer; padding: 0 13px; font-size: 14px; font-weight: normal; color: #222; line-height: 28px; border: 1px solid #bbb; background-color: #fff; }
+			input[type=file] { position: absolute; left: -9999px; }
+		}
+		.limited { margin-left: 20px; font-size: 14px; color: #878787; line-height: 30px; }
+
+		.added { clear: both; margin-top: 5px; }
+	}
+
+	.btn-normal { padding: 0 10px; height: 40px; font-size: 14px; color: #222; line-height: 38px; border: 1px solid #bbb; background-color: #fff; }
+	.btn-file { font-size: 14px; color: #26afbd; }
+	.btn-file-delete { margin-left: 6px; font-size: 14px; color: #d30000; text-decoration: underline; }
+
+	.all-check { float: left; position: relative; padding: 10px 0; width: 76px;
+		&:after { content: ''; display: block; position: absolute; top: 50%; right: 0; margin-top: -10px; height: 20px; width: 1px; background-color: #ddd; }
+	}
+	.display { float: left; padding: 10px 0 10px 25px;
+		li { float: left; width: 80px; }
+	}
+	.category { float: left; padding: 10px 0 10px 25px; width: 80%;
+		li { float: left; width: 130px; }
+	}
+	.list-radio { overflow: hidden;
+		> li { float: left; padding-top: 2px;  }
+	}
+}
+
+
+/* data table & forms */
+.tbl-h { width: 100%; border-top: 1px solid #747474;
+	&.write { margin-top: 13px; }
+
+	tbody {
+		th { padding: 0 0 0 15px; height: 60px; width: 185px; font-size: 14px; font-weight: normal; color: #222; text-align: left; border-bottom: 1px solid #ddd; background-color: #fafafa; }
+		td { padding: 0 15px 0 15px; border-bottom: 1px solid #ddd; }
+	}
+}
+
+
+
+/* 게시판 */
+.tbl-bbs-top { overflow: hidden; margin-top: 40px;
+	.results { font-size: 14px; color: #747474; line-height: 30px;
+		mark { color: #e56c00; background-color: transparent; }
+	}
+
+	.forms { float: right; }
+}
+
+/* 게시판 목록 */
+.tbl-bbs { margin-top: 10px; width: 100%; border-top: 1px solid #747474;
+	thead {
+		th { height: 38px; font-size: 14px; font-weight: normal; color: #222; text-align: center; border-bottom: 1px solid #747474; background-color: #f4f5f7;
+			+ th { border-left: 1px solid #ddd; }
+		}
+	}
+	tbody {
+		.is-selected {
+			td { background-color: #edf4fc; }
+		}
+
+		td { height: 39px; font-size: 14px; font-weight: normal; color: #444; text-align: center; border-bottom: 1px solid #ddd;
+			a { color: #444; }
+
+			+ td { border-left: 1px solid #ddd; }
+		}
+
+		.l { padding-left: 15px; text-align: left; }
+	}
+}
+
+.tbl-bbs-navigation { position: relative; margin-top: 20px;
+	.page-btns { position: absolute; top: 0; left: 0;
+		.btn { display: inline-block; padding: 0 28px; height: 40px; font-size: 16px; color: #444; line-height: 42px; border: 1px solid #bbb; background-color: #f4f5f7;
+			&.submit { color: #fff; border: 1px solid #ed6627; background-color: #ed6627; }
+			&.em { color: #fff; borde: 1px solid #6c6f71; background-color: #6c6f71; }
+		}
+
+		&.right { right: 0; left: auto; }
+	}
+
+	.paging { text-align: center;
+		.btns { text-align: left; text-indent: -9999px;
+			&.first { @include sprite($sa-btn-first); }
+			&.prev { @include sprite($sa-btn-prev); }
+			&.next { @include sprite($sa-btn-next); }
+			&.last { @include sprite($sa-btn-last); }
+
+			&:hover { background-color: #fff; }
+		}
+		a { display: inline-block; height: 30px; width: 30px; font-size: 14px; color: #444; text-align: center; line-height: 30px; border: 1px solid #ddd; background-color: #fff;
+			&.is-selected,
+			&:hover { color: #fff; background-color: #747474; }
+		}
+	}
+}
+
+
+/* 게시판 상세 */
+.tbl-bbs-detail { margin-top: 13px; width: 100%; border-top: 1px solid #747474;
+	tbody {
+		th, td { height: 60px; width: 10%; font-size: 14px; font-weight: normal; color: #222; text-align: center; border-bottom: 1px solid #ddd; }
+		th { background-color: #fafafa; }
+		.category { padding-left: 15px; font-size: 16px; font-weight: bold; color: #26afbd; text-align: left; background-color: #fff; }
+		.title { padding-left: 15px; font-size: 16px; font-weight: bold; color: #222; text-align: left; background-color: #fff; }
+		.l { padding-left: 20px; text-align: left; }
+		.btn-files { color: #26afbd; text-decoration: underline; }
+		.content { padding: 55px 0;
+			p { margin-top: 24px; font-size: 16px; color: #252525; line-height: 1.500em; }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

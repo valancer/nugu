@@ -1,0 +1,649 @@
+@charset "UTF-8";
+@import url(roboto.css);
+@import url(notosanskr.css);
+/**
+ * variable
+ */
+body {
+  background-color: #fff; }
+
+/* Common Style */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, font, img, ins, q, s, samp, strike, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+  line-height: 1.3em;
+  border: 0 none; }
+
+body {
+  position: relative;
+  min-height: 320px;
+  margin: 0 auto;
+  font-size: 100%;
+  line-height: 1.3em;
+  font-family: "Malgun Gothic", "맑은고딕", sans-serif;
+  -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+header, h1 {
+  font-size: 100%; }
+
+html, body {
+  height: 100%; }
+
+caption, legend {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+caption {
+  display: none; }
+
+img {
+  border: none;
+  vertical-align: top; }
+
+select, input {
+  vertical-align: top;
+  border: 0px;
+  border-radius: 0;
+  background-color: transparent; }
+
+hr {
+  display: none;
+  border: 0 none; }
+
+ol, ul, ul li {
+  list-style: none; }
+
+em {
+  font-style: normal; }
+
+menu li {
+  list-style: none; }
+
+address {
+  display: inline;
+  font-style: normal; }
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  border: 0px;
+  background-color: transparent; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input, textarea, keygen, select, button {
+  font-family: "Malgun Gothic", "맑은고딕", sans-serif; }
+
+strong {
+  font-weight: normal; }
+
+dfn {
+  font-style: normal; }
+
+/* link Style */
+a:link, a:visited, a:active, a:focus {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+.is-hidden {
+  display: none !important; }
+
+.visible-hidden {
+  visibility: hidden !important; }
+
+.clear {
+  clear: both; }
+
+.txt-center {
+  text-align: center !important; }
+
+.inline-block {
+  display: inline-block;
+  vertical-align: middle; }
+
+/* forms */
+fieldset {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+select,
+input[type=submit],
+input[type=search],
+input[type=checkbox],
+input[type=radio],
+input[type=file] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  border: 0px; }
+
+input:focus,
+button:focus,
+textarea:focus,
+select,
+div {
+  outline: 0; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/* media queries */
+/* z-index */
+/* retina */
+/* aspect ratio */
+/**
+ * import
+ */
+/** layout **/
+body {
+  min-width: 1280px;
+  background-color: #fff; }
+
+/* header */
+.layout-header {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 800;
+  height: 100%;
+  width: 259px;
+  border-top: 6px solid #ed6527;
+  border-right: 1px solid #e7e6eb;
+  background-color: #fff; }
+  .layout-header .btn-nugu {
+    display: block;
+    position: relative;
+    height: 145px;
+    text-indent: -9999px;
+    border-bottom: 1px solid #e7e6eb; }
+    .layout-header .btn-nugu:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -36.5px;
+      margin-left: -55.5px;
+      background-image: url(../images/sprites_admin.png);
+      background-position: 0px 0px;
+      width: 111px;
+      height: 73px; }
+  .layout-header .shortcut-menus {
+    padding: 0 29px 0 28px; }
+    .layout-header .shortcut-menus .shortcut-menus-title {
+      display: none; }
+    .layout-header .shortcut-menus .list-menus > li {
+      border-bottom: 1px solid #e7e6eb; }
+      .layout-header .shortcut-menus .list-menus > li > a {
+        font-size: 16px;
+        font-weight: bold;
+        color: #222;
+        line-height: 55px; }
+        .layout-header .shortcut-menus .list-menus > li > a:hover {
+          color: #ed6627; }
+      .layout-header .shortcut-menus .list-menus > li.is-selected > a {
+        color: #ed6627; }
+    .layout-header .shortcut-menus .list-sub-menus {
+      margin-bottom: 20px; }
+      .layout-header .shortcut-menus .list-sub-menus > li a {
+        font-size: 14px;
+        color: #444;
+        line-height: 23px; }
+        .layout-header .shortcut-menus .list-sub-menus > li a:before {
+          content: '';
+          display: inline-block;
+          margin: -2px 3px 0 0;
+          height: 3px;
+          width: 3px;
+          vertical-align: middle;
+          background-color: #434343; }
+        .layout-header .shortcut-menus .list-sub-menus > li a:hover {
+          color: #26afbd; }
+          .layout-header .shortcut-menus .list-sub-menus > li a:hover:before {
+            background: #3dadec; }
+      .layout-header .shortcut-menus .list-sub-menus > li.is-selected a {
+        color: #26afbd; }
+        .layout-header .shortcut-menus .list-sub-menus > li.is-selected a:before {
+          background: #3dadec; }
+
+.layout-users {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 260px;
+  z-index: 800;
+  padding: 0 30px 0 0px;
+  height: 50px;
+  min-width: 960px;
+  text-align: right;
+  border-top: 6px solid #ed6527;
+  background-color: #f4f5f7; }
+  .layout-users .user {
+    font-size: 13px;
+    color: #444;
+    line-height: 50px; }
+  .layout-users .btn-logout {
+    margin-left: 10px;
+    font-size: 13px;
+    color: #ed6627;
+    line-height: 50px; }
+
+/* contents */
+.layout-contents {
+  padding: 96px 30px 100px 290px;
+  min-width: 960px; }
+  .layout-contents .page-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222; }
+
+.search-container {
+  margin-top: 13px; }
+  .search-container .btns {
+    padding-top: 20px;
+    text-align: center; }
+    .search-container .btns .btn {
+      display: inline-block;
+      height: 38px;
+      width: 98px;
+      font-size: 16px;
+      font-weight: normal;
+      color: #444;
+      line-height: 40px; }
+      .search-container .btns .btn.search {
+        color: #fff;
+        border: 1px solid #6c6f71;
+        background-color: #6c6f71; }
+      .search-container .btns .btn.reset {
+        border: 1px solid #bbb;
+        background-color: #f4f5f7; }
+
+.forms {
+  /* 파일 선택 */ }
+  .forms .btn-date {
+    display: inline-block;
+    margin-left: -4px;
+    text-indent: -9999px;
+    vertical-align: middle;
+    background-image: url(../images/sprites_admin.png);
+    background-position: -117px 0px;
+    width: 40px;
+    height: 40px; }
+  .forms input[type=text] {
+    box-sizing: border-box;
+    padding: 0 0 0 15px;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    color: #222;
+    line-height: 38px;
+    border: 1px solid #bbb;
+    background-color: #fafafa; }
+    .forms input[type=text].date {
+      width: 100px; }
+  .forms input[type=checkbox] {
+    margin: 9px 0 10px 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid #999;
+    border-radius: 2px; }
+    .forms input[type=checkbox]:checked {
+      background: url("/assets/admin/images/bg_checkbox_selected.png") center center no-repeat; }
+    .forms input[type=checkbox] + label {
+      display: inline-block;
+      cursor: pointer;
+      margin-left: 6px;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #222; }
+  .forms input[type=radio] {
+    margin: 9px 0 10px 0;
+    height: 20px;
+    width: 20px;
+    background: url("/assets/admin/images/bg_radio.png") center center no-repeat; }
+    .forms input[type=radio]:checked {
+      background-image: url("/assets/admin/images/bg_radio_selected.png"); }
+    .forms input[type=radio] + label {
+      display: inline-block;
+      cursor: pointer;
+      margin-left: 6px;
+      margin-right: 20px;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #222; }
+  .forms select {
+    display: inline-block;
+    padding: 0 40px 0 10px;
+    min-width: 135px;
+    font-size: 14px;
+    color: #222;
+    line-height: 38px;
+    border: 1px solid #bbb;
+    background: #fff url("/assets/admin/images/bg_select.png") right center no-repeat; }
+    .forms select.small {
+      padding: 0 30px 0 10px;
+      min-width: 80px;
+      line-height: 28px;
+      background: #fff url("/assets/admin/images/bg_select_small.png") right center no-repeat; }
+  .forms .editor-container {
+    padding: 15px;
+    min-height: 300px; }
+  .forms .select-file {
+    padding: 15px 0 10px 0; }
+    .forms .select-file .filebox {
+      float: left;
+      position: relative; }
+      .forms .select-file .filebox label {
+        display: inline-block;
+        cursor: pointer;
+        padding: 0 13px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #222;
+        line-height: 28px;
+        border: 1px solid #bbb;
+        background-color: #fff; }
+      .forms .select-file .filebox input[type=file] {
+        position: absolute;
+        left: -9999px; }
+    .forms .select-file .limited {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #878787;
+      line-height: 30px; }
+    .forms .select-file .added {
+      clear: both;
+      margin-top: 5px; }
+  .forms .btn-normal {
+    padding: 0 10px;
+    height: 40px;
+    font-size: 14px;
+    color: #222;
+    line-height: 38px;
+    border: 1px solid #bbb;
+    background-color: #fff; }
+  .forms .btn-file {
+    font-size: 14px;
+    color: #26afbd; }
+  .forms .btn-file-delete {
+    margin-left: 6px;
+    font-size: 14px;
+    color: #d30000;
+    text-decoration: underline; }
+  .forms .all-check {
+    float: left;
+    position: relative;
+    padding: 10px 0;
+    width: 76px; }
+    .forms .all-check:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -10px;
+      height: 20px;
+      width: 1px;
+      background-color: #ddd; }
+  .forms .display {
+    float: left;
+    padding: 10px 0 10px 25px; }
+    .forms .display li {
+      float: left;
+      width: 80px; }
+  .forms .category {
+    float: left;
+    padding: 10px 0 10px 25px;
+    width: 80%; }
+    .forms .category li {
+      float: left;
+      width: 130px; }
+  .forms .list-radio {
+    overflow: hidden; }
+    .forms .list-radio > li {
+      float: left;
+      padding-top: 2px; }
+
+/* data table & forms */
+.tbl-h {
+  width: 100%;
+  border-top: 1px solid #747474; }
+  .tbl-h.write {
+    margin-top: 13px; }
+  .tbl-h tbody th {
+    padding: 0 0 0 15px;
+    height: 60px;
+    width: 185px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #222;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #fafafa; }
+  .tbl-h tbody td {
+    padding: 0 15px 0 15px;
+    border-bottom: 1px solid #ddd; }
+
+/* 게시판 */
+.tbl-bbs-top {
+  overflow: hidden;
+  margin-top: 40px; }
+  .tbl-bbs-top .results {
+    font-size: 14px;
+    color: #747474;
+    line-height: 30px; }
+    .tbl-bbs-top .results mark {
+      color: #e56c00;
+      background-color: transparent; }
+  .tbl-bbs-top .forms {
+    float: right; }
+
+/* 게시판 목록 */
+.tbl-bbs {
+  margin-top: 10px;
+  width: 100%;
+  border-top: 1px solid #747474; }
+  .tbl-bbs thead th {
+    height: 38px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #222;
+    text-align: center;
+    border-bottom: 1px solid #747474;
+    background-color: #f4f5f7; }
+    .tbl-bbs thead th + th {
+      border-left: 1px solid #ddd; }
+  .tbl-bbs tbody .is-selected td {
+    background-color: #edf4fc; }
+  .tbl-bbs tbody td {
+    height: 39px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #444;
+    text-align: center;
+    border-bottom: 1px solid #ddd; }
+    .tbl-bbs tbody td a {
+      color: #444; }
+    .tbl-bbs tbody td + td {
+      border-left: 1px solid #ddd; }
+  .tbl-bbs tbody .l {
+    padding-left: 15px;
+    text-align: left; }
+
+.tbl-bbs-navigation {
+  position: relative;
+  margin-top: 20px; }
+  .tbl-bbs-navigation .page-btns {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .tbl-bbs-navigation .page-btns .btn {
+      display: inline-block;
+      padding: 0 28px;
+      height: 40px;
+      font-size: 16px;
+      color: #444;
+      line-height: 42px;
+      border: 1px solid #bbb;
+      background-color: #f4f5f7; }
+      .tbl-bbs-navigation .page-btns .btn.submit {
+        color: #fff;
+        border: 1px solid #ed6627;
+        background-color: #ed6627; }
+      .tbl-bbs-navigation .page-btns .btn.em {
+        color: #fff;
+        borde: 1px solid #6c6f71;
+        background-color: #6c6f71; }
+    .tbl-bbs-navigation .page-btns.right {
+      right: 0;
+      left: auto; }
+  .tbl-bbs-navigation .paging {
+    text-align: center; }
+    .tbl-bbs-navigation .paging .btns {
+      text-align: left;
+      text-indent: -9999px; }
+      .tbl-bbs-navigation .paging .btns.first {
+        background-image: url(../images/sprites_admin.png);
+        background-position: 0px -79px;
+        width: 30px;
+        height: 30px; }
+      .tbl-bbs-navigation .paging .btns.prev {
+        background-image: url(../images/sprites_admin.png);
+        background-position: -108px -79px;
+        width: 30px;
+        height: 30px; }
+      .tbl-bbs-navigation .paging .btns.next {
+        background-image: url(../images/sprites_admin.png);
+        background-position: -72px -79px;
+        width: 30px;
+        height: 30px; }
+      .tbl-bbs-navigation .paging .btns.last {
+        background-image: url(../images/sprites_admin.png);
+        background-position: -36px -79px;
+        width: 30px;
+        height: 30px; }
+      .tbl-bbs-navigation .paging .btns:hover {
+        background-color: #fff; }
+    .tbl-bbs-navigation .paging a {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid #ddd;
+      background-color: #fff; }
+      .tbl-bbs-navigation .paging a.is-selected, .tbl-bbs-navigation .paging a:hover {
+        color: #fff;
+        background-color: #747474; }
+
+/* 게시판 상세 */
+.tbl-bbs-detail {
+  margin-top: 13px;
+  width: 100%;
+  border-top: 1px solid #747474; }
+  .tbl-bbs-detail tbody th, .tbl-bbs-detail tbody td {
+    height: 60px;
+    width: 10%;
+    font-size: 14px;
+    font-weight: normal;
+    color: #222;
+    text-align: center;
+    border-bottom: 1px solid #ddd; }
+  .tbl-bbs-detail tbody th {
+    background-color: #fafafa; }
+  .tbl-bbs-detail tbody .category {
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #26afbd;
+    text-align: left;
+    background-color: #fff; }
+  .tbl-bbs-detail tbody .title {
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    text-align: left;
+    background-color: #fff; }
+  .tbl-bbs-detail tbody .l {
+    padding-left: 20px;
+    text-align: left; }
+  .tbl-bbs-detail tbody .btn-files {
+    color: #26afbd;
+    text-decoration: underline; }
+  .tbl-bbs-detail tbody .content {
+    padding: 55px 0; }
+    .tbl-bbs-detail tbody .content p {
+      margin-top: 24px;
+      font-size: 16px;
+      color: #252525;
+      line-height: 1.500em; }

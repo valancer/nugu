@@ -1,0 +1,151 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$sa-btn-date-name: 'sa-btn_date';
+$sa-btn-date-x: 117px;
+$sa-btn-date-y: 0px;
+$sa-btn-date-offset-x: -117px;
+$sa-btn-date-offset-y: 0px;
+$sa-btn-date-width: 40px;
+$sa-btn-date-height: 40px;
+$sa-btn-date-total-width: 157px;
+$sa-btn-date-total-height: 109px;
+$sa-btn-date-image: '../images/sprites_admin.png';
+$sa-btn-date: (117px, 0px, -117px, 0px, 40px, 40px, 157px, 109px, '../images/sprites_admin.png', 'sa-btn_date', );
+$sa-btn-first-name: 'sa-btn_first';
+$sa-btn-first-x: 0px;
+$sa-btn-first-y: 79px;
+$sa-btn-first-offset-x: 0px;
+$sa-btn-first-offset-y: -79px;
+$sa-btn-first-width: 30px;
+$sa-btn-first-height: 30px;
+$sa-btn-first-total-width: 157px;
+$sa-btn-first-total-height: 109px;
+$sa-btn-first-image: '../images/sprites_admin.png';
+$sa-btn-first: (0px, 79px, 0px, -79px, 30px, 30px, 157px, 109px, '../images/sprites_admin.png', 'sa-btn_first', );
+$sa-btn-last-name: 'sa-btn_last';
+$sa-btn-last-x: 36px;
+$sa-btn-last-y: 79px;
+$sa-btn-last-offset-x: -36px;
+$sa-btn-last-offset-y: -79px;
+$sa-btn-last-width: 30px;
+$sa-btn-last-height: 30px;
+$sa-btn-last-total-width: 157px;
+$sa-btn-last-total-height: 109px;
+$sa-btn-last-image: '../images/sprites_admin.png';
+$sa-btn-last: (36px, 79px, -36px, -79px, 30px, 30px, 157px, 109px, '../images/sprites_admin.png', 'sa-btn_last', );
+$sa-btn-next-name: 'sa-btn_next';
+$sa-btn-next-x: 72px;
+$sa-btn-next-y: 79px;
+$sa-btn-next-offset-x: -72px;
+$sa-btn-next-offset-y: -79px;
+$sa-btn-next-width: 30px;
+$sa-btn-next-height: 30px;
+$sa-btn-next-total-width: 157px;
+$sa-btn-next-total-height: 109px;
+$sa-btn-next-image: '../images/sprites_admin.png';
+$sa-btn-next: (72px, 79px, -72px, -79px, 30px, 30px, 157px, 109px, '../images/sprites_admin.png', 'sa-btn_next', );
+$sa-btn-prev-name: 'sa-btn_prev';
+$sa-btn-prev-x: 108px;
+$sa-btn-prev-y: 79px;
+$sa-btn-prev-offset-x: -108px;
+$sa-btn-prev-offset-y: -79px;
+$sa-btn-prev-width: 30px;
+$sa-btn-prev-height: 30px;
+$sa-btn-prev-total-width: 157px;
+$sa-btn-prev-total-height: 109px;
+$sa-btn-prev-image: '../images/sprites_admin.png';
+$sa-btn-prev: (108px, 79px, -108px, -79px, 30px, 30px, 157px, 109px, '../images/sprites_admin.png', 'sa-btn_prev', );
+$sa-nugu-name: 'sa-nugu';
+$sa-nugu-x: 0px;
+$sa-nugu-y: 0px;
+$sa-nugu-offset-x: 0px;
+$sa-nugu-offset-y: 0px;
+$sa-nugu-width: 111px;
+$sa-nugu-height: 73px;
+$sa-nugu-total-width: 157px;
+$sa-nugu-total-height: 109px;
+$sa-nugu-image: '../images/sprites_admin.png';
+$sa-nugu: (0px, 0px, 0px, 0px, 111px, 73px, 157px, 109px, '../images/sprites_admin.png', 'sa-nugu', );
+$spritesheet-width: 157px;
+$spritesheet-height: 109px;
+$spritesheet-image: '../images/sprites_admin.png';
+$spritesheet-sprites: ($sa-btn-date, $sa-btn-first, $sa-btn-last, $sa-btn-next, $sa-btn-prev, $sa-nugu, );
+$spritesheet: (157px, 109px, '../images/sprites_admin.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -28,7 +28,12 @@ var paths = {
 	html: {
 		src: 'sources/html/*.html',
 		base: 'sources/html/includes/',
-		dest: 'build/'
+		dest: 'build/',
+		admin: {
+			src: 'sources/admin/*.html',
+			base: 'sources/admin/includes/',
+			dest: 'build/admin/'
+		}
 	},
 	sprites : {
 		desktop: {
@@ -46,15 +51,30 @@ var paths = {
 				img: 'sources/assets/images/mobile/',
 				css: 'sources/assets/styles/scss/'
 			}
+		},
+		admin: {
+			src: 'sources/assets/admin/images/sprites/*.png',
+			filter: 'sources/assets/admin/images/sprites/*@2x.png',
+			dest: {
+				img: 'sources/assets/admin/images/',
+				css: 'sources/assets/admin/styles/scss/'
+			}
 		}
 	},
 	scss: {
 		src: 'sources/assets/styles/scss/**/*.scss',
-		dest: 'sources/assets/styles/'
+		dest: 'sources/assets/styles/',
+		admin: {
+			src: 'sources/assets/admin/styles/scss/**/*.scss',
+			dest: 'sources/assets/admin/styles/'
+		}
 	},
 	styles: {
 		src: ['sources/assets/styles/*.css', '!sources/assets/styles/*.min.css'],
-		dest: 'sources/assets/styles/'
+		dest: 'sources/assets/styles/',
+		admin: {
+			dest: 'sources/assets/admin/styles/'
+		}
 	},
 	scripts: {
 		src: 'sources/assets/scripts/*.js',
@@ -78,6 +98,17 @@ gulp.task('includes', function() {
 			indent: true
 		}))
 		.pipe(gulp.dest(paths.html.dest))
+		.pipe(livereload());
+});
+
+gulp.task('includes:admin', function() {
+	gulp.src([paths.html.admin.src])
+		.pipe(fileinclude({
+			prefix: '@@',
+			basepath: paths.html.admin.base,
+			indent: true
+		}))
+		.pipe(gulp.dest(paths.html.admin.dest))
 		.pipe(livereload());
 });
 
@@ -130,6 +161,28 @@ gulp.task('sprites:mobile', function () {
 	return merge(imgStream, cssStream).pipe(livereload());
 });
 
+gulp.task('sprites:admin', function () {
+	var spriteData = gulp.src(paths.sprites.admin.src).pipe(spritesmith({
+		imgPath: '../images/sprites_admin.png',
+		imgName: 'sprites_admin.png',
+		cssName: '_sprites_admin.scss',
+		padding: 6,
+		cssVarMap: function (sprite) {
+			sprite.name = 'sa-' + sprite.name;
+		}
+	}));
+
+	var imgStream = spriteData.img
+		.pipe(buffer())
+		.pipe(imagemin())
+		.pipe(gulp.dest(paths.sprites.admin.dest.img));
+
+	var cssStream = spriteData.css
+		.pipe(gulp.dest(paths.sprites.admin.dest.css));
+
+	return merge(imgStream, cssStream).pipe(livereload());
+});
+
 
 gulp.task('sass', function () {
 	return gulp.src(paths.scss.src)
@@ -149,11 +202,35 @@ gulp.task('sass', function () {
 		.pipe(livereload());
 });
 
+gulp.task('sass:admin', function () {
+	return gulp.src(paths.scss.admin.src)
+        .pipe(sass({ errLogToConsole: false }))
+		// .pipe(sass().on('error', sass.logError))
+		.on('error', function(err) {
+			notify().write(err);
+			this.emit('end');
+		})
+		.pipe(gulp.dest(paths.scss.admin.dest))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			expand: true,
+			flatten: true
+		}))
+		.pipe(gulp.dest(paths.styles.admin.dest))
+		.pipe(livereload());
+});
+
 
 gulp.task('csscomb', function() {
 	return gulp.src('build/assets/styles/*.css')
 		.pipe(csscomb('config/csscomb.json'))
 		.pipe(gulp.dest('build/assets/styles/'));
+});
+
+gulp.task('csscomb:admin', function() {
+	return gulp.src('build/assets/admin/styles/*.css')
+		.pipe(csscomb('config/csscomb.json'))
+		.pipe(gulp.dest('build/assets/admin/styles/'));
 });
 
 
@@ -204,6 +281,15 @@ gulp.task('copy:release', function () {
 });
 
 
+gulp.task('copy:admin:styles', function () {
+	return gulp.src('sources/assets/admin/styles/*.css')
+	.pipe(gulp.dest('build/assets/admin/styles/'));
+});
+gulp.task('copy:admin:images', function () {
+	return gulp.src(['sources/assets/admin/images/**', '!**/sprites', '!**/sprites/**'])
+	.pipe(gulp.dest('build/assets/admin/images/'));
+});
+
 
 /* watch */
 gulp.task('check', function() {
@@ -223,6 +309,14 @@ gulp.task('watch', function () {
 	gulp.watch(['sources/assets/images/mobile/sprites/*'], ['sprites:mobile', 'copy:images']);
 });
 
+gulp.task('watch:admin', function () {
+	gulp.watch(['sources/admin/**/*.html'], ['includes:admin']);
+	gulp.watch(['sources/assets/admin/styles/scss/*.scss'], ['sass:admin', 'copy:admin:styles']);
+	gulp.watch(['sources/assets/admin/styles/*.css'], ['sass:admin', 'copy:admin:styles']);
+	gulp.watch(['sources/assets/admin/images/**'], ['check', 'copy:admin:images']);
+	gulp.watch(['sources/assets/admin/images/sprites/*'], ['sprites:admin', 'copy:admin:images']);
+});
+
 
 /* connect */
 gulp.task('connect', function () {
@@ -239,9 +333,17 @@ gulp.task('sass-release', ['sprites:desktop', 'sprites:mobile', 'sass'], functio
 gulp.task('scripts-build', ['jshint'], function() { });
 gulp.task('html-build', ['includes'], function() { });
 
+gulp.task('sass-admin-build', ['sprites:admin', 'sass:admin'], function() { });
+gulp.task('scripts-admin-build', ['jshint'], function() { });
+gulp.task('html-admin-build', ['includes:admin'], function() { });
+
 gulp.task('build', ['clean:build'], function() {
 	gulp.run(['sass-build', 'scripts-build', 'html-build', 'copy:assets', 'connect', 'watch']);
 });
+gulp.task('build:admin', ['build'], function() {
+	gulp.run(['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:assets', 'watch:admin']);
+});
+
 gulp.task('release', function(callback) {
-	runSequence('clean:release', ['sass-release', 'scripts-build', 'html-build', 'copy:assets'], ['csscomb', 'copy:release'], callback);
+	runSequence('clean:release', ['sass-release', 'scripts-build', 'html-build'], ['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:assets'], ['csscomb', 'csscomb:admin', 'copy:release'], callback);
 });

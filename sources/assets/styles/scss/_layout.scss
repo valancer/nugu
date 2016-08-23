@@ -4,6 +4,7 @@ body { background-color: #fff; }
 
 @include mobile {
 	.only-desktop { display: none; }
+	img { width: 100%; }
 }
 
 @include desktop {
