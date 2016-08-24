@@ -89,6 +89,8 @@
 
 	@include desktop { margin-top: 60px;
 		.btn-category { display: none; }
+		.new { display: inline-block; margin-top: -4px; text-indent: -9999px; vertical-align: middle; }
+		.new { @include sprite($sd-icon-new); }
 	}
 }
 

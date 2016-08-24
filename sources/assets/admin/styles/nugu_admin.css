@@ -605,6 +605,16 @@ body {
         color: #fff;
         background-color: #747474; }
 
+.badge {
+  display: inline-block;
+  height: 24px;
+  width: 80px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  background-color: #3ab8c8; }
+
 /* 게시판 상세 */
 .tbl-bbs-detail {
   margin-top: 13px;
