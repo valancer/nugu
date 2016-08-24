@@ -6,9 +6,9 @@
 	<nav class="shortcut-menus">
 		<h2 class="shortcut-menus-title">네비게이션 메뉴</h2>
 		<ul>
-			<li><a href="#">PRODUCT</a></li>
-			<li class="is-selected"><a href="#">WHAT'S NEW</a></li>
-			<li><a href="#">SUPPORT</a></li>
+			<li@@if ( menu == "product" ) { class="is-selected"}><a href="#">PRODUCT</a></li>
+			<li@@if ( menu == "whatsnew" ) { class="is-selected"}><a href="#">WHAT'S NEW</a></li>
+			<li@@if ( menu == "support" ) { class="is-selected"}><a href="#">SUPPORT</a></li>
 		</ul>
 	</nav>
 </header>

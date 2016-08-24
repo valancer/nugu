@@ -194,7 +194,7 @@ gulp.task('sass', function () {
 		})
 		.pipe(gulp.dest(paths.scss.dest))
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
+			browsers: ['last 2 versions', 'IE 9'],
 			expand: true,
 			flatten: true
 		}))
@@ -347,3 +347,4 @@ gulp.task('build:admin', ['build'], function() {
 gulp.task('release', function(callback) {
 	runSequence('clean:release', ['sass-release', 'scripts-build', 'html-build'], ['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:assets'], ['csscomb', 'csscomb:admin', 'copy:release'], callback);
 });
+

@@ -13,7 +13,7 @@ body { background-color: #fff; }
 
 
 /* header */
-.layout-header { position: relative; height: 50px; border-bottom: 1px solid #ddd;
+.layout-header { position: fixed; top: 0; right: 0; left: 0; z-index: z("gnb"); height: 50px; border-bottom: 1px solid #ddd; background-color: #fff;
 	.btn-menu { position: absolute; top: 50%; left: 10px; margin-top: -$sm-btn-menus-height/2; }
 	.btn-nugu { position: absolute; top: 50%; margin-top: -$sm-btn-nugu-height/2; }
 	.btn-login { position: absolute; top: 50%; right: 10px; margin-top: -$sm-btn-nugu-height/2; }
@@ -31,17 +31,33 @@ body { background-color: #fff; }
 
 
 /* contents */
-.layout-contents { margin: 0 auto; padding-bottom: 60px;
-	.page-title { margin-top: 24px; font-family: $font-roboto-stack; font-size: 1.500rem; font-weight: 500; color: #252525; text-align: center; }
+.layout-contents { margin: 51px auto 0 auto; padding-bottom: 60px;
+	.page-title { font-family: $font-roboto-stack; font-size: 1.500rem; font-weight: 500; color: #252525; text-align: center; }
 	.hidden-title { display: none; }
 
-	@include desktop { padding-bottom: 120px; width: $desktop-min-width; 
-		.page-title { display: none; }
+	@include mobile { padding-top: 24px; }
+
+	@include desktop { margin-top: 101px; padding-bottom: 120px; width: $desktop-min-width; 
+		.page-title { display: block; padding-top: 50px; font-size: 2.750rem; font-weight: 500; color: #252525;
+			body.whatsnew & { display: none; }
+		}
 	}
 }
 
 
 /* footer */
-.layout-footer { padding: 30px 0 0 0; text-align: center; border-top: 1px solid #ddd;
-	@include desktop { padding: 80px 0 0 0; min-width: $desktop-min-width; }
+.layout-footer { padding: 35px 0 46px 0; text-align: center; border-top: 1px solid #ddd;
+	@include desktop { padding: 80px 0 80px 0; min-width: $desktop-min-width; }
+
+	.address { font-size: 0.625rem; font-weight: 300; color: #868686; line-height: 1.400em;
+		strong { display: block; font-weight: 300; }
+	}
+	.copyright { font-family: $font-roboto-stack; font-size: 0.625rem; font-weight: 300; color: #ccc; }
+
+	@include desktop {
+		.address { font-size: 0.875rem;
+			strong { display: inline; }
+		}
+		.copyright { font-size: 0.750rem; }
+	}
 }
