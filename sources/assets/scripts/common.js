@@ -24,6 +24,28 @@ if (!window.console) {
 
 
 $(document).ready(function(e) {
+	
+	// faq, qna
+	var $toggleItems = $('.accordion dt > a');
+	var $lastToggleItem = null;
+
+	$toggleItems.off('click').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		var $this = $(this).closest('dt');
+		if( $this.is($lastToggleItem) && $this.hasClass("is-opened") ) {
+			$this.removeClass("is-opened");
+			return;
+		}
+
+		if( $lastToggleItem !== null ) {
+			$lastToggleItem.removeClass("is-opened");
+		}
+
+		$this.addClass('is-opened');
+		$lastToggleItem = $this;
+	});
 });
 
 
