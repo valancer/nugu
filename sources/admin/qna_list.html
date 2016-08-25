@@ -13,7 +13,7 @@
 	<main role="main">
 		<div class="layout-contents">
 
-			<h1 class="page-title">WHAT'S NEW</h1>
+			<h1 class="page-title">1:1문의현황</h1>
 
 
 			<!-- 검색 영역 -->
@@ -27,28 +27,16 @@
 						<tr>
 							<th>작성일자검색</th>
 							<td>
-								<input type="text" name="daterange" id="" class="date" value="">
+								<input type="text" name="" id="" class="date" value="2016-09-01">
 								<button type="button" class="btn-date">날짜선택</button>
-<!--
 								~
 								<input type="text" name="" id="" class="date" value="2016-09-01">
 								<button type="button" class="btn-date">날짜선택</button>
--->
+
 								<button type="button" class="btn-normal">전체</button>
 								<button type="button" class="btn-normal">1개월</button>
 								<button type="button" class="btn-normal">3개월</button>
 								<button type="button" class="btn-normal">6개월</button>
-
-								<script>
-								$(document).ready(function(e) {
-									$('input[name="daterange"]').daterangepicker({
-										"showDropdowns": true,
-										locale: {
-											format: 'YYYY-MM-DD'
-										}
-									});
-								});
-								</script>
 							</td>
 						</tr>
 						<tr>
@@ -56,8 +44,8 @@
 							<td>
 								<select name="" id="">
 									<option value="">전체</option>
-									<option value="">작성자</option>
 									<option value="">내용</option>
+									<option value="">작성자ID</option>
 								</select>
 
 								<span style="display: inline-block; width: 380px;">
@@ -66,7 +54,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th>노출여부</th>
+							<th>진행상태</th>
 							<td>
 								<div class="all-check">
 									<input type="checkbox" name="display" id="display-all">
@@ -76,22 +64,22 @@
 									<ul>
 										<li>
 											<input type="checkbox" name="display" id="display0">
-											<label for="display0">노출</label>
+											<label for="display0">접수</label>
 										</li>
 										<li>
 											<input type="checkbox" name="display" id="display1">
-											<label for="display1">비노출</label>
+											<label for="display1">진행중</label>
 										</li>
 										<li>
 											<input type="checkbox" name="display" id="display2">
-											<label for="display2">블라인드</label>
+											<label for="display2">처리완료</label>
 										</li>
 									</ul>
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<th>말머리선택</th>
+							<th>문의유형선택</th>
 							<td>
 								<div class="all-check">
 									<input type="checkbox" name="category" id="category-all">
@@ -101,35 +89,11 @@
 									<ul>
 										<li>
 											<input type="checkbox" name="category" id="category0">
-											<label for="category0">WEEKLY가이드</label>
+											<label for="category0">기기오류</label>
 										</li>
 										<li>
 											<input type="checkbox" name="category" id="category1">
-											<label for="category1">전문가리뷰</label>
-										</li>
-										<li>
-											<input type="checkbox" name="category" id="category2">
-											<label for="category2">신규기능</label>
-										</li>
-										<li>
-											<input type="checkbox" name="category" id="category3">
-											<label for="category3">활용팁</label>
-										</li>
-										<li>
-											<input type="checkbox" name="category" id="category4">
-											<label for="category4">이벤트</label>
-										</li>
-										<li>
-											<input type="checkbox" name="category" id="category5">
-											<label for="category5">장애공지</label>
-										</li>
-										<li>
-											<input type="checkbox" name="category" id="category6">
-											<label for="category6">업데이트</label>
-										</li>
-										<li>
-											<input type="checkbox" name="category" id="category7">
-											<label for="category7">보도자료</label>
+											<label for="category1">설치오류</label>
 										</li>
 									</ul>
 								</div
@@ -147,13 +111,7 @@
 			
 			<!-- 검색결과 -->
 			<div class="tbl-bbs-top">
-				<div class="forms">
-					<select name="" id="" class="small">
-						<option value="">10개</option>
-						<option value="">30개</option>
-						<option value="">50개</option>
-					</select>	
-				</div>
+				
 
 				<p class="results">총 <mark>10</mark>개의 게시물이 검색되었습니다.</p>
 			</div>
@@ -338,10 +296,6 @@
 
 			<!-- 페이징 -->
 			<div class="tbl-bbs-navigation">
-				<p class="page-btns">
-					<a href="#" class="btn submit">게시물 작성</a>
-				</p>
-
 				<div class="paging">
 					<a href="#" class="btns first">처음 페이지로 이동</a>
 					<a href="#" class="btns prev">이전 페이지로 이동</a>
