@@ -37,7 +37,7 @@ body { background-color: #fff; }
 
 	@include mobile { padding-top: 24px; }
 
-	@include desktop { margin-top: 101px; padding-bottom: 120px; width: $desktop-min-width; 
+	@include desktop { margin-top: 0; padding-top: 101px; padding-bottom: 120px; width: $desktop-min-width; 
 		.page-title { display: block; padding-top: 50px; font-size: 2.750rem; font-weight: 500; color: #252525;
 			body.whatsnew & { display: none; }
 		}

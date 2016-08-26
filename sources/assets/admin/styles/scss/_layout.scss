@@ -67,9 +67,12 @@ body { min-width: 1280px; background-color: #fff; }
 }
 
 .forms {
-	.btn-date { display: inline-block; margin-left: -4px; text-indent: -9999px; vertical-align: middle; @include sprite($sa-btn-date); }
+	// .btn-date { display: inline-block; margin-left: -4px; text-indent: -9999px; vertical-align: middle; @include sprite($sa-btn-date); }
+	.date-container { display: inline-block; position: relative; width: 250px; vertical-align: middle;
+		&:after { content: ''; display: block; position: absolute; top: 0; right: 0; @include sprite($sa-btn-date); }
+	}
 	input[type=text] { box-sizing: border-box; padding: 0 0 0 15px; height: 40px; width: 100%; font-size: 14px; color: #222; line-height: 38px; border: 1px solid #bbb; background-color: #fafafa;
-		&.date { width: 230px; padding: 0; text-align: center; }
+		&.date { padding: 0; text-align: center; }
 	}
 
 	input[type=checkbox] { margin: 9px 0 10px 0; height: 18px; width: 18px; border: 1px solid #999; border-radius: 2px;
@@ -136,6 +139,8 @@ body { min-width: 1280px; background-color: #fff; }
 .tbl-bbs-top { overflow: hidden; margin-top: 40px;
 	.results { font-size: 14px; color: #747474; line-height: 30px;
 		mark { color: #e56c00; background-color: transparent; }
+
+		&.right { float: right; text-align: right; }
 	}
 
 	.forms { float: right; }
@@ -150,7 +155,13 @@ body { min-width: 1280px; background-color: #fff; }
 	}
 	tbody {
 		.is-selected {
-			td { background-color: #edf4fc; }
+			th, td { background-color: #edf4fc; }
+		}
+		.accept {
+			th, td { background-color: #fef7f4; }
+		}
+		.ing {
+			th, td { background-color: #edf4fc; }
 		}
 
 		td { height: 39px; font-size: 14px; font-weight: normal; color: #444; text-align: center; border-bottom: 1px solid #ddd;
@@ -201,8 +212,8 @@ body { min-width: 1280px; background-color: #fff; }
 		.title { padding-left: 15px; font-size: 16px; font-weight: bold; color: #222; text-align: left; background-color: #fff; }
 		.l { padding-left: 20px; text-align: left; }
 		.btn-files { color: #26afbd; text-decoration: underline; }
-		.content { padding: 55px 0;
-			p { margin-top: 24px; font-size: 16px; color: #252525; line-height: 1.500em; }
+		.content { padding: 30px 30px;
+			p { margin-top: 0px; font-size: 16px; color: #252525; line-height: 1.500em; text-align: left; }
 		}
 	}
 }

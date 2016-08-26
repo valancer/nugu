@@ -27,26 +27,50 @@
 						<tr>
 							<th>작성일자검색</th>
 							<td>
-								<input type="text" name="daterange" id="" class="date" value="">
-								<button type="button" class="btn-date">날짜선택</button>
-<!--
-								~
-								<input type="text" name="" id="" class="date" value="2016-09-01">
-								<button type="button" class="btn-date">날짜선택</button>
--->
-								<button type="button" class="btn-normal">전체</button>
-								<button type="button" class="btn-normal">1개월</button>
-								<button type="button" class="btn-normal">3개월</button>
-								<button type="button" class="btn-normal">6개월</button>
+								<span class="date-container">
+									<input type="text" name="daterange" id="" value="" >
+								</span>
+								<button type="button" class="btn-normal all">전체</button>
+								<button type="button" class="btn-normal last1">1개월</button>
+								<button type="button" class="btn-normal last3">3개월</button>
+								<button type="button" class="btn-normal last6">6개월</button>
 
 								<script>
 								$(document).ready(function(e) {
+									var start = moment().subtract(1, 'months');
+									var end = moment();
+
 									$('input[name="daterange"]').daterangepicker({
-										"showDropdowns": true,
-										locale: {
-											format: 'YYYY-MM-DD'
-										}
+										startDate: start,
+										endDate: end
 									});
+
+									function cb(start, end) {
+										var picker = $('input[name=daterange]').data('daterangepicker'); 
+
+										picker.setStartDate(start);
+										picker.setEndDate(end);
+									}
+    								
+									$('.btn-normal.all').on('click', function() {
+										var picker = $('input[name=daterange]').data('daterangepicker'); 
+
+										picker.setStartDate(moment());
+										picker.setEndDate(moment());
+
+										$('input[name=daterange]').val('');
+									});
+									$('.btn-normal.last1').on('click', function() {
+										cb(moment().subtract(1, 'months'), moment());
+									});
+									$('.btn-normal.last3').on('click', function() {
+										cb(moment().subtract(3, 'months'), moment());
+									});
+									$('.btn-normal.last6').on('click', function() {
+										cb(moment().subtract(6, 'months'), moment());
+									});
+
+									cb(moment().subtract(1, 'months'), moment());
 								});
 								</script>
 							</td>

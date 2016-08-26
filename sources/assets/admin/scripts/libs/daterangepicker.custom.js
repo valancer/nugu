@@ -64,14 +64,15 @@
 
         this.locale = {
             direction: 'ltr',
-            format: 'YYYY.MM.DD',
-            separator: '   >   ',
+            format: 'YYYY-MM-DD',
+            separator: ' - ',
             applyLabel: 'Apply',
             cancelLabel: 'Cancel',
             weekLabel: 'W',
             customRangeLabel: 'Custom Range',
             daysOfWeek: ["S", "M", "T", "W", "T", "F", "S"],
-            monthNames: ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"],
+            // monthNames: ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"],
+            monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
             firstDay: moment.localeData().firstDayOfWeek(1)
         };
 

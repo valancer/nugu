@@ -1675,7 +1675,8 @@ body {
       padding-top: 24px; } }
   @media only screen and (min-width: 768px) {
     .layout-contents {
-      margin-top: 101px;
+      margin-top: 0;
+      padding-top: 101px;
       padding-bottom: 120px;
       width: 1120px; }
       .layout-contents .page-title {

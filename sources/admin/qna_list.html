@@ -27,16 +27,52 @@
 						<tr>
 							<th>작성일자검색</th>
 							<td>
-								<input type="text" name="" id="" class="date" value="2016-09-01">
-								<button type="button" class="btn-date">날짜선택</button>
-								~
-								<input type="text" name="" id="" class="date" value="2016-09-01">
-								<button type="button" class="btn-date">날짜선택</button>
+								<span class="date-container">
+									<input type="text" name="daterange" id="" value="" >
+								</span>
+								<button type="button" class="btn-normal all">전체</button>
+								<button type="button" class="btn-normal last1">1개월</button>
+								<button type="button" class="btn-normal last3">3개월</button>
+								<button type="button" class="btn-normal last6">6개월</button>
 
-								<button type="button" class="btn-normal">전체</button>
-								<button type="button" class="btn-normal">1개월</button>
-								<button type="button" class="btn-normal">3개월</button>
-								<button type="button" class="btn-normal">6개월</button>
+								<script>
+								$(document).ready(function(e) {
+									var start = moment().subtract(1, 'months');
+									var end = moment();
+
+									$('input[name="daterange"]').daterangepicker({
+										startDate: start,
+										endDate: end
+									});
+
+									function cb(start, end) {
+										var picker = $('input[name=daterange]').data('daterangepicker'); 
+
+										picker.setStartDate(start);
+										picker.setEndDate(end);
+									}
+    								
+									$('.btn-normal.all').on('click', function() {
+										var picker = $('input[name=daterange]').data('daterangepicker'); 
+
+										picker.setStartDate(moment());
+										picker.setEndDate(moment());
+
+										$('input[name=daterange]').val('');
+									});
+									$('.btn-normal.last1').on('click', function() {
+										cb(moment().subtract(1, 'months'), moment());
+									});
+									$('.btn-normal.last3').on('click', function() {
+										cb(moment().subtract(3, 'months'), moment());
+									});
+									$('.btn-normal.last6').on('click', function() {
+										cb(moment().subtract(6, 'months'), moment());
+									});
+
+									cb(moment().subtract(1, 'months'), moment());
+								});
+								</script>
 							</td>
 						</tr>
 						<tr>
@@ -111,7 +147,7 @@
 			
 			<!-- 검색결과 -->
 			<div class="tbl-bbs-top">
-				
+				<p class="results right">접수 <mark>1</mark>건 | 진행중 <mark>3</mark>건 | 처리완료 <mark>67</mark>건</p>
 
 				<p class="results">총 <mark>10</mark>개의 게시물이 검색되었습니다.</p>
 			</div>
@@ -121,174 +157,93 @@
 				<caption>검색 목록</caption>
 				<thead>
 					<tr>
-						<th>NO</th>
-						<th>말머리</th>
+						<th>접수일자</th>
+						<th>상태</th>
+						<th>문의유형</th>
 						<th>제목</th>
-						<th>노출</th>
-						<th>작성일자</th>
-						<th>조회수</th>
-						<th>좋아요</th>
+						<th>처리완료일</th>
 						<th>작성자</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="is-selected">
+					<tr class="accept">
+						<td><time datetime="2016-09-05">2016-09-05</time></td>
+						<td>접수</td>
 						<td></td>
-						<td>Weekly가이드</td>
 						<td class="l">
-							<span class="badge">상단노출1</span>
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
+							<a href="#">기기 설치 문의 드립니다.</a>
 						</td>
-						<td>노출</td>
-						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
-						<td>nugusky</td>
-					</tr>
-					<tr class="is-selected">
 						<td></td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<span class="badge">상단노출2</span>
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>노출</td>
-						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
 						<td>nugusky</td>
 					</tr>
-					<tr class="is-selected">
+					<tr class="ing">
+						<td><time datetime="2016-09-05">2016-09-05</time></td>
+						<td>진행중</td>
 						<td></td>
-						<td>Weekly가이드</td>
 						<td class="l">
-							<span class="badge">상단노출3</span>
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
+							<a href="#">기기 설치 문의 드립니다.</a>
 						</td>
-						<td>노출</td>
-						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
+						<td></td>
 						<td>nugusky</td>
 					</tr>
 					<tr>
-						<td>10</td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>노출</td>
 						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
+						<td>처리완료</td>
+						<td></td>
+						<td class="l">
+							<a href="#">기기 설치 문의 드립니다.</a>
+						</td>
+						<td><time datetime="2016-09-05">2016-09-05</time></td>
+						<td>nugusky</td>
+					</tr>
+					<tr class="accept">
+						<td><time datetime="2016-09-05">2016-09-05</time></td>
+						<td>접수</td>
+						<td></td>
+						<td class="l">
+							<a href="#">기기 설치 문의 드립니다.</a>
+						</td>
+						<td></td>
+						<td>nugusky</td>
+					</tr>
+					<tr class="ing">
+						<td><time datetime="2016-09-05">2016-09-05</time></td>
+						<td>진행중</td>
+						<td></td>
+						<td class="l">
+							<a href="#">기기 설치 문의 드립니다.</a>
+						</td>
+						<td></td>
 						<td>nugusky</td>
 					</tr>
 					<tr>
-						<td>9</td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>비노출</td>
 						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
+						<td>처리완료</td>
+						<td></td>
+						<td class="l">
+							<a href="#">기기 설치 문의 드립니다.</a>
+						</td>
+						<td><time datetime="2016-09-05">2016-09-05</time></td>
 						<td>nugusky</td>
 					</tr>
 					<tr>
-						<td>8</td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>노출</td>
 						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
+						<td>처리완료</td>
+						<td></td>
+						<td class="l">
+							<a href="#">기기 설치 문의 드립니다.</a>
+						</td>
+						<td><time datetime="2016-09-05">2016-09-05</time></td>
 						<td>nugusky</td>
 					</tr>
 					<tr>
-						<td>7</td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>노출</td>
 						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
-						<td>nugusky</td>
-					</tr>
-					<tr>
-						<td>6</td>
-						<td>Weekly가이드</td>
+						<td>처리완료</td>
+						<td></td>
 						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
+							<a href="#">기기 설치 문의 드립니다.</a>
 						</td>
-						<td>비노출</td>
 						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
-						<td>nugusky</td>
-					</tr>
-					<tr>
-						<td>5</td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>노출</td>
-						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
-						<td>nugusky</td>
-					</tr>
-					<tr>
-						<td>4</td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>노출</td>
-						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
-						<td>nugusky</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>비노출</td>
-						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
-						<td>nugusky</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>노출</td>
-						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
-						<td>nugusky</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Weekly가이드</td>
-						<td class="l">
-							<a href="#">9월 1주차 NUGU와 즐기는 모닝뮤직!</a>
-						</td>
-						<td>노출</td>
-						<td><time datetime="2016-09-05">2016-09-05</time></td>
-						<td>76</td>
-						<td>8</td>
 						<td>nugusky</td>
 					</tr>
 				</tbody>
