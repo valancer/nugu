@@ -15,7 +15,7 @@
 
 			<h1 class="page-title">1:1 문의관리</h1>
 
-			<table class="tbl-bbs-detail">
+			<table class="tbl-bbs-detail forms">
 				<caption>게시물 상세</caption>
 
 				<tbody>
@@ -29,7 +29,12 @@
 						<td>접수</td>
 						<th>문의유형</th>
 						<td>
-							<button type="button">설정</button>
+							<button type="button" class="btn-normal small popup-settings_open">설정</button>
+							<script>
+							$(document).ready(function() {
+								$('#popup-settings').popup();
+							});
+							</script>
 						</td>
 						<th>작성자</th>
 						<td>NUGUSKY</td>
@@ -47,13 +52,25 @@
 							<a href="#" class="btn-files">whatsimage.jpg</a>
 						</td>
 					</tr>
+					<tr>
+						<th>처리담당자</th>
+						<td colspan="7" class="l">
+							홍길동 | 채널사업부 | hgd@sk.co.kr
+						</td>
+					</tr>
+					<tr>
+						<td colspan="8" class="reply">
+							<textarea name="" id="" cols="30" rows="10"></textarea>
+						</td>
+					</tr>
 				</tbody>
 			</table>
 			
 			<div class="tbl-bbs-navigation">
 				<p class="page-btns">
-					<a href="#" class="btn submit">수정</a>
-					<a href="#" class="btn">삭제</a>
+					<a href="#" class="btn submit">답변작성</a>
+					<a href="#" class="btn submit">답변처리완료</a>
+					<a href="#" class="btn">취소</a>
 				</p>
 
 				<p class="page-btns right">
@@ -63,6 +80,26 @@
 
 		</div>
 	</main>
+
+
+	<aside id="popup-settings" class="layout-popup" style="width: 340px;">
+		<button type="button" class="btn-close popup-settings_close">닫기</button>
+		<h2 class="popup-title">문의유형 설정</h2>
+
+		<fieldset class="forms">
+			<legend>문의유형 설정 품</legend>
+
+			<select name="" id="" style="width: 100%;">
+				<option value="">설치오류</option>
+				<option value="">기기오류</option>
+			</select>
+
+			<p class="popup-btns">
+				<a href="#" class="btn submit">확인</a>
+				<a href="#" class="btn popup-settings_close">취소</a>
+			</p>
+		</fieldset>
+	</aside>
 
 </body>
 </html>

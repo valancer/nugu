@@ -52,10 +52,25 @@ body { min-width: 1280px; background-color: #fff; }
 
 
 /* contents */
+body.login { min-height: 600px; min-width: auto; }
 .layout-contents { padding: 96px 30px 100px 290px; min-width: $content-min-width;
 	.page-title { font-size: 22px; font-weight: bold; color: #222; }
+
+	.login & { position: absolute; top: 0; bottom: 0; padding: 0; min-height: 500px; min-width: auto; width: 100%; border-top: 6px solid #ed6527;
+		.box { position: absolute; top: 50%; left: 50%; margin-top: -180px; margin-left: -240px; width: 480px; }
+
+		.page-title { font-size: 30px; font-weight: bold; color: #444; text-align: center;
+			&:before { content: ''; display: block; margin: 0 auto 40px auto; @include sprite($sa-nugu); }
+		}
+
+		.forms.login { margin: 0 auto;
+			p { margin-top: 10px; }
+			.btn-login { display: block; margin-top: 40px; height: 70px; width: 100%; font-size: 20px; font-weight: bold; color: #fff; text-align: center; line-height: 70px; background-color: #ed6627; }
+		}
+	}
 }
 
+.layout-login-footer { position: absolute; right: 0; bottom: 0; left: 0; padding: 400px 0 40px 0; font-size: 13px; color: #747474; text-align: center; }
 
 .search-container { margin-top: 13px;
 	.btns { padding-top: 20px; text-align: center;
@@ -71,7 +86,8 @@ body { min-width: 1280px; background-color: #fff; }
 	.date-container { display: inline-block; position: relative; width: 250px; vertical-align: middle;
 		&:after { content: ''; display: block; position: absolute; top: 0; right: 0; @include sprite($sa-btn-date); }
 	}
-	input[type=text] { box-sizing: border-box; padding: 0 0 0 15px; height: 40px; width: 100%; font-size: 14px; color: #222; line-height: 38px; border: 1px solid #bbb; background-color: #fafafa;
+	input[type=text],
+	input[type=password] { box-sizing: border-box; padding: 0 0 0 15px; height: 40px; width: 100%; font-size: 14px; color: #222; line-height: 38px; border: 1px solid #bbb; background-color: #fafafa;
 		&.date { padding: 0; text-align: center; }
 	}
 
@@ -104,7 +120,9 @@ body { min-width: 1280px; background-color: #fff; }
 		.added { clear: both; margin-top: 5px; }
 	}
 
-	.btn-normal { padding: 0 10px; height: 40px; font-size: 14px; color: #222; line-height: 38px; border: 1px solid #bbb; background-color: #fff; }
+	.btn-normal { padding: 0 10px; height: 40px; font-size: 14px; color: #222; line-height: 38px; border: 1px solid #bbb; background-color: #fff;
+		&.small { height: 23px; font-size: 12px; line-height: 23px; }
+	}
 	.btn-file { font-size: 14px; color: #26afbd; }
 	.btn-file-delete { margin-left: 6px; font-size: 14px; color: #d30000; text-decoration: underline; }
 
@@ -215,11 +233,30 @@ body { min-width: 1280px; background-color: #fff; }
 		.content { padding: 30px 30px;
 			p { margin-top: 0px; font-size: 16px; color: #252525; line-height: 1.500em; text-align: left; }
 		}
+		.reply { padding: 10px 10px 5px 10px;
+			textarea { box-sizing: border-box; padding: 15px 20px; height: 158px; width: 100%; font-size: 14px; color: #444; line-height: 20px; border: 1px solid #ddd; background-color: #fafafa; }
+		}
 	}
 }
 
 
+/* popup */
+.layout-popup { display: none; position: relative; padding: 30px 40px; border: 1px solid #ddd; background-color: #fff;
+	.btn-close { display: block; position: absolute; top: 23px; right: 30px; text-indent: -9999px; @include sprite($sa-btn-close); }
+	.popup-title { padding-bottom: 9px; font-size: 22px; font-weight: bold; color: #ed6627; border-bottom: 3px solid #444; }
 
+	.forms { padding-top: 20px; }
+
+	.tbl-h {
+		th { width: 105px; font-size: 14px; color: #222; }
+	}
+
+	.popup-btns { margin-top: 30px; text-align: center;
+		.btn { display: inline-block; height: 38px; min-width: 98px; font-size: 16px; color: #222; text-align: center; line-height: 40px; border: 1px solid #bbb; background-color: #fff;
+			&.submit { color: #fff; border: 1px solid #ed6627; background-color: #ed6627; }
+		}
+	}
+}
 
 
 
