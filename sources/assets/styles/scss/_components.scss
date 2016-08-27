@@ -30,7 +30,7 @@
 			}
 
 			&.is-selected {
-				> a { color: #ed6627;
+				> a {
 					&:after { content: ''; display: block; position: absolute; bottom: -1px; height: 4px; width: 100%; background-color: #ed6627; }
 				}
 			}
@@ -581,6 +581,90 @@
 }
 
 
+/* 서포트 바로가기 */
+.support-shortcut { overflow: hidden; padding-top: 51px; background-color: #4b4b4b;
+	.shortcut { display: block; padding: 40px 0; font-weight: 400; color: #fff; text-align: center;
+		&:before { content: ''; display: block; margin: 0 auto 16px auto; }
+		&:after { content: ''; display: block; margin: 21px auto 0 auto; }
+
+		strong { display: block; font-size: 1.500rem; font-weight: 500; }
+		p { display: block; margin-top: 7px; font-size: 0.750rem; }
+	}	
+
+	@include mobile { background: url('/assets/images/mobile/bg_support@2x.jpg') center top no-repeat; background-size: cover;
+		ul {
+			li {
+				+ li { border-top: 1px solid #666; }
+			}
+		}
+
+		.shortcut {
+			&.faq {
+				&:before { @include retina-sprite($sm-icon-support01-group); }
+				&:after { @include retina-sprite($sm-icon-shortcut-group); }
+			}
+
+			&.qna {
+				&:before { @include retina-sprite($sm-icon-support02-group); }
+				&:after { @include retina-sprite($sm-icon-shortcut-group); }
+			}
+
+			&.manual {
+				&:before { @include retina-sprite($sm-icon-support03-group); }
+				&:after { @include retina-sprite($sm-icon-pdf-group); }
+			}
+		}
+	}
+	@include desktop { padding-top: 100px; min-width: $desktop-min-width; background: url('/assets/images/desktop/bg_support.jpg') center top no-repeat; background-size: cover;
+		ul { margin: 0 auto; width: $desktop-min-width;
+			> li { box-sizing: border-box; float: left; width: 33.3%;
+				+ li { border-left: 1px solid #666; }
+			}
+		}
+		.shortcut { padding: 140px 0;
+			&:before { margin-bottom: 24px; }
+			&:after { margin-top: 27px; }
+
+			strong { font-size: 2.000rem; }
+			p { margin-top: 4px; font-size: 1.000rem; line-height: 1.500em; }
+
+			&.faq {
+				&:before { @include sprite($sd-icon-support01); }
+				&:after { @include sprite($sd-icon-shortcut); }
+			}
+
+			&.qna {
+				&:before { @include sprite($sd-icon-support02); }
+				&:after { @include sprite($sd-icon-shortcut); }
+			}
+
+			&.manual {
+				&:before { @include sprite($sd-icon-support03); }
+				&:after { @include sprite($sd-icon-pdf); }
+			}
+
+			+ .shortcut { border-left: 1px solid #666; }
+		}
+	}
+}
+
+
+/* 튜토리얼 */
+.tutorial { box-sizing: border-box; padding: 34px 0 0 0; height: 160px; background: url('/assets/images/mobile/bg_tutorial@2x.jpg') center center no-repeat; background-size: cover; 
+	.title { display: block; margin: 0 auto; text-indent: -9999px; }
+	.detail { margin-top: 25px; font-size: 1.125rem; font-weight: 300; color: #fff; line-height: 1.444em; }
+	.btn-play { display: block; margin: 25px auto 0 auto; text-indent: -9999px; }
+
+	@include mobile {
+		.title { @include retina-sprite($sm-title-tutorial-group); }
+		.detail { display: none; }
+		.btn-play { @include retina-sprite($sm-btn-play-group); }
+	}
+	@include desktop { padding: 96px 0 0 80px; height: 400px; background: url('/assets/images/desktop/bg_tutorial.jpg') center center no-repeat; background-size: cover;
+		.title { margin: 0; @include sprite($sd-title-tutorial); }
+		.btn-play { margin: 0; margin-top: 38px; @include sprite($sd-btn-play); }
+	}
+}
 
 
 

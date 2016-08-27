@@ -271,17 +271,17 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     .btn-nugu {
       background-image: url(../images/mobile/sprites.png);
-      background-position: 0px -104px;
+      background-position: -208px -82px;
       width: 40px;
       height: 28px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .btn-nugu {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 190px 169px; } }
+      background-size: 390px 202px; } }
   @media only screen and (min-width: 768px) {
     .btn-nugu {
       background-image: url(../images/desktop/sprites.png);
-      background-position: -134px 0px;
+      background-position: -268px -47px;
       width: 80px;
       height: 56px; } }
 
@@ -289,13 +289,13 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   display: block;
   text-indent: -9999px;
   background-image: url(../images/mobile/sprites.png);
-  background-position: -158px -74px;
+  background-position: -358px -116px;
   width: 30px;
   height: 30px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .btn-menu {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 190px 169px; } }
+      background-size: 390px 202px; } }
 
 .btn-login {
   display: block;
@@ -303,17 +303,17 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     .btn-login {
       background-image: url(../images/mobile/sprites.png);
-      background-position: -158px -38px;
+      background-position: -322px -116px;
       width: 30px;
       height: 30px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .btn-login {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 190px 169px; } }
+      background-size: 390px 202px; } }
   @media only screen and (min-width: 768px) {
     .btn-login {
       background-image: url(../images/desktop/sprites.png);
-      background-position: -134px -62px;
+      background-position: -338px -109px;
       width: 60px;
       height: 60px; } }
 
@@ -340,16 +340,14 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       line-height: 100px; }
       .shortcut-menus li > a:hover {
         color: #ed6627; }
-    .shortcut-menus li.is-selected > a {
-      color: #ed6627; }
-      .shortcut-menus li.is-selected > a:after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -1px;
-        height: 4px;
-        width: 100%;
-        background-color: #ed6627; } }
+    .shortcut-menus li.is-selected > a:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      height: 4px;
+      width: 100%;
+      background-color: #ed6627; } }
 
 /* filter(search & category) container */
 .search-container {
@@ -407,13 +405,13 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     .search-container .btn-submit {
       background-image: url(../images/mobile/sprites.png);
-      background-position: -158px -110px;
+      background-position: -366px -28px;
       width: 16px;
       height: 16px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .search-container .btn-submit {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 190px 169px; } }
+      background-size: 390px 202px; } }
   @media only screen and (min-width: 768px) {
     .search-container {
       padding: 0 30px 0 20px;
@@ -437,7 +435,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         right: 30px;
         margin-top: -12px;
         background-image: url(../images/desktop/sprites.png);
-        background-position: -50px -134px;
+        background-position: -512px -47px;
         width: 24px;
         height: 24px; } }
 
@@ -484,7 +482,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         vertical-align: middle; }
       .category-container .new {
         background-image: url(../images/desktop/sprites.png);
-        background-position: -196px -134px;
+        background-position: -600px -47px;
         width: 16px;
         height: 16px; } }
 
@@ -583,13 +581,13 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .item-info .new {
     background-image: url(../images/mobile/sprites.png);
-    background-position: 0px -157px;
+    background-position: -254px -98px;
     width: 12px;
     height: 12px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .item-info .new {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 190px 169px; } }
+      background-size: 390px 202px; } }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .item-info .options {
@@ -610,24 +608,24 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         vertical-align: middle; }
       .item-info .options .number.hit > span {
         background-image: url(../images/mobile/sprites.png);
-        background-position: -18px -157px;
+        background-position: -272px -98px;
         width: 13px;
         height: 11px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
         .item-info .options .number.hit > span {
           background-image: url(../images/mobile/sprites@2x.png);
-          background-size: 190px 169px; } }
+          background-size: 390px 202px; } }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
       .item-info .options .number.recommend > span {
         background-image: url(../images/mobile/sprites.png);
-        background-position: -180px -110px;
+        background-position: -291px -98px;
         width: 9px;
         height: 11px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
         .item-info .options .number.recommend > span {
           background-image: url(../images/mobile/sprites@2x.png);
-          background-size: 190px 169px; } }
+          background-size: 390px 202px; } }
 
 @media only screen and (min-width: 768px) {
   .item-info .category {
@@ -644,7 +642,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
     white-space: nowrap; }
   .item-info .new {
     background-image: url(../images/desktop/sprites.png);
-    background-position: -196px -134px;
+    background-position: -600px -47px;
     width: 16px;
     height: 16px; }
   .item-info .options {
@@ -682,7 +680,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       right: 30px;
       margin-top: -13px;
       background-image: url(../images/desktop/sprites.png);
-      background-position: -200px -62px;
+      background-position: -404px -138px;
       width: 14px;
       height: 26px; }
     .list-bbs-item .thumb {
@@ -775,22 +773,22 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           border-bottom: 2px solid #fff; }
         .list-bbs-navigation .btns.first {
           background-image: url(../images/desktop/sprites.png);
-          background-position: -167px -134px;
+          background-position: -542px -47px;
           width: 23px;
           height: 23px; }
         .list-bbs-navigation .btns.prev {
           background-image: url(../images/desktop/sprites.png);
-          background-position: -138px -134px;
+          background-position: -433px -109px;
           width: 23px;
           height: 23px; }
         .list-bbs-navigation .btns.next {
           background-image: url(../images/desktop/sprites.png);
-          background-position: -109px -134px;
+          background-position: -404px -109px;
           width: 23px;
           height: 23px; }
         .list-bbs-navigation .btns.last {
           background-image: url(../images/desktop/sprites.png);
-          background-position: -80px -134px;
+          background-position: -571px -47px;
           width: 23px;
           height: 23px; } }
 
@@ -817,13 +815,13 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         text-indent: -9999px;
         vertical-align: middle;
         background-image: url(../images/mobile/sprites.png);
-        background-position: 0px -138px;
+        background-position: -208px -154px;
         width: 14px;
         height: 13px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
       .btn-recommend .recommend {
         background-image: url(../images/mobile/sprites@2x.png);
-        background-size: 190px 169px; } }
+        background-size: 390px 202px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
       .view-bbs-item-info .btn-recommend {
         display: none; } }
@@ -846,7 +844,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           margin-top: -4px;
           vertical-align: middle;
           background-image: url(../images/desktop/sprites.png);
-          background-position: -200px -94px;
+          background-position: -490px -109px;
           width: 14px;
           height: 12px; }
       .btn-recommend .txt {
@@ -919,23 +917,23 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           vertical-align: middle; }
         .view-bbs-item-info .options .number.hit > span {
           background-image: url(../images/mobile/sprites.png);
-          background-position: -46px -104px;
+          background-position: -366px -50px;
           width: 17px;
           height: 13px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
         .view-bbs-item-info .options .number.hit > span {
           background-image: url(../images/mobile/sprites@2x.png);
-          background-size: 190px 169px; } }
+          background-size: 390px 202px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
         .view-bbs-item-info .options .number.recommend > span {
           background-image: url(../images/mobile/sprites.png);
-          background-position: 0px -138px;
+          background-position: -208px -154px;
           width: 14px;
           height: 13px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
         .view-bbs-item-info .options .number.recommend > span {
           background-image: url(../images/mobile/sprites@2x.png);
-          background-size: 190px 169px; } }
+          background-size: 390px 202px; } }
   @media only screen and (min-width: 768px) {
     .view-bbs-item-info {
       padding: 36px 0 39px 30px; }
@@ -1020,14 +1018,14 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       bottom: 15px;
       text-indent: -9999px;
       background-image: url(../images/mobile/sprites.png);
-      background-position: -104px 0px;
+      background-position: -208px -28px;
       width: 48px;
       height: 48px;
       background-color: transparent; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .btn-in-bbs.list {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 190px 169px; } }
+      background-size: 390px 202px; } }
 
 .view-bbs-btns {
   margin-top: 30px;
@@ -1079,24 +1077,24 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .view-bbs-navigation a.prev:after {
         margin-top: -5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -119px -104px;
+        background-position: -304px -82px;
         width: 16px;
         height: 10px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
       .view-bbs-navigation a.prev:after {
         background-image: url(../images/mobile/sprites@2x.png);
-        background-size: 190px 169px; } }
+        background-size: 390px 202px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
       .view-bbs-navigation a.next:after {
         margin-top: -5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -20px -138px;
+        background-position: -326px -82px;
         width: 16px;
         height: 10px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
       .view-bbs-navigation a.next:after {
         background-image: url(../images/mobile/sprites@2x.png);
-        background-size: 190px 169px; } }
+        background-size: 390px 202px; } }
   @media only screen and (min-width: 768px) {
     .view-bbs-navigation {
       margin-top: 60px; }
@@ -1115,13 +1113,13 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         .view-bbs-navigation a.prev:after {
           margin-top: -7px;
           background-image: url(../images/desktop/sprites.png);
-          background-position: -142px -164px;
+          background-position: -576px -77px;
           width: 22px;
           height: 14px; }
         .view-bbs-navigation a.next:after {
           margin-top: -7px;
           background-image: url(../images/desktop/sprites.png);
-          background-position: -114px -164px;
+          background-position: -462px -109px;
           width: 22px;
           height: 14px; } }
 
@@ -1260,25 +1258,25 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
             right: 15px;
             margin-top: -16px;
             background-image: url(../images/mobile/sprites.png);
-            background-position: -158px 0px;
+            background-position: -246px -116px;
             width: 32px;
             height: 32px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
         .forms .filebox label:after {
           background-image: url(../images/mobile/sprites@2x.png);
-          background-size: 190px 169px; } }
+          background-size: 390px 202px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
         .forms .filebox .btn-clear {
           right: 0;
           bottom: -46px;
           background-image: url(../images/mobile/sprites.png);
-          background-position: -104px -54px;
+          background-position: -316px -28px;
           width: 44px;
           height: 44px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
       .forms .filebox .btn-clear {
         background-image: url(../images/mobile/sprites@2x.png);
-        background-size: 190px 169px; } }
+        background-size: 390px 202px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
         .forms .filebox .upload-name {
           display: none;
@@ -1308,7 +1306,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         right: 107px;
         margin-top: -22px;
         background-image: url(../images/desktop/sprites.png);
-        background-position: 0px -134px;
+        background-position: -462px -47px;
         width: 44px;
         height: 44px; }
       .forms .filebox .upload-name {
@@ -1387,7 +1385,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .forms .complete:before {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 190px 169px; } }
+      background-size: 390px 202px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
       .forms .complete em {
         margin-bottom: 5px; } }
@@ -1403,7 +1401,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           left: 310px;
           margin-top: -64px;
           background-image: url(../images/desktop/sprites.png);
-          background-position: 0px 0px;
+          background-position: -134px -134px;
           width: 128px;
           height: 128px; }
         .forms .complete em {
@@ -1469,20 +1467,20 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .accordion dt > a:after {
         margin-top: -5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -69px -104px;
+        background-position: -254px -82px;
         width: 19px;
         height: 10px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .accordion dt > a:after {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 190px 169px; } }
+      background-size: 390px 202px; } }
     @media only screen and (min-width: 768px) {
       .accordion dt > a {
         padding: 26px 60px 28px 130px; }
         .accordion dt > a:after {
           margin-top: -7px;
           background-image: url(../images/desktop/sprites.png);
-          background-position: -50px -164px;
+          background-position: -544px -77px;
           width: 26px;
           height: 14px; }
         .accordion dt > a .title {
@@ -1496,18 +1494,18 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .accordion dt.is-opened > a:after {
         margin-top: -5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -94px -104px;
+        background-position: -279px -82px;
         width: 19px;
         height: 10px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
     .accordion dt.is-opened > a:after {
       background-image: url(../images/mobile/sprites@2x.png);
-      background-size: 190px 169px; } }
+      background-size: 390px 202px; } }
     @media only screen and (min-width: 768px) {
       .accordion dt.is-opened > a:after {
         margin-top: -7px;
         background-image: url(../images/desktop/sprites.png);
-        background-position: -82px -164px;
+        background-position: -512px -77px;
         width: 26px;
         height: 14px; } }
   .accordion dd {
@@ -1604,6 +1602,221 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         line-height: 32px;
         border-radius: 32px; } }
 
+/* 서포트 바로가기 */
+.support-shortcut {
+  overflow: hidden;
+  padding-top: 51px;
+  background-color: #4b4b4b; }
+  .support-shortcut .shortcut {
+    display: block;
+    padding: 40px 0;
+    font-weight: 400;
+    color: #fff;
+    text-align: center; }
+    .support-shortcut .shortcut:before {
+      content: '';
+      display: block;
+      margin: 0 auto 16px auto; }
+    .support-shortcut .shortcut:after {
+      content: '';
+      display: block;
+      margin: 21px auto 0 auto; }
+    .support-shortcut .shortcut strong {
+      display: block;
+      font-size: 1.500rem;
+      font-weight: 500; }
+    .support-shortcut .shortcut p {
+      display: block;
+      margin-top: 7px;
+      font-size: 0.750rem; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .support-shortcut {
+      background: url("/assets/images/mobile/bg_support@2x.jpg") center top no-repeat;
+      background-size: cover; }
+      .support-shortcut ul li + li {
+        border-top: 1px solid #666; }
+      .support-shortcut .shortcut.faq:before {
+        background-image: url(../images/mobile/sprites.png);
+        background-position: -104px -104px;
+        width: 98px;
+        height: 98px; } }
+    @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+      .support-shortcut .shortcut.faq:before {
+        background-image: url(../images/mobile/sprites@2x.png);
+        background-size: 390px 202px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .support-shortcut .shortcut.faq:after {
+        background-image: url(../images/mobile/sprites.png);
+        background-position: -284px -116px;
+        width: 32px;
+        height: 32px; } }
+    @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+      .support-shortcut .shortcut.faq:after {
+        background-image: url(../images/mobile/sprites@2x.png);
+        background-size: 390px 202px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .support-shortcut .shortcut.qna:before {
+        background-image: url(../images/mobile/sprites.png);
+        background-position: 0px -104px;
+        width: 98px;
+        height: 98px; } }
+    @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+      .support-shortcut .shortcut.qna:before {
+        background-image: url(../images/mobile/sprites@2x.png);
+        background-size: 390px 202px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .support-shortcut .shortcut.qna:after {
+        background-image: url(../images/mobile/sprites.png);
+        background-position: -284px -116px;
+        width: 32px;
+        height: 32px; } }
+    @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+      .support-shortcut .shortcut.qna:after {
+        background-image: url(../images/mobile/sprites@2x.png);
+        background-size: 390px 202px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .support-shortcut .shortcut.manual:before {
+        background-image: url(../images/mobile/sprites.png);
+        background-position: -104px 0px;
+        width: 98px;
+        height: 98px; } }
+    @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+      .support-shortcut .shortcut.manual:before {
+        background-image: url(../images/mobile/sprites@2x.png);
+        background-size: 390px 202px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .support-shortcut .shortcut.manual:after {
+        background-image: url(../images/mobile/sprites.png);
+        background-position: -208px -116px;
+        width: 32px;
+        height: 32px; } }
+    @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+      .support-shortcut .shortcut.manual:after {
+        background-image: url(../images/mobile/sprites@2x.png);
+        background-size: 390px 202px; } }
+  @media only screen and (min-width: 768px) {
+    .support-shortcut {
+      padding-top: 100px;
+      min-width: 1120px;
+      background: url("/assets/images/desktop/bg_support.jpg") center top no-repeat;
+      background-size: cover; }
+      .support-shortcut ul {
+        margin: 0 auto;
+        width: 1120px; }
+        .support-shortcut ul > li {
+          box-sizing: border-box;
+          float: left;
+          width: 33.3%; }
+          .support-shortcut ul > li + li {
+            border-left: 1px solid #666; }
+      .support-shortcut .shortcut {
+        padding: 140px 0; }
+        .support-shortcut .shortcut:before {
+          margin-bottom: 24px; }
+        .support-shortcut .shortcut:after {
+          margin-top: 27px; }
+        .support-shortcut .shortcut strong {
+          font-size: 2.000rem; }
+        .support-shortcut .shortcut p {
+          margin-top: 4px;
+          font-size: 1.000rem;
+          line-height: 1.500em; }
+        .support-shortcut .shortcut.faq:before {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: 0px -134px;
+          width: 128px;
+          height: 128px; }
+        .support-shortcut .shortcut.faq:after {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: -354px -47px;
+          width: 48px;
+          height: 48px; }
+        .support-shortcut .shortcut.qna:before {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: -134px 0px;
+          width: 128px;
+          height: 128px; }
+        .support-shortcut .shortcut.qna:after {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: -354px -47px;
+          width: 48px;
+          height: 48px; }
+        .support-shortcut .shortcut.manual:before {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: 0px 0px;
+          width: 128px;
+          height: 128px; }
+        .support-shortcut .shortcut.manual:after {
+          background-image: url(../images/desktop/sprites.png);
+          background-position: -408px -47px;
+          width: 48px;
+          height: 48px; }
+        .support-shortcut .shortcut + .shortcut {
+          border-left: 1px solid #666; } }
+
+/* 튜토리얼 */
+.tutorial {
+  box-sizing: border-box;
+  padding: 34px 0 0 0;
+  height: 160px;
+  background: url("/assets/images/mobile/bg_tutorial@2x.jpg") center center no-repeat;
+  background-size: cover; }
+  .tutorial .title {
+    display: block;
+    margin: 0 auto;
+    text-indent: -9999px; }
+  .tutorial .detail {
+    margin-top: 25px;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.444em; }
+  .tutorial .btn-play {
+    display: block;
+    margin: 25px auto 0 auto;
+    text-indent: -9999px; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .tutorial .title {
+      background-image: url(../images/mobile/sprites.png);
+      background-position: -208px 0px;
+      width: 182px;
+      height: 22px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+    .tutorial .title {
+      background-image: url(../images/mobile/sprites@2x.png);
+      background-size: 390px 202px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .tutorial .detail {
+      display: none; }
+    .tutorial .btn-play {
+      background-image: url(../images/mobile/sprites.png);
+      background-position: -262px -28px;
+      width: 48px;
+      height: 48px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+    .tutorial .btn-play {
+      background-image: url(../images/mobile/sprites@2x.png);
+      background-size: 390px 202px; } }
+  @media only screen and (min-width: 768px) {
+    .tutorial {
+      padding: 96px 0 0 80px;
+      height: 400px;
+      background: url("/assets/images/desktop/bg_tutorial.jpg") center center no-repeat;
+      background-size: cover; }
+      .tutorial .title {
+        margin: 0;
+        background-image: url(../images/desktop/sprites.png);
+        background-position: -268px 0px;
+        width: 348px;
+        height: 41px; }
+      .tutorial .btn-play {
+        margin: 0;
+        margin-top: 38px;
+        background-image: url(../images/desktop/sprites.png);
+        background-position: -268px -109px;
+        width: 64px;
+        height: 64px; } }
+
 body {
   background-color: #fff; }
 
@@ -1687,6 +1900,44 @@ body {
         color: #252525; }
         body.whatsnew .layout-contents .page-title {
           display: none; } }
+
+/* customer */
+.layout-customer {
+  padding: 45px 0 50px 0;
+  text-align: center;
+  background-color: #f7f7f7; }
+  .layout-customer .title {
+    font-size: 1.438rem;
+    font-wieght: 500;
+    color: #666; }
+    .layout-customer .title strong {
+      font-family: "Roboto", sans-serif;
+      color: #ed6627; }
+  .layout-customer .detail {
+    margin-top: 10px;
+    font-size: 0.750rem;
+    color: #666;
+    line-height: 1.667em; }
+    .layout-customer .detail:after {
+      content: '';
+      display: block;
+      margin: 21px auto 0 auto;
+      height: 1px;
+      width: 50px;
+      background-color: #999; }
+  @media only screen and (min-width: 768px) {
+    .layout-customer {
+      padding: 91px 0 100px 0;
+      min-width: 1120px; }
+      .layout-customer .title {
+        font-size: 2.875rem; }
+      .layout-customer .detail {
+        margin-top: 23px;
+        font-size: 1.125rem;
+        line-height: 1.500em; }
+        .layout-customer .detail:after {
+          margin-top: 35px;
+          width: 70px; } }
 
 /* footer */
 .layout-footer {
