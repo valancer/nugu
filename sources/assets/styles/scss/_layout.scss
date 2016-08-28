@@ -1,46 +1,97 @@
 
 
-body { background-color: #fff; }
+body { background-color: #fff;
+	&.is-menu-open { overflow: hidden;
+		.mobile-menus { top: 0; transition: top 0.3s; }
+	}
+}
 
 @include mobile {
 	.only-desktop { display: none; }
 	img { width: 100%; }
+
+	/* mobile menu */
+	.mobile-menus { display: block; position: fixed; top: 100%; right: 0; bottom: 0; left: 0; z-index: z("gnb") + 1; overflow: scroll; padding-top: 68px; background-color: rgba(255, 255, 255, 1);
+		transition: top 0.3s;
+
+		.btn-close { display: block; position: absolute; top: 10px; right: 10px; text-indent: -9999px; @include retina-sprite($sm-btn-close-group); }
+		.title { display: block; margin: 0 auto; text-indent: -9999px; @include retina-sprite($sm-nugu-big-group); }
+
+		.shortcut-menus { display: block; }
+
+		.login-container { padding: 20px 0; background-color: #f5f5f5;
+			.btn-login { margin: 0 auto; }
+
+			.btns { margin-top: 16px; text-align: center;
+				a { display: inline-block; margin: 0 2px 0 6px; height: 24px; width: 100px; font-size: 0.625rem; font-weight: 500; color: #868686; text-align: center; line-height: 24px; border-radius: 24px; background-color: #fff; }
+			}
+		}
+	}
 }
 
 @include desktop {
 	.only-mobile { display: none; }
+
+	.mobile-menus { display: none; }
+
+	/* user menu */
+	.user-menus { position: fixed; top: 0; right: 0; left: 0; z-index: z("gnb"); height: 50px; background-color: #ddd;
+		.title { display: none; }
+		.btns { padding-right: 40px; text-align: right;
+			a { font-size: 1.000rem; font-weight: 300; color: #666; line-height: 50px;
+				+ a {
+					&:before { content: '|'; display: inline-block; margin: -8px 16px 0 16px; font-size: 0.750rem; color: #b1b1b1; vertical-align: middle; }
+				}
+			}
+		}
+
+		&.is-show {
+			~ .layout-header { top: 50px; transition: top 0.3s; }
+
+			~ main {
+				.support-shortcut { margin-top: 50px; }
+				.layout-contents { padding-top: 151px; transition: padding 0.3s; }
+			}
+		}
+	}
 }
+
 
 
 /* header */
 .layout-header { position: fixed; top: 0; right: 0; left: 0; z-index: z("gnb"); height: 50px; border-bottom: 1px solid #ddd; background-color: #fff;
-	.btn-menu { position: absolute; top: 50%; left: 10px; margin-top: -$sm-btn-menus-height/2; }
-	.btn-nugu { position: absolute; top: 50%; margin-top: -$sm-btn-nugu-height/2; }
-	.btn-login { position: absolute; top: 50%; right: 10px; margin-top: -$sm-btn-nugu-height/2; }
+	.btn-menu { position: absolute; top: 50%; right: 10px; margin-top: -$sm-btn-menus-height/2; }
+	.btn-nugu { }
 
 	@include mobile {
-		.btn-nugu { left: 50%; margin-left: -$sm-btn-nugu-width/2; }
+		.btn-nugu { margin-top: 15px; margin-left: 15px; }
+		.btn-login { display: none; }
 	}
 
-	@include desktop { height: 100px; min-width: $desktop-min-width; 
+	@include desktop { height: 100px; min-width: $desktop-min-width; transition: top 0.3s; 
 		.btn-menu { display: none; }
-		.btn-nugu { left: 40px; margin-top: -$sd-btn-nugu-height/2; }
-		.btn-login { right: 30px; margin-top: -$sd-btn-nugu-height/2; }
+		.btn-nugu { position: absolute; top: 50%; left: 40px; margin-top: -$sd-nugu-height/2; }
+		.btn-login { position: absolute; top: 50%; right: 30px; margin-top: -$sd-btn-login-height/2; }
+		.btn-user { position: absolute; top: 50%; right: 30px; margin-top: -$sd-icon-user-height/2; }
 	}
 }
 
 
 /* contents */
-.layout-contents { margin: 51px auto 0 auto; padding-bottom: 60px;
+.layout-contents { margin: 0 auto; padding-bottom: 60px;
 	.page-title { font-family: $font-roboto-stack; font-size: 1.500rem; font-weight: 500; color: #252525; text-align: center; }
 	.hidden-title { display: none; }
 
-	@include mobile { padding-top: 24px; }
+	@include mobile { padding-top: 24px;
+	}
 
-	@include desktop { margin-top: 0; padding-top: 101px; padding-bottom: 120px; width: $desktop-min-width; 
+	@include desktop { margin-top: 0; padding-top: 101px; padding-bottom: 120px; width: $desktop-min-width; transition: padding 0.3s;
 		.page-title { display: block; padding-top: 50px; font-size: 2.750rem; font-weight: 500; color: #252525;
 			body.whatsnew & { display: none; }
 		}
+
+		.layout-inner-contents { margin: 0 auto; width: $desktop-min-width; }
+		&.fullsize { width: 100%; }
 	}
 }
 
