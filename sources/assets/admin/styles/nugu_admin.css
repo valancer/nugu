@@ -617,6 +617,7 @@ body.login {
   min-width: auto; }
 
 .layout-contents {
+  z-index: 1;
   padding: 96px 30px 100px 290px;
   min-width: 960px; }
   .layout-contents .page-title {

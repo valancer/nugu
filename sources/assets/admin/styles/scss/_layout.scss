@@ -53,7 +53,7 @@ body { min-width: 1280px; background-color: #fff; }
 
 /* contents */
 body.login { min-height: 600px; min-width: auto; }
-.layout-contents { padding: 96px 30px 100px 290px; min-width: $content-min-width;
+.layout-contents { z-index: z("default"); padding: 96px 30px 100px 290px; min-width: $content-min-width;
 	.page-title { font-size: 22px; font-weight: bold; color: #222; }
 
 	.login & { position: absolute; top: 0; bottom: 0; padding: 0; min-height: 500px; min-width: auto; width: 100%; border-top: 6px solid #ed6527;

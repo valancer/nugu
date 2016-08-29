@@ -82,7 +82,10 @@ body { background-color: #fff;
 	.page-title { font-family: $font-roboto-stack; font-size: 1.500rem; font-weight: 500; color: #252525; text-align: center; }
 	.hidden-title { display: none; }
 
+	&.fullsize { padding-bottom: 0px; width: 100%; }
+
 	@include mobile { padding-top: 24px;
+		&.fullsize { padding-top: 0px; }
 	}
 
 	@include desktop { margin-top: 0; padding-top: 101px; padding-bottom: 120px; width: $desktop-min-width; transition: padding 0.3s;
@@ -91,7 +94,6 @@ body { background-color: #fff;
 		}
 
 		.layout-inner-contents { margin: 0 auto; width: $desktop-min-width; }
-		&.fullsize { width: 100%; }
 	}
 }
 
