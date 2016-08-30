@@ -44,6 +44,9 @@ input[type=search],
 input[type=checkbox],
 input[type=radio],
 input[type=file] { appearance: none; cursor: pointer; border: 0px; }
+select::-ms-expand {
+    display: none;
+}
 
 input:focus,
 button:focus,

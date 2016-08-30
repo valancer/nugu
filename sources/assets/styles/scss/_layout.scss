@@ -68,7 +68,7 @@ body { background-color: #fff;
 		.btn-login { display: none; }
 	}
 
-	@include desktop { height: 100px; min-width: $desktop-min-width; transition: top 0.3s; 
+	@include desktop { height: 100px; transition: top 0.3s; 
 		.btn-menu { display: none; }
 		.btn-nugu { position: absolute; top: 50%; left: 40px; margin-top: -$sd-nugu-height/2; }
 		.btn-login { position: absolute; top: 50%; right: 30px; margin-top: -$sd-btn-login-height/2; }

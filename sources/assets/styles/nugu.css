@@ -281,7 +281,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 768px) {
     .btn-nugu {
       background-image: url(../images/desktop/sprites.png);
-      background-position: -268px -47px;
+      background-position: -268px -98px;
       width: 227px;
       height: 34px; } }
 
@@ -313,7 +313,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 768px) {
     .btn-login {
       background-image: url(../images/desktop/sprites.png);
-      background-position: -338px -192px;
+      background-position: -70px -268px;
       width: 60px;
       height: 60px; } }
 
@@ -347,7 +347,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         margin-left: 10px;
         vertical-align: middle;
         background-image: url(../images/desktop/sprites.png);
-        background-position: -540px -192px;
+        background-position: -272px -268px;
         width: 40px;
         height: 40px; } }
 
@@ -499,7 +499,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         right: 30px;
         margin-top: -12px;
         background-image: url(../images/desktop/sprites.png);
-        background-position: -586px -192px;
+        background-position: -318px -268px;
         width: 24px;
         height: 24px; } }
 
@@ -546,7 +546,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         vertical-align: middle; }
       .category-container .new {
         background-image: url(../images/desktop/sprites.png);
-        background-position: -108px -294px;
+        background-position: -464px -268px;
         width: 16px;
         height: 16px; } }
 
@@ -645,7 +645,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .item-info .new {
     background-image: url(../images/mobile/sprites.png);
-    background-position: -258px -208px;
+    background-position: -425px -97px;
     width: 12px;
     height: 12px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -672,7 +672,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         vertical-align: middle; }
       .item-info .options .number.hit > span {
         background-image: url(../images/mobile/sprites.png);
-        background-position: -276px -208px;
+        background-position: -278px -208px;
         width: 13px;
         height: 11px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -706,7 +706,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
     white-space: nowrap; }
   .item-info .new {
     background-image: url(../images/desktop/sprites.png);
-    background-position: -108px -294px;
+    background-position: -464px -268px;
     width: 16px;
     height: 16px; }
   .item-info .options {
@@ -744,7 +744,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       right: 30px;
       margin-top: -13px;
       background-image: url(../images/desktop/sprites.png);
-      background-position: 0px -351px;
+      background-position: -599px -47px;
       width: 14px;
       height: 26px; }
     .list-bbs-item .thumb {
@@ -846,22 +846,22 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           border-bottom: 2px solid #fff; }
         .list-bbs-navigation .btns.first {
           background-image: url(../images/desktop/sprites.png);
-          background-position: -29px -322px;
+          background-position: -377px -268px;
           width: 23px;
           height: 23px; }
         .list-bbs-navigation .btns.prev {
           background-image: url(../images/desktop/sprites.png);
-          background-position: -58px -322px;
+          background-position: -406px -268px;
           width: 23px;
           height: 23px; }
         .list-bbs-navigation .btns.next {
           background-image: url(../images/desktop/sprites.png);
-          background-position: 0px -322px;
+          background-position: -348px -268px;
           width: 23px;
           height: 23px; }
         .list-bbs-navigation .btns.last {
           background-image: url(../images/desktop/sprites.png);
-          background-position: -87px -322px;
+          background-position: -435px -268px;
           width: 23px;
           height: 23px; } }
 
@@ -888,7 +888,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         text-indent: -9999px;
         vertical-align: middle;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -265px -179px;
+        background-position: -258px -208px;
         width: 14px;
         height: 13px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -917,7 +917,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           margin-top: -4px;
           vertical-align: middle;
           background-image: url(../images/desktop/sprites.png);
-          background-position: -406px -268px;
+          background-position: -457px -243px;
           width: 14px;
           height: 12px; }
       .btn-recommend .txt {
@@ -990,7 +990,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           vertical-align: middle; }
         .view-bbs-item-info .options .number.hit > span {
           background-image: url(../images/mobile/sprites.png);
-          background-position: -409px -97px;
+          background-position: -419px -126px;
           width: 17px;
           height: 13px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1000,7 +1000,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) {
         .view-bbs-item-info .options .number.recommend > span {
           background-image: url(../images/mobile/sprites.png);
-          background-position: -265px -179px;
+          background-position: -258px -208px;
           width: 14px;
           height: 13px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1091,7 +1091,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       bottom: 15px;
       text-indent: -9999px;
       background-image: url(../images/mobile/sprites.png);
-      background-position: -208px -125px;
+      background-position: -262px -126px;
       width: 48px;
       height: 48px;
       background-color: transparent; } }
@@ -1150,7 +1150,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .view-bbs-navigation a.prev:after {
         margin-top: -5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -307px -179px;
+        background-position: -385px -180px;
         width: 16px;
         height: 10px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1161,7 +1161,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .view-bbs-navigation a.next:after {
         margin-top: -5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -285px -179px;
+        background-position: -407px -180px;
         width: 16px;
         height: 10px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1186,13 +1186,13 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         .view-bbs-navigation a.prev:after {
           margin-top: -7px;
           background-image: url(../images/desktop/sprites.png);
-          background-position: -308px -268px;
+          background-position: -359px -243px;
           width: 22px;
           height: 14px; }
         .view-bbs-navigation a.next:after {
           margin-top: -7px;
           background-image: url(../images/desktop/sprites.png);
-          background-position: -336px -268px;
+          background-position: -387px -243px;
           width: 22px;
           height: 14px; } }
 
@@ -1331,7 +1331,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
             right: 15px;
             margin-top: -16px;
             background-image: url(../images/mobile/sprites.png);
-            background-position: -84px -251px;
+            background-position: -46px -251px;
             width: 32px;
             height: 32px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1343,7 +1343,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           right: 0;
           bottom: -46px;
           background-image: url(../images/mobile/sprites.png);
-          background-position: -316px -125px;
+          background-position: -316px -126px;
           width: 44px;
           height: 44px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1379,7 +1379,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         right: 107px;
         margin-top: -22px;
         background-image: url(../images/desktop/sprites.png);
-        background-position: -558px -130px;
+        background-position: -558px -181px;
         width: 44px;
         height: 44px; }
       .forms .filebox .upload-name {
@@ -1452,7 +1452,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .forms .complete:before {
         margin: 0 auto 17px auto;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -104px 0px;
+        background-position: 0px 0px;
         width: 98px;
         height: 98px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1540,7 +1540,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .accordion dt > a:after {
         margin-top: -5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -419px -125px;
+        background-position: -419px -145px;
         width: 19px;
         height: 10px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1553,7 +1553,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         .accordion dt > a:after {
           margin-top: -7px;
           background-image: url(../images/desktop/sprites.png);
-          background-position: -244px -268px;
+          background-position: -295px -243px;
           width: 26px;
           height: 14px; }
         .accordion dt > a .title {
@@ -1567,7 +1567,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .accordion dt.is-opened > a:after {
         margin-top: -5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -419px -141px;
+        background-position: -360px -180px;
         width: 19px;
         height: 10px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1578,7 +1578,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .accordion dt.is-opened > a:after {
         margin-top: -7px;
         background-image: url(../images/desktop/sprites.png);
-        background-position: -276px -268px;
+        background-position: -327px -243px;
         width: 26px;
         height: 14px; } }
   .accordion dd {
@@ -1720,7 +1720,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) {
       .support-shortcut .shortcut.faq:after {
         background-image: url(../images/mobile/sprites.png);
-        background-position: -46px -251px;
+        background-position: -84px -251px;
         width: 32px;
         height: 32px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1730,7 +1730,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) {
       .support-shortcut .shortcut.qna:before {
         background-image: url(../images/mobile/sprites.png);
-        background-position: -104px -104px;
+        background-position: -104px 0px;
         width: 98px;
         height: 98px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1740,7 +1740,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) {
       .support-shortcut .shortcut.qna:after {
         background-image: url(../images/mobile/sprites.png);
-        background-position: -46px -251px;
+        background-position: -84px -251px;
         width: 32px;
         height: 32px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1750,7 +1750,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) {
       .support-shortcut .shortcut.manual:before {
         background-image: url(../images/mobile/sprites.png);
-        background-position: 0px 0px;
+        background-position: -104px -104px;
         width: 98px;
         height: 98px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1802,7 +1802,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           height: 128px; }
         .support-shortcut .shortcut.faq:after {
           background-image: url(../images/desktop/sprites.png);
-          background-position: -54px -268px;
+          background-position: 0px -338px;
           width: 48px;
           height: 48px; }
         .support-shortcut .shortcut.qna:before {
@@ -1812,7 +1812,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           height: 128px; }
         .support-shortcut .shortcut.qna:after {
           background-image: url(../images/desktop/sprites.png);
-          background-position: -54px -268px;
+          background-position: 0px -338px;
           width: 48px;
           height: 48px; }
         .support-shortcut .shortcut.manual:before {
@@ -1822,7 +1822,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           height: 128px; }
         .support-shortcut .shortcut.manual:after {
           background-image: url(../images/desktop/sprites.png);
-          background-position: 0px -268px;
+          background-position: -54px -338px;
           width: 48px;
           height: 48px; }
         .support-shortcut .shortcut + .shortcut {
@@ -1864,7 +1864,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       display: none; }
     .tutorial .btn-play {
       background-image: url(../images/mobile/sprites.png);
-      background-position: -262px -125px;
+      background-position: -208px -126px;
       width: 48px;
       height: 48px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -1887,7 +1887,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         margin: 0;
         margin-top: 38px;
         background-image: url(../images/desktop/sprites.png);
-        background-position: -268px -192px;
+        background-position: 0px -268px;
         width: 64px;
         height: 64px; } }
 
@@ -1992,7 +1992,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         background-size: cover; }
       .main-nugu-info .nugu-detail .title .txt-nugu {
         background-image: url(../images/mobile/sprites.png);
-        background-position: -208px -97px;
+        background-position: -319px -97px;
         width: 100px;
         height: 22px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2010,7 +2010,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         top: 2px;
         left: 0;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -363px -179px;
+        background-position: -331px -208px;
         width: 8px;
         height: 6px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2025,7 +2025,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         bottom: 7px;
         right: 0;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -377px -179px;
+        background-position: -429px -180px;
         width: 8px;
         height: 6px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2036,7 +2036,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .main-nugu-info .list-featured-nugu > li.melon:after {
         margin-top: -18.5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: 0px -208px;
+        background-position: -106px -208px;
         width: 47px;
         height: 37px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2049,7 +2049,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         display: inline-block;
         margin-left: 10px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -208px -179px;
+        background-position: -303px -180px;
         width: 51px;
         height: 14px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2060,7 +2060,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .main-nugu-info .list-featured-nugu > li.smarthome:after {
         margin-top: -18.5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -53px -208px;
+        background-position: -159px -208px;
         width: 47px;
         height: 37px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2084,7 +2084,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .main-nugu-info .list-featured-nugu > li.schedule:after {
         margin-top: -18.5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -106px -208px;
+        background-position: -53px -208px;
         width: 47px;
         height: 37px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2095,7 +2095,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .main-nugu-info .list-featured-nugu > li.wheather:after {
         margin-top: -18.5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -159px -208px;
+        background-position: 0px -208px;
         width: 47px;
         height: 37px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2106,7 +2106,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .main-nugu-info .list-featured-nugu > li.alarm:after {
         margin-top: -18.5px;
         background-image: url(../images/mobile/sprites.png);
-        background-position: -366px -125px;
+        background-position: -366px -126px;
         width: 47px;
         height: 37px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2135,7 +2135,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           .main-nugu-info .nugu-detail .title .txt-nugu {
             margin: 18px 0 0 7px;
             background-image: url(../images/desktop/sprites.png);
-            background-position: -444px -87px;
+            background-position: -444px -138px;
             width: 170px;
             height: 37px; }
         .main-nugu-info .nugu-detail .example {
@@ -2192,7 +2192,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
               top: 1px;
               left: 0;
               background-image: url(../images/desktop/sprites.png);
-              background-position: -385px -268px;
+              background-position: -436px -243px;
               width: 15px;
               height: 12px; }
             .main-nugu-info .list-featured-nugu > li .example:after {
@@ -2202,12 +2202,12 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
               bottom: 5px;
               right: 0;
               background-image: url(../images/desktop/sprites.png);
-              background-position: -364px -268px;
+              background-position: -415px -243px;
               width: 15px;
               height: 12px; }
           .main-nugu-info .list-featured-nugu > li.melon:after {
             background-image: url(../images/desktop/sprites.png);
-            background-position: -472px -192px;
+            background-position: -204px -268px;
             width: 62px;
             height: 46px; }
           .main-nugu-info .list-featured-nugu > li.melon .title:after {
@@ -2215,12 +2215,12 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
             display: inline-block;
             margin-left: 6px;
             background-image: url(../images/desktop/sprites.png);
-            background-position: -108px -268px;
+            background-position: -501px -98px;
             width: 75px;
             height: 20px; }
           .main-nugu-info .list-featured-nugu > li.smarthome:after {
             background-image: url(../images/desktop/sprites.png);
-            background-position: -404px -192px;
+            background-position: -136px -268px;
             width: 62px;
             height: 46px; }
           .main-nugu-info .list-featured-nugu > li.smarthome .title:after {
@@ -2228,22 +2228,22 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
             display: inline-block;
             margin-left: 6px;
             background-image: url(../images/desktop/sprites.png);
-            background-position: -501px -47px;
+            background-position: -483px -47px;
             width: 110px;
             height: 31px; }
           .main-nugu-info .list-featured-nugu > li.schedule:after {
             background-image: url(../images/desktop/sprites.png);
-            background-position: -490px -130px;
+            background-position: -354px -181px;
             width: 62px;
             height: 46px; }
           .main-nugu-info .list-featured-nugu > li.wheather:after {
             background-image: url(../images/desktop/sprites.png);
-            background-position: -354px -130px;
+            background-position: -490px -181px;
             width: 62px;
             height: 46px; }
           .main-nugu-info .list-featured-nugu > li.alarm:after {
             background-image: url(../images/desktop/sprites.png);
-            background-position: -422px -130px;
+            background-position: -422px -181px;
             width: 62px;
             height: 46px; } }
 
@@ -2313,7 +2313,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       padding: 65px 0 0 0; }
     .main-product .message-benefit strong .txt-nugu {
       background-image: url(../images/mobile/sprites.png);
-      background-position: -314px -97px;
+      background-position: -208px -180px;
       width: 89px;
       height: 19px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2346,7 +2346,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           margin-left: 6px;
           text-align: left;
           background-image: url(../images/desktop/sprites.png);
-          background-position: -268px -87px;
+          background-position: -268px -138px;
           width: 170px;
           height: 37px; }
     .main-product .info {
@@ -2458,7 +2458,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       background: url("/assets/images/mobile/bg_main_company@2x.png") left top repeat; }
       .main-company .recommend .kongdoo .say-hello:before {
         background-image: url(../images/mobile/sprites.png);
-        background-position: -329px -179px;
+        background-position: -297px -208px;
         width: 11px;
         height: 10px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2468,7 +2468,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   @media only screen and (min-width: 320px) and (max-width: 767px) {
       .main-company .recommend .kongdoo .say-hello:after {
         background-image: url(../images/mobile/sprites.png);
-        background-position: -346px -179px;
+        background-position: -314px -208px;
         width: 11px;
         height: 9px; } }
     @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -2507,13 +2507,13 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
             .main-company .recommend .kongdoo .say-hello:before {
               margin-top: -14px;
               background-image: url(../images/desktop/sprites.png);
-              background-position: -189px -268px;
+              background-position: -582px -98px;
               width: 22px;
               height: 19px; }
             .main-company .recommend .kongdoo .say-hello:after {
               margin-bottom: 4px;
               background-image: url(../images/desktop/sprites.png);
-              background-position: -217px -268px;
+              background-position: -268px -243px;
               width: 21px;
               height: 18px; }
             .main-company .recommend .kongdoo .say-hello span {
@@ -2604,6 +2604,275 @@ body.company .kongdoo {
       font-weight: 500;
       line-height: 44px;
       border: 2px solid #fff; } }
+
+/* product */
+body.product {
+  /* header */
+  /* featured */ }
+  body.product .nugu-header {
+    box-sizing: border-box;
+    padding: 26px 0 0 0; }
+    body.product .nugu-header .title {
+      font-size: 1.688rem;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.185em;
+      text-align: center; }
+      body.product .nugu-header .title em {
+        color: #ed6627; }
+      body.product .nugu-header .title strong {
+        display: block;
+        margin: 3px auto 0 auto;
+        text-indent: -9999px; }
+    body.product .nugu-header .product-img {
+      margin: 14px auto 0 auto;
+      height: 354px;
+      width: 320px; }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      body.product .nugu-header {
+        height: 517px;
+        background: url("/assets/images/mobile/bg_product_header@2x.jpg") center top repeat-x;
+        background-size: 320px 517px; }
+        body.product .nugu-header .title strong {
+          background-image: url(../images/mobile/sprites.png);
+          background-position: -208px -97px;
+          width: 105px;
+          height: 23px; } }
+    @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+      body.product .nugu-header .title strong {
+        background-image: url(../images/mobile/sprites@2x.png);
+        background-size: 438px 291px; } }
+    @media only screen and (min-width: 768px) {
+      body.product .nugu-header {
+        padding: 0;
+        min-width: 1280px;
+        background: url("/assets/images/desktop/bg_product_header.jpg") center top repeat-x; }
+        body.product .nugu-header .layout-inner-contents {
+          position: relative;
+          box-sizing: border-box;
+          margin: 0 auto;
+          padding: 244px 0 0 80px;
+          height: 920px;
+          width: 1280px; }
+        body.product .nugu-header .title {
+          position: relative;
+          z-index: 1;
+          padding-left: 20px;
+          font-size: 3.250rem;
+          line-height: 1.308em;
+          text-align: left; }
+          body.product .nugu-header .title strong {
+            margin: 14px 0 0 5px;
+            background-image: url(../images/desktop/sprites.png);
+            background-position: -268px -47px;
+            width: 209px;
+            height: 45px; }
+        body.product .nugu-header .product-img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          margin: 0;
+          height: 870px;
+          width: 860px; } }
+  body.product .featured-product > .title {
+    display: none; }
+  body.product .list-featured-product .featured {
+    text-align: center; }
+    body.product .list-featured-product .featured .title {
+      font-size: 1.563rem;
+      font-weight: 500;
+      color: #ed6627; }
+    body.product .list-featured-product .featured .description {
+      font-size: 0.750rem;
+      color: #666;
+      line-height: 1.667em; }
+      body.product .list-featured-product .featured .description:after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        height: 1px;
+        width: 50px;
+        background-color: #999; }
+    body.product .list-featured-product .featured .example .commands {
+      font-size: 1.313rem;
+      font-weight: 300;
+      color: #868686; }
+    body.product .list-featured-product .featured .example .answer {
+      display: inline-block;
+      position: relative;
+      padding: 0 10px;
+      font-size: 0.750rem;
+      color: #fff;
+      line-height: 33px;
+      border-radius: 5px;
+      background-color: #727272; }
+      body.product .list-featured-product .featured .example .answer:before {
+        content: '';
+        display: none;
+        position: absolute;
+        bottom: 1px;
+        left: 0; }
+      body.product .list-featured-product .featured .example .answer:after {
+        content: '';
+        display: none;
+        position: absolute;
+        bottom: 1px;
+        right: 0; }
+      body.product .list-featured-product .featured .example .answer.left:before {
+        display: block; }
+      body.product .list-featured-product .featured .example .answer.right:after {
+        display: block; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    body.product .list-featured-product .featured {
+      padding: 46px 0 246px 0;
+      text-align: center; }
+      body.product .list-featured-product .featured .description {
+        margin-top: 9px; }
+        body.product .list-featured-product .featured .description:after {
+          margin-top: 21px; }
+      body.product .list-featured-product .featured .example {
+        padding-top: 25px; }
+        body.product .list-featured-product .featured .example .answer {
+          margin-top: 17px; }
+          body.product .list-featured-product .featured .example .answer:before {
+            left: -5px;
+            background-image: url(../images/mobile/sprites.png);
+            background-position: -358px -208px;
+            width: 7px;
+            height: 5px; } }
+        @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+          body.product .list-featured-product .featured .example .answer:before {
+            background-image: url(../images/mobile/sprites@2x.png);
+            background-size: 438px 291px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+          body.product .list-featured-product .featured .example .answer:after {
+            right: -5px;
+            background-image: url(../images/mobile/sprites.png);
+            background-position: -345px -208px;
+            width: 7px;
+            height: 5px; } }
+        @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+          body.product .list-featured-product .featured .example .answer:after {
+            background-image: url(../images/mobile/sprites@2x.png);
+            background-size: 438px 291px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+      body.product .list-featured-product .featured.voice-command {
+        background: url("/assets/images/mobile/product_img02@2x.png") center bottom no-repeat;
+        background-size: 232px 206px; }
+      body.product .list-featured-product .featured.secretary {
+        background: #f7f7f7 url("/assets/images/mobile/product_img03@2x.png") center bottom no-repeat;
+        background-size: 218px 214px; }
+      body.product .list-featured-product .featured.evolution {
+        padding-bottom: 357px;
+        background: url("/assets/images/mobile/product_img04@2x.png") center bottom no-repeat;
+        background-size: 320px 330px; } }
+  @media only screen and (min-width: 768px) {
+    body.product .list-featured-product {
+      margin: 0 auto;
+      width: 1280px; }
+      body.product .list-featured-product > li {
+        margin-top: 80px;
+        background-color: #f7f7f7; }
+        body.product .list-featured-product > li.bg-none {
+          background-color: #fff; }
+      body.product .list-featured-product .featured {
+        box-sizing: border-box;
+        position: relative;
+        height: 560px;
+        text-align: left; }
+        body.product .list-featured-product .featured .title {
+          font-size: 2.875rem;
+          line-height: 1.217em; }
+        body.product .list-featured-product .featured .description {
+          margin-top: 27px;
+          font-size: 1.000rem;
+          line-height: 1.750em; }
+          body.product .list-featured-product .featured .description:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            height: 1px;
+            width: 70px;
+            background-color: #999; }
+        body.product .list-featured-product .featured .example .commands {
+          font-size: 2.500rem;
+          line-height: 1.400em; }
+        body.product .list-featured-product .featured .example .answer {
+          margin-top: 0px;
+          padding: 0 25px;
+          font-size: 1.063em;
+          line-height: 66px;
+          border-radius: 10px; }
+          body.product .list-featured-product .featured .example .answer:before {
+            left: -9px;
+            bottom: 2px;
+            background-image: url(../images/desktop/sprites.png);
+            background-position: -496px -243px;
+            width: 13px;
+            height: 9px; }
+          body.product .list-featured-product .featured .example .answer:after {
+            right: -9px;
+            bottom: 2px;
+            background-image: url(../images/desktop/sprites.png);
+            background-position: -477px -243px;
+            width: 13px;
+            height: 9px; }
+        body.product .list-featured-product .featured.voice-command {
+          padding: 0 0 0 920px;
+          background: url("/assets/images/desktop/product_img02.png") 80px bottom no-repeat; }
+          body.product .list-featured-product .featured.voice-command .featured-inner-contents {
+            box-sizing: border-box;
+            padding: 32px 80px 0 30px;
+            height: 100%;
+            background-color: #fff; }
+          body.product .list-featured-product .featured.voice-command .example {
+            position: absolute;
+            bottom: 140px;
+            right: 360px;
+            padding-right: 30px;
+            width: 290px;
+            text-align: right; }
+            body.product .list-featured-product .featured.voice-command .example .answer {
+              margin-top: 51px; }
+        body.product .list-featured-product .featured.secretary {
+          padding: 0 920px 0 0;
+          text-align: right;
+          background: url("/assets/images/desktop/product_img03.png") 786px bottom no-repeat; }
+          body.product .list-featured-product .featured.secretary .featured-inner-contents {
+            box-sizing: border-box;
+            padding: 32px 30px 0 100px;
+            height: 100%;
+            background-color: #fff; }
+          body.product .list-featured-product .featured.secretary .description:after {
+            left: 260px; }
+          body.product .list-featured-product .featured.secretary .example {
+            position: absolute;
+            bottom: 140px;
+            left: 390px;
+            width: 350px;
+            text-align: left; }
+            body.product .list-featured-product .featured.secretary .example .answer {
+              margin-top: 51px; }
+        body.product .list-featured-product .featured.evolution {
+          height: auto; }
+          body.product .list-featured-product .featured.evolution .featured-inner-contents {
+            margin: 0 auto;
+            width: 1120px;
+            text-align: center;
+            height: 748px;
+            background: url("/assets/images/desktop/product_img04.png") center bottom no-repeat; }
+          body.product .list-featured-product .featured.evolution .description:after {
+            position: static;
+            margin: 35px auto 0 auto; }
+          body.product .list-featured-product .featured.evolution .example {
+            position: absolute;
+            bottom: 140px;
+            left: 880px;
+            text-align: left; }
+            body.product .list-featured-product .featured.evolution .example .answer {
+              margin-top: 51px; } }
 
 body {
   background-color: #fff; }
@@ -2748,7 +3017,6 @@ body {
   @media only screen and (min-width: 768px) {
     .layout-header {
       height: 100px;
-      min-width: 1120px;
       transition: top 0.3s; }
       .layout-header .btn-menu {
         display: none; }
