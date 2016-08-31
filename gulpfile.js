@@ -280,6 +280,10 @@ gulp.task('copy:release', function () {
 	.pipe(gulp.dest('release/'));
 });
 
+gulp.task('copy:emails', function () {
+	return gulp.src('sources/html/email/**')
+	.pipe(gulp.dest('build/email/'));
+});
 
 gulp.task('copy:admin:styles', function () {
 	return gulp.src('sources/assets/admin/styles/*.css')
@@ -338,13 +342,13 @@ gulp.task('scripts-admin-build', ['jshint'], function() { });
 gulp.task('html-admin-build', ['includes:admin'], function() { });
 
 gulp.task('build', ['clean:build'], function() {
-	gulp.run(['sass-build', 'scripts-build', 'html-build', 'copy:assets', 'connect', 'watch']);
+	gulp.run(['sass-build', 'scripts-build', 'html-build', 'copy:emails', 'copy:assets', 'connect', 'watch']);
 });
 gulp.task('build:admin', ['build'], function() {
 	gulp.run(['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:assets', 'watch:admin']);
 });
 
 gulp.task('release', function(callback) {
-	runSequence('clean:release', ['sass-release', 'scripts-build', 'html-build'], ['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:assets'], ['csscomb', 'csscomb:admin', 'copy:release'], callback);
+	runSequence('clean:release', ['sass-release', 'scripts-build', 'html-build'], ['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:emails', 'copy:assets'], ['csscomb', 'csscomb:admin', 'copy:release'], callback);
 });
 
