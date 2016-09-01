@@ -15,7 +15,7 @@ body { background-color: #fff;
 		transition: top 0.3s;
 
 		.btn-close { display: block; position: absolute; top: 10px; right: 10px; text-indent: -9999px; @include retina-sprite($sm-btn-close-group); }
-		.title { display: block; margin: 0 auto; text-indent: -9999px; @include retina-sprite($sm-nugu-big-group); }
+		.title { display: block; margin: 0 auto; text-indent: -9999px; @include retina-sprite($sm-txt-nugu-07-group); }
 
 		.shortcut-menus { display: block; }
 
@@ -27,6 +27,8 @@ body { background-color: #fff;
 			}
 		}
 	}
+
+	.user-menus { display: none; }
 }
 
 @include desktop {
@@ -70,7 +72,7 @@ body { background-color: #fff;
 
 	@include desktop { height: 100px; transition: top 0.3s; 
 		.btn-menu { display: none; }
-		.btn-nugu { position: absolute; top: 50%; left: 40px; margin-top: -$sd-nugu-height/2; }
+		.btn-nugu { position: absolute; top: 50%; left: 40px; margin-top: -$sd-txt-nugu-07-height/2; }
 		.btn-login { position: absolute; top: 50%; right: 30px; margin-top: -$sd-btn-login-height/2; }
 		.btn-user { position: absolute; top: 50%; right: 30px; margin-top: -$sd-icon-user-height/2; }
 	}
@@ -84,8 +86,9 @@ body { background-color: #fff;
 
 	&.fullsize { padding-bottom: 0px; width: 100%; }
 
-	@include mobile { padding-top: 24px;
-		&.fullsize { padding-top: 0px; }
+	@include mobile { margin: 51px 0 0 0;
+		&.fullsize {  }
+		.page-title { padding-top: 24px; }
 	}
 
 	@include desktop { margin-top: 0; padding-top: 101px; padding-bottom: 120px; width: $desktop-min-width; transition: padding 0.3s;
