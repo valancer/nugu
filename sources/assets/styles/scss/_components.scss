@@ -8,9 +8,9 @@
 
 .btn-menu { display: block; text-indent: -9999px; @include retina-sprite($sm-btn-menus-group); }
 
-.btn-login { display: block; text-indent: -9999px;
-	@include mobile { @include retina-sprite($sm-btn-login-group); }
-	@include desktop { @include sprite($sd-btn-login); }
+.btn-login { display: block; font-family: $font-roboto-stack; font-size: 0.625rem; font-weight: 500; color: #666;
+	@include mobile { font-size: 0.750rem; }
+	@include desktop { font-size: 1.250rem; }
 }
 
 .btn-user { display: block; font-family: $font-roboto-stack; font-size: 0.750rem; color: #868686; 
@@ -39,9 +39,9 @@
 			}
 		}
 
-		.list-sub-menus {
-			> li { padding-top: 25px; text-align: center;
-				> a { display: block; font-size: 0.813rem; color: #ababab; }
+		.list-sub-menus { padding: 5px 0 30px 0; text-align: center;
+			> li { display: inline-block; width: 30%; text-align: center;
+				> a { display: inline-block; font-size: 0.813rem; color: #ababab; }
 			}
 		}
 	}
@@ -652,7 +652,7 @@
 				+ li { border-left: 1px solid #666; }
 			}
 		}
-		.shortcut { padding: 140px 0;
+		.shortcut { padding: 80px 0 60px 0;
 			&:before { margin-bottom: 24px; }
 			&:after { margin-top: 27px; }
 
@@ -708,7 +708,9 @@
 .main-video-container { background-color: rgba(0, 0, 0, 0.8);
 
 	@include mobile { margin-bottom: -3px; height: 300px; }
-	@include desktop { height: 924px; }
+	@include desktop { height: 724px; min-width: 1440px;
+		#player { margin: auto; }
+	}
 }
 
 /* 메인 : NUGU 소개 */
@@ -775,7 +777,7 @@
 			}
 		}
 	}
-	@include desktop { min-width: 1440px; background: #ebeced url('/assets/images/desktop/bg_nugu_info.jpg') center center no-repeat;
+	@include desktop { min-width: 1440px; background: #eef0f2 url('/assets/images/desktop/bg_nugu_info.jpg') center center no-repeat;
 		.layout-inner-contents { position: relative; margin: 0 auto; height: 1024px; width: 1440px !important; }
 
 		.nugu-detail { box-sizing: border-box; float: left; padding: 187px 0 0 66px; height: 100%; width: 640px; text-align: left;
@@ -835,7 +837,7 @@
 		}
 	}
 
-	.info { margin-top: 160px; font-size: 1.000rem; font-weight: 400; color: #fff;
+	.info { margin-top: 191px; font-size: 1.000rem; font-weight: 400; color: #fff;
 		.price { display: block; margin-bottom: 3px; font-family: $font-roboto-stack; font-size: 2.875rem; font-weight: bold; color: #ff802b;
 			span { font-size: 1.250rem; font-weight: 400; color: #fff; }
 		}
@@ -854,7 +856,7 @@
 		}
 	}
 
-	@include desktop { position: relative; height: 1024px; min-width: 1440px; text-align: right; background: url('/assets/images/desktop/bg_nugu_product.jpg') center bottom no-repeat;
+	@include desktop { position: relative; height: 1024px; min-width: 1440px; text-align: right; background: #e0e5e4 url('/assets/images/desktop/bg_nugu_product.jpg') center bottom no-repeat;
 		.layout-inner-contents { position: absolute; top: 0; left: 50%; margin-left: 60px; padding: 173px 45px 0 0; height: 1024px; width: 680px !important; }
 
 		.message-benefit { font-size: 2.625rem;
@@ -864,7 +866,7 @@
 		}
 
 
-		.info { margin-top: 172px; font-size: 2.000rem; font-weight: 400; color: #fff;
+		.info { margin-top: 233px; font-size: 2.000rem; font-weight: 400; color: #fff;
 			.price { margin-bottom: 3px; font-size: 5.750rem;
 				span { font-size: 2.500rem; }
 			}
@@ -905,7 +907,7 @@
 		.kongdoo { margin-top: 22px;
 			.title { font-size: 1.750rem; font-weight: 500; color: #fff; }
 			.say-hello { margin-top: 8px; font-size: 0.750rem; font-weight: 400; color: #fff; line-height: 1.333em;
-				&:before { content: ''; display: inline-block; margin-top: -10px; vertical-align: middle; }
+				&:before { content: ''; display: inline-block; margin-top: -70px; vertical-align: middle; }
 				&:after { content: ''; display: inline-block; margin-bottom: -4px; }
 					
 				span { display: inline-block; margin-bottom: 5px; }
@@ -939,7 +941,7 @@
 			.kongdoo { margin: 0px; padding-top: 13px;
 				.title { font-size: 3.500rem; }
 				.say-hello { margin-top: 33px; font-size: 1.375rem; line-height: 1.455em;
-					&:before { margin-top: -14px; @include sprite($sd-dq-left-02); }
+					&:before { margin-top: -130px; @include sprite($sd-dq-left-02); }
 					&:after { margin-bottom: 4px; @include sprite($sd-dq-right-02); }
 						
 					span { margin-bottom: 10px; }
@@ -958,7 +960,9 @@ body.company {
 
 	.page-title { font-size: 1.563rem; font-weight: 700; }
 
-	.intro { margin-top: 19px; font-size: 0.875rem; color: #666; text-align: center; line-height: 1.643em; }
+	.intro { margin-top: 19px; font-size: 0.875rem; color: #666; text-align: center; line-height: 1.643em;
+		span { color: #ed6627; }
+	}
 	.youtube { margin-top: 35px; padding: 0 15px; height: 208px; }
 
 	.kongdoo { color: #fff; text-align: center; 
@@ -1096,13 +1100,13 @@ body.product {
 				}
 
 				&.voice-command { padding: 0 0 0 920px; background: url('/assets/images/desktop/product_img02.png') 80px bottom no-repeat;
-					.featured-inner-contents { box-sizing: border-box; padding: 32px 80px 0 30px; height: 100%; background-color: #fff; }
+					.featured-inner-contents { box-sizing: border-box; padding: 32px 30px 0 30px; height: 100%; background-color: #fff; }
 					.example { position: absolute; bottom: 140px; right: 360px; padding-right: 30px; width: 290px; text-align: right;
 						.answer { margin-top: 51px; }
 					}
 				}
 				&.secretary { padding: 0 920px 0 0; text-align: right; background: url('/assets/images/desktop/product_img03.png') 786px bottom no-repeat;
-					.featured-inner-contents { box-sizing: border-box; padding: 32px 30px 0 100px; height: 100%; background-color: #fff; }
+					.featured-inner-contents { box-sizing: border-box; padding: 32px 30px 0 50px; height: 100%; background-color: #fff; }
 					.description {
 						&:after { left: 260px; }
 					}
@@ -1157,7 +1161,7 @@ body.product {
 				}
 
 				&.sound {
-					figcaption { position: absolute; bottom: 0; left: 0; width: 250px; }
+					figcaption { position: absolute; bottom: 0; left: 0; width: 270px; }
 				}
 
 				&.design {
@@ -1165,7 +1169,7 @@ body.product {
 				}
 
 				&.light {
-					figcaption { position: absolute; bottom: 0; right: 0; width: 270px; }
+					figcaption { position: absolute; bottom: 0; right: -20px; width: 290px; }
 				}
 			}
 		}

@@ -3,7 +3,7 @@
 	<h2 class="title">사용자 메뉴</h2>
 
 	<p class="btns">
-		<a href="#">마이페이지</a>
+		<!-- <a href="#">마이페이지</a> -->
 		<a href="#">로그아웃</a>
 	</p>
 </aside>
@@ -18,32 +18,34 @@
 	<nav class="shortcut-menus">
 		<ul class="list-menus">
 			<li>
-				<a href="#">누군 주식회사</a>
-			</li>
-			<li>
 				<a href="#">NUGU</a>
 			</li>
 			<li>
 				<a href="#">SUPPORT</a>
-				<ul class="list-sub-menus">
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">1:1 문의</a></li>
-					<li><a href="#">사용매뉴얼</a></li>
-				</ul>
 			</li>
+			<li>
+				<a href="#">누구나 주식회사</a>
+			</li>
+		</ul>
+		<ul class="list-sub-menus">
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">1:1 문의</a></li>
+			<li><a href="#">사용매뉴얼</a></li>
 		</ul>
 	</nav>
 
 	<div class="login-container">
 		<!-- 로그인 전 -->
-		<!-- <a href="#" class="btn-login">로그인</a> -->
+		<a href="#" class="btn-login">LOGIN</a>
 
 		<!-- 로그인 후 -->
+<!--
 		<a href="#" class="btn-user">id******</a>
 		<p class="btns">
 			<a href="#">마이페이지</a>
 			<a href="#">로그아웃</a>
 		</p>
+-->
 	</div>
 </aside>
 <script>
@@ -65,17 +67,19 @@ $(document).ready(function(e) {
 	<a href="#menus" class="btn-menu only-mobile">메뉴 open/close</a>
 
 	<!-- 로그인 전 -->
-	<a href="#" class="btn-login">로그인</a>
+	<a href="#" class="btn-login">LOGIN</a>
 
 	<!-- 로그인 후 -->
+<!--
 	<a href="#user-menus" class="btn-user only-desktop">id******</a>
+-->
 
 	<nav class="shortcut-menus">
 		<h2 class="shortcut-menus-title">네비게이션 메뉴</h2>
 		<ul class="list-menus">
-			<li@@if ( menu == "intro" ) { class="is-selected"}><a href="#">누구나 주식회사</a></li>
 			<li@@if ( menu == "product" ) { class="is-selected"}><a href="#">NUGU</a></li>
 			<li@@if ( menu == "support" ) { class="is-selected"}><a href="#">SUPPORT</a></li>
+			<li@@if ( menu == "intro" ) { class="is-selected"}><a href="#">누구나 주식회사</a></li>
 		</ul>
 	</nav>
 	<script>
