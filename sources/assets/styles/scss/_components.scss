@@ -446,7 +446,7 @@
 	input[type=text],
 	input[type=search] { width: 100%; box-sizing: border-box; font-size: 1.000rem; 
 		@include mobile { padding: 0 0 0 15px; height: 47px; line-height: 47px; }
-		@include desktop { padding-left: 15px; line-height: 44px; border: 1px solid #ddd;
+		@include desktop { padding-left: 15px; height: 44px; line-height: 44px; border: 1px solid #ddd;
 			&::placeholder { color: #fff; }
 		}
 	}

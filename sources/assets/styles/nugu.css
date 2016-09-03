@@ -1239,6 +1239,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       .forms input[type=text],
       .forms input[type=search] {
         padding-left: 15px;
+        height: 44px;
         line-height: 44px;
         border: 1px solid #ddd; }
         .forms input[type=text]::-webkit-input-placeholder,

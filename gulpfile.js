@@ -1,6 +1,7 @@
 'use strict';
 
 var	gulp = require('gulp'),
+	fs = require('fs'),
 	clean = require('gulp-clean'),
 	fileinclude = require('gulp-file-include'),
 	sass = require('gulp-sass'),
@@ -19,7 +20,8 @@ var	gulp = require('gulp'),
 	livereload = require('gulp-livereload'),
 	watch = require('gulp-watch'),
 	notify = require('gulp-notify'),
-	runSequence = require('run-sequence');
+	runSequence = require('run-sequence'),
+	awspublish = require('gulp-awspublish');
 
 var paths = {
 	sources: 'sources/**',
@@ -332,6 +334,19 @@ gulp.task('connect', function () {
 });
 
 
+/* publish s3 */
+gulp.task('publish', function () {
+	var credentials = JSON.parse(fs.readFileSync('aws-credentials.json', 'utf8'));
+	var publisher = awspublish.create(credentials);
+	var headers = { 'Cache-Control': 'max-age=315360000, no-transform, public' };
+
+	return gulp.src('release/**')
+		.pipe(publisher.publish(headers))
+		// .pipe(publisher.cache())
+		.pipe(awspublish.reporter());
+});
+
+
 gulp.task('sass-build', ['sprites:desktop', 'sprites:mobile', 'sass'], function() { });
 gulp.task('sass-release', ['sprites:desktop', 'sprites:mobile', 'sass'], function() { });
 gulp.task('scripts-build', ['jshint'], function() { });
@@ -349,6 +364,6 @@ gulp.task('build:admin', ['build'], function() {
 });
 
 gulp.task('release', function(callback) {
-	runSequence('clean:release', ['sass-release', 'scripts-build', 'html-build'], ['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:emails', 'copy:assets'], ['csscomb', 'csscomb:admin', 'copy:release'], callback);
+	runSequence('clean:release', ['sass-release', 'scripts-build', 'html-build'], ['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:emails', 'copy:assets'], ['csscomb', 'csscomb:admin', 'copy:release'], ['publish'], callback);
 });
 
