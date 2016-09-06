@@ -19,8 +19,8 @@ body { background-color: #fff;
 
 		.shortcut-menus { display: block; }
 
-		.login-container { padding: 20px 0; background-color: #f5f5f5;
-			.btn-login { margin: 0 auto; text-align: center; }
+		.login-container { padding: 20px 0; text-align: center; background-color: #f5f5f5;
+			.btn-login { display: inline-block; width: 135px; font-size: 1.125rem; font-weight: 500; line-height: 40px; border-radius: 40px; background-color: #fff; }
 
 			.btns { margin-top: 16px; text-align: center;
 				a { display: inline-block; margin: 0 2px 0 6px; height: 24px; width: 100px; font-size: 0.625rem; font-weight: 500; color: #868686; text-align: center; line-height: 24px; border-radius: 24px; background-color: #fff; }
@@ -117,6 +117,43 @@ body { background-color: #fff;
 		}
 	}
 }
+
+
+
+/* layer popup */
+.layout-popup { display: none; position: relative; padding: 30px 40px; border: 1px solid #ddd; background-color: #fff;
+	.btn-close { display: block; position: absolute; top: 23px; right: 30px; text-indent: -9999px; @include sprite($sd-btn-close); }
+	.popup-title { padding-bottom: 9px; font-size: 1.375rem; font-weight: bold; color: #ed6627; border-bottom: 3px solid #444; }
+
+	.forms { padding-top: 20px;
+		img { display: block; max-width: 100%; width: 100%; }
+	}
+
+	.tbl-h {
+		th { width: 105px; font-size: 14px; color: #222; }
+	}
+
+	.popup-btns { margin-top: 30px; text-align: center;
+		.btn { display: inline-block; height: 38px; min-width: 98px; font-size: 1.000rem; color: #222; text-align: center; line-height: 40px; border: 1px solid #bbb; background-color: #fff;
+			&.submit { color: #fff; border: 1px solid #ed6627; background-color: #ed6627; }
+		}
+	}
+
+	@include mobile { padding: 20px;
+		.btn-close { display: block; position: absolute; top: 16px; right: 12px; text-indent: -9999px; @include retina-sprite($sm-btn-close-02-group); }
+		.popup-title { padding-bttom: 5px; font-size: 1.000rem; border-bottom: 2px solid #444; }
+		.popup-btns { margin-top: 20px;
+			.btn { display: inline-block; height: 28px; min-width: 65px; font-size: 0.813rem; color: #222; text-align: center; line-height: 28px; border: 1px solid #bbb; background-color: #fff;
+				&.submit { color: #fff; border: 1px solid #ed6627; background-color: #ed6627; }
+			}
+		}
+	}
+
+	@include desktop {
+	}
+}
+
+
 
 /* footer */
 .layout-footer { padding: 35px 0 46px 0; text-align: center; border-top: 1px solid #ddd;

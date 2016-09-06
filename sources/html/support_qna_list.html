@@ -27,8 +27,25 @@
 				</dt>
 				<dd>
 					<div class="desc">
-						NUGU사용할 때 윙 하는 소리가 납니다. 고장인가요? NUGU사용할 때 윙 하는 소리가 납니다. 고장인가요?
+						안녕하세요. 문의 드릴것이 있습니다.<br>
+						상품을 구매하고 설치를 했는데도 아무소리도 나지 않습니다. 조명도 나오지 않습니다.<br>
+						제가 무엇을 잘못했는지 잘 모르겠네요. 설치 이미지 보냅니다.<br>
+						이미지 파일 보내드릴테니 확인 부탁드립니다.<br>
+
+						<p class="attach">
+							첨부파일 <a href="#popup-preview" class="btn-files popup-preview_open">whatsimage.jpg</a>
+						</p>
 					</div>
+					<script>
+					$(document).ready(function() {
+						$('#popup-preview').popup({
+							opacity: 0,
+							onopen: function() {
+								console.log("popup open");
+							}
+  						});
+					});
+					</script>
 				</dd>
 
 				<dt>
@@ -95,6 +112,20 @@
 
 		</div>
 	</main>
+
+
+	<!-- 첨부파일 미리보기 -->
+	<aside id="popup-preview" class="layout-popup">
+		<button type="button" class="btn-close popup-preview_close">닫기</button>
+		<h2 class="popup-title">이미지 미리보기</h2>
+		
+		<p class="forms">
+			<img src="/assets/images/@temp/temp04.jpg" alt="">
+		</p>
+		<p class="popup-btns">
+			<a href="#" class="btn submit popup-preview_close">확인</a>
+		</p>
+	</aside>
 	
 	<!-- 하단 영역 -->
 	@@include('./footer.html')

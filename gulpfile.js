@@ -364,6 +364,6 @@ gulp.task('build:admin', ['build'], function() {
 });
 
 gulp.task('release', function(callback) {
-	runSequence('clean:release', ['sass-release', 'scripts-build', 'html-build'], ['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:emails', 'copy:assets'], ['csscomb', 'csscomb:admin', 'copy:release'], ['publish'], callback);
+	runSequence('clean:release', ['sass-release', 'scripts-build', 'html-build'], ['sass-admin-build', 'scripts-admin-build', 'html-admin-build', 'copy:emails', 'copy:assets'], ['csscomb', 'csscomb:admin', 'copy:release'], callback);
 });
 

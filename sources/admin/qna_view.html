@@ -49,7 +49,12 @@
 					<tr>
 						<th>첨부파일</th>
 						<td colspan="7" class="l">
-							<a href="#" class="btn-files">whatsimage.jpg</a>
+							<a href="#popup-preview" class="btn-files popup-preview_open">whatsimage.jpg</a>
+							<script>
+							$(document).ready(function() {
+								$('#popup-preview').popup();
+							});
+							</script>
 						</td>
 					</tr>
 					<tr>
@@ -74,6 +79,8 @@
 				</p>
 
 				<p class="page-btns right">
+					<a href="#" class="btn">수정</a>
+					<a href="#" class="btn">삭제</a>
 					<a href="#" class="btn em">목록</a>
 				</p>
 			</div>
@@ -81,7 +88,7 @@
 		</div>
 	</main>
 
-
+	<!-- 문의유형 설정 -->
 	<aside id="popup-settings" class="layout-popup" style="width: 340px;">
 		<button type="button" class="btn-close popup-settings_close">닫기</button>
 		<h2 class="popup-title">문의유형 설정</h2>
@@ -99,6 +106,20 @@
 				<a href="#" class="btn popup-settings_close">취소</a>
 			</p>
 		</fieldset>
+	</aside>
+
+
+	<!-- 첨부파일 미리보기 -->
+	<aside id="popup-preview" class="layout-popup" style="width: 718px;">
+		<button type="button" class="btn-close popup-preview_close">닫기</button>
+		<h2 class="popup-title">이미지 미리보기</h2>
+		
+		<p class="forms">
+			<img src="/assets/admin/images/@temp/temp04.jpg" alt="">
+		</p>
+		<p class="popup-btns">
+			<a href="#" class="btn submit popup-preview_close">확인</a>
+		</p>
 	</aside>
 
 </body>

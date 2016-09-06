@@ -710,16 +710,8 @@ body.login {
     position: relative;
     width: 250px;
     vertical-align: middle; }
-    .forms .date-container:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-image: url(../images/sprites_admin.png);
-      background-position: 0px -79px;
-      width: 40px;
-      height: 40px; }
+    .forms .date-container input[type=text] {
+      background: url("/assets/admin/images/btn_date.png") right top no-repeat; }
   .forms input[type=text],
   .forms input[type=password] {
     box-sizing: border-box;
@@ -768,11 +760,11 @@ body.login {
   .forms select {
     display: inline-block;
     padding: 0 10px 0 10px;
-    height: 38px;
+    height: 40px;
     min-width: 135px;
     font-size: 14px;
     color: #222;
-    line-height: 38px;
+    line-height: 40px;
     border: 1px solid #bbb;
     background: #fff url("/assets/admin/images/bg_select.png") right center no-repeat; }
     .forms select.small {

@@ -29,7 +29,7 @@
 	@include mobile { display: none;
 		.shortcut-menus-title { display: none; }
 
-		.list-menus { margin-top: 15px;
+		.list-menus { margin-top: 15px; margin-bottom: 30px;
 			> li { position: relative; padding: 25px 0; text-align: center;
 				> a { display: block; font-size: 1.250rem; font-weight: 500; color: #666; }
 
@@ -39,7 +39,7 @@
 			}
 		}
 
-		.list-sub-menus { padding: 5px 0 30px 0; text-align: center;
+		.list-sub-menus { padding: 30px 0 5px 0; text-align: center;
 			> li { display: inline-block; width: 30%; text-align: center;
 				> a { display: inline-block; font-size: 0.813rem; color: #ababab; }
 			}
@@ -442,7 +442,17 @@
 			}
 		}
 	}
+/*
+	select { width: 100%; box-sizing: border-box; font-size: 1.000rem; border: 1px solid #ddd;
+		@include mobile { height: 47px;
 
+		}
+
+		@include desktop { height: 44px; font-weight: 300;
+
+		}
+	}
+*/
 	input[type=text],
 	input[type=search] { width: 100%; box-sizing: border-box; font-size: 1.000rem; 
 		@include mobile { padding: 0 0 0 15px; height: 47px; line-height: 47px; }
@@ -567,18 +577,31 @@
 	}
 
 
-	dd { display: none; padding: 22px 15px 22px 75px; font-size: 0.813rem; color: #868686; line-height: 1.385em; background-color: #fafafa;
+	dd { display: none; padding: 22px 30px 22px 40px; font-size: 0.813rem; color: #868686; line-height: 1.385em; background-color: #fafafa;
 
 		@include mobile { }
-		@include desktop { padding: 37px 60px 38px 130px;  font-size: 1.000rem; line-height: 1.625em; }
+		@include desktop { padding: 37px 60px 38px 100px;  font-size: 1.000rem; line-height: 1.625em; }
 		
-		.answer { position: relative; margin-top: 10px;
-			&:before { content: ''; display: block; position: absolute; top: 2px; left: -18px; height: 8px; width: 8px; border-bottom: 1px solid #aaa; border-left: 1px solid #aaa; }
+		.desc { padding-left: 35px;
+			@include mobile { line-height: 2.000em; }
+			@include desktop { padding-left: 30px; line-height: 2.000em; }
+		}
+
+		.attach { padding-top: 20px; font-size: 0.875rem; color: #222;
+			.btn-files { display: inline-block; margin-left: 10px; font-size: 1.000rem; color: #26afbd; text-decoration: underline; }
+
+			@include mobile { font-size: 0.813rem;
+				.btn-files { font-size: 0.813rem; }
+			}
+		}
+
+		.answer { position: relative; margin-top: 10px; padding: 15px 0 0 35px; border-top: 1px solid #d9dee1;
+			&:before { content: ''; display: block; position: absolute; top: 18px; left: 17px; height: 8px; width: 8px; border-bottom: 1px solid #aaa; border-left: 1px solid #aaa; }
 			time { display: block; }
 
-			@include mobile { }
-			@include desktop { margin-top: 20px;
-				&:before { top: 2px; left: -30px; height: 10px; width: 10px; }
+			@include mobile { line-height: 2.000em; }
+			@include desktop { margin-top: 20px; padding-top: 25px; line-height: 2.000em;
+				&:before { top: 30px; left: 0px; height: 10px; width: 10px; }
 			}
 		}
 	}
@@ -1285,7 +1308,7 @@ body.product {
 				.txt-nugu { @include retina-sprite($sm-txt-nugu-05-group); }
 			}
 
-			.useful-case { margin: 0 15px; @include aspect-ratio(580, 2053); background: url('/assets/images/mobile/bg_useful@2x.jpg') center top no-repeat; background-size: 100%; }
+			.useful-case { margin: 0 15px; @include aspect-ratio(580, 1758); background: url('/assets/images/mobile/bg_useful@2x.jpg') center top no-repeat; background-size: 100%; }
 
 			.message {
 				.txt-nugu { @include retina-sprite($sm-txt-nugu-06-group); }
@@ -1298,7 +1321,7 @@ body.product {
 			}
 
 			.description { margin-top: 25px; margin-bottom: 72px; font-size: 1.125rem; }
-			.useful-case { @include aspect-ratio(1120, 3945); background: url('/assets/images/desktop/bg_useful.jpg') center top no-repeat; background-size: 100%; }
+			.useful-case { @include aspect-ratio(1120, 3440); background: url('/assets/images/desktop/bg_useful.jpg') center top no-repeat; background-size: 100%; }
 			.guide { padding: 37px 0 53px 0; 
 				> li { margin-top: 0; padding-left: 11px; font-size: 1.000rem; line-height: 1.625em;
 					&:before { top: 12px; height: 4px; width: 4px; border-radius: 2px; }
