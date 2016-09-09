@@ -704,8 +704,15 @@
 
 
 /* 튜토리얼 */
-.tutorial { height: 160px;
-	@include desktop { height: 400px; }
+.tutorial { 
+	.video { padding: 0 15px; height: 160px;
+		+ .video { margin-top: 50px; }
+	}
+	@include desktop { 
+		.video { padding: 0; height: 400px;
+			+ .video { margin-top: 80px; }
+		}
+	}
 }
 /*
 .tutorial { box-sizing: border-box; padding: 34px 0 0 0; height: 160px; background: url('/assets/images/mobile/bg_tutorial@2x.jpg') center center no-repeat; background-size: cover; 
@@ -1036,7 +1043,7 @@ body.product {
 				strong { @include retina-sprite($sm-txt-nugu-03-group); }
 			}
 			.btns {
-				a { margin-top: 15px; }
+				a { margin-top: 15px; color: #fff; background-color: #4f4f4f; }
 			}
 		}
 		@include desktop { padding: 0; min-width: 1280px; background: url('/assets/images/desktop/bg_product_header.jpg') center top repeat-x;
@@ -1257,8 +1264,12 @@ body.product {
 
 
 	/* 소개 영상 */
-	.intro-video { margin-top: 50px; height: 228px;
-		@include desktop { margin: 100px auto 0 auto; height: 560px; width: 1120px; }
+	.intro-video { 
+		.video { margin-top: 50px; height: 211px; }
+
+		@include desktop { 
+			.video { margin: 100px auto 0 auto; height: 560px; width: 1120px; }
+		}
 	}
 /*	
 	.intro-video { box-sizing: border-box; margin-top: 100px; padding-top: 47px; height: 228px; text-align: center;
@@ -1340,26 +1351,28 @@ body.product {
 
 	/* 선구매 혜택 */
 	.benefit-pre-order { box-sizing: border-box; text-align: center;
-		.title { font-size: 0.938rem; font-weight: 400; color: #fff; }
-		.price { margin-top: 5px; font-family: $font-roboto-stack; font-size: 1.875rem; font-weight: 300; color: #ed6627;
+		.title { font-size: 1.125rem; font-weight: 300; color: #fff; }
+		.price { display: block; margin-top: 22px; font-family: $font-roboto-stack; font-size: 1.875rem; font-weight: 300; color: #ed6627;
 			.unit { font-size: 0.750rem; font-weight: 400; color: #fff; }
+			.melon { display: block; font-size: 0.938rem; font-weight: 400; color: #fff; }
 		}
 		.description { margin-top: 40px; font-size: 0.750rem; color: #fff; line-height: 1.750em; }
 		.btns { padding-top: 10px;
 			a { display: block; margin: 15px auto 0 auto; height: 30px; width: 168px; font-size: 0.875rem; color: #fff; text-align: center; line-height: 30px; border: 1px solid #fff; border-radius: 30px;  }
 		}
 
-		@include mobile { padding: 48px 0 0 0; height: 365px; background: url('/assets/images/mobile/bg_pre_order@2x.jpg') center center no-repeat; background-size: cover;
+		@include mobile { padding: 34px 0 0 0; height: 365px; background: url('/assets/images/mobile/bg_pre_order@2x.jpg') center center no-repeat; background-size: cover;
 
 		}
 
-		@include desktop { margin: 0 auto; padding: 96px 0 0 0; height: 503px; background: url('/assets/images/desktop/bg_pre_order.jpg') center center no-repeat; background-size: cover;
+		@include desktop { margin: 0 auto; padding: 70px 0 0 0; height: 503px; background: url('/assets/images/desktop/bg_pre_order.jpg') center center no-repeat; background-size: cover;
 			.title { font-size: 1.500rem; }
-			.price { margin-top: 0px; font-size: 3.750rem;
+			.price { margin-top: 30px; font-size: 3.750rem;
 				.unit { font-size: 1.250rem; }
+				.melon { font-size: 1.500rem; }
 			}
-			.description { margin-top: 18px; font-size: 1.125rem; line-height: 1.556em; }
-			.btns { padding-top: 75px;
+			.description { margin-top: 53px; font-size: 1.125rem; line-height: 1.556em; }
+			.btns { padding-top: 32px;
 				a { display: inline-block; margin: 0; height: 44px; width: 196px; font-size: 1.250rem; font-weight: 500; line-height: 44px; border: 2px solid #fff; border-radius: 44px; 
 					+ a { margin-left: 16px; }
 				}
@@ -1518,5 +1531,30 @@ body.product {
 
 
 
+/* error page */
+body.error {
+	main { background-color: #f5f5f5; }
+	.layout-contents { text-align: center; 
+		.title { padding-top: 40px; font-size: 1.000rem; font-weight: 500; color: #222;
+			&:before { content: ''; display: block; margin: 0 auto 27px auto; }
+		}
+		.description { margin-top: 17px; font-size: 0.688rem; color: #666; line-height: 1.455em; }
+		.btn-home { display: block; margin: 37px auto 0 auto; height: 30px; width: 120px; font-size: 0.688rem; font-weight: 500; color: #fff; text-align: center; line-height: 30px; border-radius: 30px; background-color: #ed6829;  }
+
+		@include mobile {
+			.title {
+				&:before { @include retina-sprite($sm-icon-error-group); }
+			}
+		}
+
+		@include desktop {
+			.title { padding-top: 156px; font-size: 1.375rem;
+				&:before { margin-bottom: 40px; @include sprite($sd-icon-error); }
+			}
+			.description { margin-top: 11px; font-size: 1.000rem; line-height: 1.750em; }
+			.btn-home { margin-top: 85px; height: 60px; width: 240px; font-size: 1.375rem; line-height: 60px; border-radius: 60px; }
+		}
+	}
+}
 
 

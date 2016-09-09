@@ -245,7 +245,9 @@ body.login { min-height: 600px; min-width: auto; }
 	.btn-close { display: block; position: absolute; top: 23px; right: 30px; text-indent: -9999px; @include sprite($sa-btn-close); }
 	.popup-title { padding-bottom: 9px; font-size: 22px; font-weight: bold; color: #ed6627; border-bottom: 3px solid #444; }
 
-	.forms { padding-top: 20px; }
+	.forms { padding-top: 20px;
+		img { display: block; max-width: 100%; width: 100%; }
+	}
 
 	.tbl-h {
 		th { width: 105px; font-size: 14px; color: #222; }
