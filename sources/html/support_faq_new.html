@@ -1,0 +1,267 @@
+@@include('./head.html')
+<body class="support">
+
+	<!-- 상단 영역 -->
+	@@include('./header.html', {"menu": "support"})
+
+
+	<!-- 본문 영역 -->
+	<main role="main">
+		<div id="top" class="layout-contents">
+
+			<h1 class="page-title">FAQ</h1>
+
+			<!-- 필터 -->
+			<fieldset class="filter-container">
+				<legend>게시판 카테고리 및 검색 필터</legend>
+
+				<fieldset class="search-container">
+					<legend>검색 필터</legend>
+					
+					<select name="" id="">
+						<option value="">전체</option>
+						<option value="">제목</option>
+						<option value="">내용</option>
+					</select>
+					<p>
+						<input type="text" name="" id="">
+					</p>
+					<input type="submit" value="검색" class="btn-submit">
+				</fieldset>
+
+
+				<fieldset class="category-container">
+					<legend>게시판 카테고리</legend>
+
+					<!-- 모바일 용 -->
+					<select name="" id="" class="btn-category">
+						<option value="#top">전체보기</option>
+						<option value="#category01">가입문의</option>
+						<option value="#category02">설치문의</option>
+						<option value="#category03">이용문의</option>
+						<option value="#category04">A/S문의</option>
+						<option value="#category05">기타</option>
+					</select>
+
+					<!-- 데스크탑 용 -->
+					<ul class="list-category">
+						<li class="is-selected"><a href="#top">전체보기</a></li>
+						<li><a href="#category01">가입문의</a></li>
+						<li><a href="#category02">설치문의</a></li>
+						<li><a href="#category03">이용문의</a></li>
+						<li><a href="#category04">A/S문의</a></li>
+						<li><a href="#category05">기타</a></li>
+					</ul>
+				</fieldset>
+				<script>
+				$(document).ready(function(e) {
+					function scrollToHash(hash, margin) {
+						$target = $(hash);
+
+						var dest = 0;
+						if( $target.offset().top > $(document).height()-$(window).height() ){
+							dest = $(document).height() - $(window).height();
+						} else {
+							dest = $target.offset().top;
+						}
+						dest -= margin;
+
+						$('html,body').animate({scrollTop:dest}, 300,'swing', function() {
+							window.location.hash = hash;
+						});
+					}
+
+					$('.btn-category').on('change', function(e) {
+						var target = $(this).val();
+						scrollToHash(target, 50);
+					});
+
+					$('.list-category a').on('click', function(e) {
+						e.preventDefault();
+
+						$('.list-category > li').removeClass("is-selected");
+						$(this).closest('li').addClass("is-selected");
+						var target = $(this).attr("href");
+						scrollToHash(target, 100);
+					});
+				});
+				</script>
+			</fieldset>
+			
+
+			<div class="accordion none-results">
+				<strong>검색결과가 없습니다.</strong>
+				<p>
+					다른 단어로 검색하시거나 검색어를 정확하게<br class="only-mobile">입력했는지 확인해주세요.
+				</p>
+			</div>
+
+			<dl class="accordion faq">
+				<!-- 가입문의 시작 : 이동용 아이디 추가 -->
+				<dt id="category01" class="is-opened">
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">가입문의</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+
+						<div class="attach">
+							<a href="#" class="btn-files">사용자매뉴얼.pdf</a>
+						</div>
+					</div>
+				</dd>
+				<dt>
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">가입문의</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+					</div>
+				</dd>
+
+
+				<!-- 설치문의 시작 : 이동용 아이디 추가 -->
+				<dt id="category02">
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">설치문의</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+					</div>
+				</dd>
+				<dt>
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">설치문의</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+					</div>
+				</dd>
+
+
+				<!-- 이용문의 시작 : 이동용 아이디 추가 -->
+				<dt id="category03">
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">이용문의</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+					</div>
+				</dd>
+				<dt>
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">이용문의</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+					</div>
+				</dd>
+
+
+				<!-- A/S문의 시작 : 이동용 아이디 추가 -->
+				<dt id="category04">
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">A/S문의</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+					</div>
+				</dd>
+				<dt>
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">A/S문의</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+					</div>
+				</dd>
+
+
+				<!-- 기타 시작 : 이동용 아이디 추가 -->
+				<dt id="category05">
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">기타</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+					</div>
+				</dd>
+				<dt>
+					<a href="#">
+						<span class="status">Q</span>
+						<span class="title">
+							<span class="category">기타</span>
+							NUGU는 누구인가요?
+						</span>
+					</a>
+				</dt>
+				<dd>
+					<div class="answer">
+						NUGU는 국내최초 인공지능 음성인식 디바이스 및 서비스의 이름입니다.
+					</div>
+				</dd>
+			</dl>
+
+		</div>
+	</main>
+
+	
+	<!-- 하단 영역 -->
+	@@include('./footer.html')
+
+</body>
+</html>

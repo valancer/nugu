@@ -25,11 +25,20 @@
 				<ul class="list-sub-menus">
 					<li><a href="#">FAQ</a></li>
 					<li><a href="#">1:1 문의</a></li>
-					<li><a href="#">사용매뉴얼</a></li>
+					<li><a href="#" target="_blank">사용매뉴얼</a></li>
 				</ul>
 			</li>
 			<li>
+				<a href="#">새소식</a>
+			</li>
+			<li class="company">
 				<a href="#">누구나 주식회사</a>
+			</li>
+			<li class="directorate">
+				<a href="#">사외이사 PROJECT</a>
+			</li>
+			<li class="event">
+				<a href="#">NUGU IDEA 공모전</a>
 			</li>
 		</ul>
 	</nav>
@@ -43,7 +52,7 @@
 		<a href="#" class="btn-user">id******</a>
 		<p class="btns">
 			<a href="#">마이페이지</a>
-			<a href="#">로그아웃</a>
+			<a href="#">LOGOUT</a>
 		</p>
 -->
 	</div>
@@ -67,19 +76,22 @@ $(document).ready(function(e) {
 	<a href="#menus" class="btn-menu only-mobile">메뉴 open/close</a>
 
 	<!-- 로그인 전 -->
-	<a href="#" class="btn-login">LOGIN</a>
+	<!-- <a href="#" class="btn-login">LOGIN</a> -->
 
 	<!-- 로그인 후 -->
-<!--
+
 	<a href="#user-menus" class="btn-user only-desktop">id******</a>
--->
+
 
 	<nav class="shortcut-menus">
 		<h2 class="shortcut-menus-title">네비게이션 메뉴</h2>
 		<ul class="list-menus">
 			<li@@if ( menu == "product" ) { class="is-selected"}><a href="#">NUGU</a></li>
 			<li@@if ( menu == "support" ) { class="is-selected"}><a href="#">SUPPORT</a></li>
-			<li@@if ( menu == "intro" ) { class="is-selected"}><a href="#">누구나 주식회사</a></li>
+			<li><a href="#">새소식</a></li>
+			<li class="company@@if ( menu == "intro" ) { is-selected}"><a href="#">누구나 주식회사</a></li>
+			<li class="directorate"><a href="#">사외이사 PROJECT</a></li>
+			<li class="event"><a href="#">NUGU IDEA 공모전</a></li>
 		</ul>
 	</nav>
 	<script>

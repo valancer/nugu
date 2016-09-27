@@ -36,6 +36,19 @@ body { background-color: #fff; }
 	}
 }
 
+@mixin mobile-header {
+	@media only screen and (min-width: 320px) and (max-width: 1399px) {
+		@content;
+	}
+}
+
+
+@mixin desktop-header {
+	@media only screen and (min-width: 1400px) {
+		@content;
+	}
+}
+
 
 /* z-index */
 $z-layers: (
@@ -98,3 +111,6 @@ $z-layers: (
 /** layout **/
 @import "components";
 @import "layout";
+
+
+@import url(nugu_contents.css);

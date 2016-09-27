@@ -39,6 +39,7 @@ a:hover { text-decoration: none; }
 /* forms */
 fieldset { appearance: none; }
 select,
+input[type=radio],
 input[type=submit],
 input[type=search] { appearance: none; cursor: pointer; border: 0px; }
 

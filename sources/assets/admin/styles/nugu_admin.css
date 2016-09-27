@@ -703,6 +703,30 @@ body.login {
         border: 1px solid #bbb;
         background-color: #f4f5f7; }
 
+.search-tab {
+  overflow: hidden;
+  margin-top: 50px;
+  width: 100%;
+  border-top: 1px solid #424242; }
+  .search-tab a {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    width: 16.667%;
+    font-size: 16px;
+    color: #222;
+    line-height: 46px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+    .search-tab a.is-selected {
+      color: #fff;
+      border-top: 1px solid #4a4a4a;
+      border-bottom: 1px solid #4a4a4a;
+      background-color: #4a4a4a; }
+    .search-tab a + a {
+      border-left: 1px solid #ddd; }
+
 .forms {
   /* 파일 선택 */ }
   .forms .date-container {
@@ -889,6 +913,11 @@ body.login {
     .tbl-bbs-top .results.right {
       float: right;
       text-align: right; }
+    .tbl-bbs-top .results .download {
+      font-size: 14px; }
+      .tbl-bbs-top .results .download a {
+        color: #26afbd;
+        text-decoration: underline; }
   .tbl-bbs-top .forms {
     float: right; }
 
@@ -907,6 +936,8 @@ body.login {
     background-color: #f4f5f7; }
     .tbl-bbs thead th + th {
       border-left: 1px solid #ddd; }
+    .tbl-bbs thead th[colspan] {
+      border-bottom: 1px solid #ddd; }
   .tbl-bbs tbody .is-selected th, .tbl-bbs tbody .is-selected td {
     background-color: #edf4fc; }
   .tbl-bbs tbody .accept th, .tbl-bbs tbody .accept td {
@@ -922,6 +953,32 @@ body.login {
     border-bottom: 1px solid #ddd; }
     .tbl-bbs tbody td a {
       color: #444; }
+      .tbl-bbs tbody td a.order {
+        font-size: 16px;
+        color: #ed6627; }
+    .tbl-bbs tbody td span.order {
+      color: #ddd; }
+    .tbl-bbs tbody td .order {
+      display: inline-block;
+      margin: 0 3px; }
+    .tbl-bbs tbody td .files {
+      display: inline-block;
+      margin: -2px 0 0 3px;
+      text-indent: -9999px;
+      vertical-align: middle;
+      background-image: url(../images/sprites_admin.png);
+      background-position: -139px -46px;
+      width: 16px;
+      height: 14px; }
+    .tbl-bbs tbody td .lock {
+      display: inline-block;
+      margin: -2px 0 0 3px;
+      text-indent: -9999px;
+      vertical-align: middle;
+      background-image: url(../images/sprites_admin.png);
+      background-position: -117px -46px;
+      width: 16px;
+      height: 20px; }
     .tbl-bbs tbody td + td {
       border-left: 1px solid #ddd; }
   .tbl-bbs tbody .l {
@@ -962,7 +1019,7 @@ body.login {
       text-indent: -9999px; }
       .tbl-bbs-navigation .paging .btns.first {
         background-image: url(../images/sprites_admin.png);
-        background-position: -122px -79px;
+        background-position: -36px -125px;
         width: 30px;
         height: 30px; }
       .tbl-bbs-navigation .paging .btns.prev {
@@ -972,12 +1029,12 @@ body.login {
         height: 30px; }
       .tbl-bbs-navigation .paging .btns.next {
         background-image: url(../images/sprites_admin.png);
-        background-position: -36px -125px;
+        background-position: 0px -125px;
         width: 30px;
         height: 30px; }
       .tbl-bbs-navigation .paging .btns.last {
         background-image: url(../images/sprites_admin.png);
-        background-position: 0px -125px;
+        background-position: -122px -79px;
         width: 30px;
         height: 30px; }
       .tbl-bbs-navigation .paging .btns:hover {
@@ -1061,6 +1118,182 @@ body.login {
       line-height: 20px;
       border: 1px solid #ddd;
       background-color: #fafafa; }
+
+/* 댓글 */
+.write-comment {
+  padding: 30px;
+  border-top: 1px solid #d9d9d8; }
+  .write-comment input[type=text] {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 14px;
+    height: 60px;
+    width: calc(100% - 133px);
+    font-size: 16px;
+    color: #252525;
+    border: 1px solid #d9d9d9;
+    background-color: #fafafa; }
+  .write-comment .btn-write {
+    display: block;
+    float: right;
+    height: 60px;
+    width: 123px;
+    font-size: 16px;
+    color: #252525;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #d9d9d9; }
+
+.comment-item {
+  position: relative;
+  padding: 25px 0 25px 0; }
+  .comment-item .name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ed6829; }
+  .comment-item time {
+    font-size: 16px;
+    color: #939393; }
+    .comment-item time:before {
+      content: '';
+      display: inline-block;
+      margin: -3px 20px 0 16px;
+      height: 16px;
+      width: 1px;
+      vertical-align: middle;
+      background-color: #d9d9d9; }
+  .comment-item .btns {
+    display: inline-block;
+    margin: -5px 0 0 16px;
+    padding: 0;
+    vertical-align: middle; }
+  .comment-item .content {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #252525; }
+  .comment-item .btn-comment {
+    display: inline-block;
+    height: 20px;
+    width: 38px;
+    font-size: 11px;
+    color: #26afbd;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    background-color: #fff; }
+
+.list-comment {
+  position: relative;
+  padding: 0 30px;
+  background-color: #fafafa; }
+  .list-comment > li {
+    border-top: 1px solid #d9d9d9; }
+    .list-comment > li:first-child {
+      border-top: 0; }
+
+.write-comment-reply {
+  overflow: hidden;
+  padding: 15px 0 30px 0px; }
+  .write-comment-reply label {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    padding-left: 30px;
+    width: 102px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #212121;
+    line-height: 44px; }
+    .write-comment-reply label:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 17px;
+      left: 0;
+      background-image: url(../images/sprites_admin.png);
+      background-position: -108px -125px;
+      width: 10px;
+      height: 10px; }
+  .write-comment-reply input[type=text] {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    padding-left: 10px;
+    height: 44px;
+    width: calc(100% - 106px - 102px);
+    font-size: 16px;
+    line-height: 40px;
+    border: 1px solid #d9d9d9;
+    background-color: #fff; }
+  .write-comment-reply .btn-write {
+    display: block;
+    float: right;
+    height: 44px;
+    width: 106px;
+    font-size: 16px;
+    line-height: 42px;
+    text-align: center;
+    background-color: #d9d9d9; }
+
+.comment-reply-item {
+  position: relative;
+  padding: 10px 0 10px 30px; }
+  .comment-reply-item:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background-image: url(../images/sprites_admin.png);
+    background-position: -108px -125px;
+    width: 10px;
+    height: 10px; }
+  .comment-reply-item .name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #212121; }
+  .comment-reply-item time {
+    font-size: 16px;
+    color: #939393; }
+    .comment-reply-item time:before {
+      content: '';
+      display: inline-block;
+      margin: -3px 20px 0 16px;
+      height: 16px;
+      width: 1px;
+      vertical-align: middle;
+      background-color: #d9d9d9; }
+  .comment-reply-item .btns {
+    display: inline-block;
+    margin: -5px 0 0 16px;
+    padding: 0;
+    vertical-align: middle; }
+  .comment-reply-item .btn-comment {
+    display: inline-block;
+    height: 20px;
+    width: 38px;
+    font-size: 11px;
+    color: #26afbd;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    background-color: #fff; }
+  .comment-reply-item .content {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #252525; }
+
+.list-comment-reply {
+  padding-top: 15px;
+  border-top: 1px solid #d9d9d9; }
+
+.comment-container {
+  border-top: 1px solid #717171;
+  border-bottom: 1px solid #d9d9d9; }
 
 /* popup */
 .layout-popup {

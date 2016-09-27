@@ -1,0 +1,238 @@
+@@include('./admin_head.html')
+<body>
+
+	<!-- 상단 영역 -->
+	@@include('./admin_header.html')
+
+
+	<!-- 유저 정보 -->
+	@@include('./admin_users.html')
+
+
+	<!-- 본문 영역 -->
+	<main role="main">
+		<div class="layout-contents">
+
+			<h1 class="page-title">FAQ관리</h1>
+
+
+			<!-- 검색 영역 -->
+			<fieldset class="search-container forms">
+				<legend>검색필터</legend>
+
+				<table class="tbl-h">
+					<caption>검색 필터 입력 항목</caption>
+
+					<tbody>
+						<tr>
+							<th>작성일자검색</th>
+							<td>
+								<span class="date-container">
+									<input type="text" name="daterange" id="" value="" >
+								</span>
+								<button type="button" class="btn-normal all">전체</button>
+								<button type="button" class="btn-normal last1">1개월</button>
+								<button type="button" class="btn-normal last3">3개월</button>
+								<button type="button" class="btn-normal last6">6개월</button>
+
+								<script>
+								$(document).ready(function(e) {
+									var start = moment().subtract(1, 'months');
+									var end = moment();
+
+									$('input[name="daterange"]').daterangepicker({
+										startDate: start,
+										endDate: end
+									});
+
+									function cb(start, end) {
+										var picker = $('input[name=daterange]').data('daterangepicker'); 
+
+										picker.setStartDate(start);
+										picker.setEndDate(end);
+									}
+    								
+									$('.btn-normal.all').on('click', function() {
+										var picker = $('input[name=daterange]').data('daterangepicker'); 
+
+										picker.setStartDate(moment());
+										picker.setEndDate(moment());
+
+										$('input[name=daterange]').val('');
+									});
+									$('.btn-normal.last1').on('click', function() {
+										cb(moment().subtract(1, 'months'), moment());
+									});
+									$('.btn-normal.last3').on('click', function() {
+										cb(moment().subtract(3, 'months'), moment());
+									});
+									$('.btn-normal.last6').on('click', function() {
+										cb(moment().subtract(6, 'months'), moment());
+									});
+
+									cb(moment().subtract(1, 'months'), moment());
+								});
+								</script>
+							</td>
+						</tr>
+						<tr>
+							<th>게시물검색</th>
+							<td>
+								<select name="" id="">
+									<option value="">전체</option>
+									<option value="">내용</option>
+									<option value="">작성자ID</option>
+								</select>
+
+								<span style="display: inline-block; width: 380px;">
+									<input type="text" name="" id="">
+								</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p class="btns">
+					<button type="submit" class="btn search">검색</button>
+					<button type="reset" class="btn reset">초기화</button>
+				</p>
+			</fieldset>
+
+
+			<!-- 카테고리 -->
+			<div class="search-tab">
+				<a href="#" class="is-selected">전체</a>
+				<a href="#">가입문의</a>
+				<a href="#">설치문의</a>
+				<a href="#">이용문의</a>
+				<a href="#">A/S문의</a>
+				<a href="#">기타</a>
+			</div>
+
+			
+			<!-- 검색결과 -->
+			<div class="tbl-bbs-top">
+				<p class="results">총 <mark>10</mark>개의 게시물이 검색되었습니다.</p>
+			</div>
+
+			<!-- 게시판 -->
+			<table class="tbl-bbs">
+				<caption>검색 목록</caption>
+				<thead>
+					<tr>
+						<th>NO</th>
+						<th>순서변경</th>
+						<th>카테고리</th>
+						<th>질문</th>
+						<th>노출</th>
+						<th>조회수</th>
+						<th>작성일자</th>
+						<th>작성자</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>85</td>
+						<td>
+							<span class="order">▲</span>
+							<a href="#" class="order">▼</a>
+						</td>
+						<td>가입문의</td>
+						<td class="l">
+							<a href="#">투자자가 뭔가요?</a>
+							<span class="files">첨부파일이 존재합니다.</span>
+						</td>
+						<td>Y</td>
+						<td><time datetime="2016-09-05">16.09.05</time></td>
+						<td>95</td>
+						<td>nugusky</td>
+					</tr>
+					<tr>
+						<td>85</td>
+						<td>
+							<a href="#" class="order">▲</a>
+							<a href="#" class="order">▼</a>
+						</td>
+						<td>가입문의</td>
+						<td class="l">
+							<a href="#">투자자가 뭔가요?</a>
+						</td>
+						<td>Y</td>
+						<td><time datetime="2016-09-05">16.09.05</time></td>
+						<td>95</td>
+						<td>nugusky</td>
+					</tr>
+					<tr>
+						<td>85</td>
+						<td>
+							<a href="#" class="order">▲</a>
+							<a href="#" class="order">▼</a>
+						</td>
+						<td>가입문의</td>
+						<td class="l">
+							<a href="#">투자자가 뭔가요?</a>
+							<span class="files">첨부파일이 존재합니다.</span>
+						</td>
+						<td>Y</td>
+						<td><time datetime="2016-09-05">16.09.05</time></td>
+						<td>95</td>
+						<td>nugusky</td>
+					</tr>
+					<tr>
+						<td>85</td>
+						<td>
+							<a href="#" class="order">▲</a>
+							<a href="#" class="order">▼</a>
+						</td>
+						<td>가입문의</td>
+						<td class="l">
+							<a href="#">투자자가 뭔가요?</a>
+						</td>
+						<td>Y</td>
+						<td><time datetime="2016-09-05">16.09.05</time></td>
+						<td>95</td>
+						<td>nugusky</td>
+					</tr>
+					<tr>
+						<td>85</td>
+						<td>
+							<a href="#" class="order">▲</a>
+							<span class="order">▼</span>
+						</td>
+						<td>가입문의</td>
+						<td class="l">
+							<a href="#">투자자가 뭔가요?</a>
+						</td>
+						<td>Y</td>
+						<td><time datetime="2016-09-05">16.09.05</time></td>
+						<td>95</td>
+						<td>nugusky</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- 페이징 -->
+			<div class="tbl-bbs-navigation">
+				<p class="page-btns">
+					<a href="#" class="btn submit">게시물 작성</a>
+				</p>
+
+				<div class="paging">
+					<a href="#" class="btns first">처음 페이지로 이동</a>
+					<a href="#" class="btns prev">이전 페이지로 이동</a>
+					<a href="#" class="is-selected">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#" class="btns next">다음 페이지로 이동</a>
+					<a href="#" class="btns last">마지막 페이지로 이동</a>
+				</div>
+			</div>
+
+
+		</div>
+	</main>
+
+</body>
+</html>

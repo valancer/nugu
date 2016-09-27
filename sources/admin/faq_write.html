@@ -1,0 +1,102 @@
+@@include('./admin_head.html')
+<body>
+
+	<!-- 상단 영역 -->
+	@@include('./admin_header.html')
+
+
+	<!-- 유저 정보 -->
+	@@include('./admin_users.html')
+
+
+	<!-- 본문 영역 -->
+	<main role="main">
+		<div class="layout-contents">
+
+			<h1 class="page-title">FAQ관리</h1>
+
+			<fieldset class="forms">
+				<legend>게시판 작성 폼</legend>
+
+				<table class="tbl-h write">
+					<caption>게시물 작성</caption>
+
+					<tbody>
+						<tr>
+							<th>카테고리</th>
+							<td>
+								<select name="" id="">
+									<option value="">가입문의</option>
+									<option value="">설치문의</option>
+									<option value="">이용문의</option>
+									<option value="">A/S문의</option>
+									<option value="">기타</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>질문제목</th>
+							<td>
+								<input type="text" name="" id="">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								
+								<div class="editor-container">
+									
+									editor area
+
+								</div>
+
+							</td>
+						</tr>
+						<tr>
+							<th>노출여부</th>
+							<td>
+								<ul class="list-radio">
+									<li>
+										<input type="radio" name="display" id="display0" checked>
+										<label for="display0">Y</label>
+									</li>
+									<li>
+										<input type="radio" name="display" id="display1">
+										<label for="display1">N</label>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>첨부파일</th>
+							<td>
+								<div class="select-file">
+									<p class="filebox">
+										<label for="ufile">파일선택</label>	
+										<input type="file" name="ufile" id="ufile">
+									</p>
+									<span class="limited">최대 00MBYTE까지 업로드 가능</span>
+
+									<p class="added">
+										<a href="#" class="btn-file">nugu_capture.zip</a>
+										<button type="button" class="btn-file-delete">X 파일삭제</button>
+									</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="tbl-bbs-navigation">
+					<p class="page-btns">
+						<a href="#" class="btn submit">등록</a>
+						<a href="#" class="btn">취소</a>
+					</p>
+				</div>
+			</fieldset>
+
+
+		</div>
+	</main>
+
+</body>
+</html>

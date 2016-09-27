@@ -20,11 +20,13 @@
 
 				<tbody>
 					<tr>
-						<th colspan="8" class="title">기기설치 문의 드립니다.</th>
+						<th colspan="10" class="title">기기설치 문의 드립니다.</th>
 					</tr>
 					<tr>
 						<th>등록일</th>
 						<td><time datetime="2016-09-05">2016-09-05</time></td>
+						<th>공개여부</th>
+						<td>Y</td>
 						<th>진행상태</th>
 						<td>접수</td>
 						<th>문의유형</th>
@@ -40,7 +42,7 @@
 						<td>NUGUSKY</td>
 					</tr>
 					<tr>
-						<td colspan="8" class="content">
+						<td colspan="10" class="content">
 							
 							<p>문의드립니다. 문의드립니다.</p>
 
@@ -48,7 +50,7 @@
 					</tr>
 					<tr>
 						<th>첨부파일</th>
-						<td colspan="7" class="l">
+						<td colspan="4" class="l">
 							<a href="#popup-preview" class="btn-files popup-preview_open">whatsimage.jpg</a>
 							<script>
 							$(document).ready(function() {
@@ -56,31 +58,119 @@
 							});
 							</script>
 						</td>
+						<th>메일알림</th>
+						<td colspan="4" class="l">
+							<a href="mailto:nugu@sk.co.kr" class="btn-files">nugu@sk.co.kr</a>
+						</td>
 					</tr>
+					
+					<!-- 처리 담당자 및 답변 달기 -->
 					<tr>
 						<th>처리담당자</th>
-						<td colspan="7" class="l">
+						<td colspan="9" class="l">
 							홍길동 | 채널사업부 | hgd@sk.co.kr
 						</td>
 					</tr>
 					<tr>
-						<td colspan="8" class="reply">
+						<td colspan="10" class="reply">
 							<textarea name="" id="" cols="30" rows="10"></textarea>
 						</td>
 					</tr>
+					<!-- // 처리 담당자 및 답변 달기 -->
+
 				</tbody>
 			</table>
-			
+
+			<!-- 댓글 목록 -->
+			<div class="comment-container">
+				<ul class="list-comment">
+					<li>
+						<div class="comment-item">
+							<span class="name">NU***</span>
+							<time datetime="2016-06-09 11:11">2016.06.09 11:11</time>
+
+							<p class="btns">
+								<button type="button" class="btn-comment">댓글</button>
+							</p>
+
+							<p class="content">
+								좋은 리뷰 잘 봤습니다. 저도 빨리 동참해야 겠네요!<br>저도 빨리 동참해야 겠네요!
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="comment-item">
+							<span class="name">NU***</span>
+							<time datetime="2016-06-09 11:11">2016.06.09 11:11</time>
+
+							<p class="btns">
+								<button type="button" class="btn-comment">수정</button>
+								<button type="button" class="btn-comment">삭제</button>
+								<button type="button" class="btn-comment">댓글</button>
+							</p>
+
+							<p class="content">
+								좋은 리뷰 잘 봤습니다. 저도 빨리 동참해야 겠네요!<br>저도 빨리 동참해야 겠네요!
+							</p>
+						</div>
+
+						<!-- 댓글의 답글 -->
+						<ul class="list-comment-reply">
+							<li>
+								<div class="comment-reply-item">
+									<span class="name">NU***</span>
+									<time datetime="2016-06-09 11:11">2016.06.09 11:11</time>
+									<p class="btns">
+										<button type="button" class="btn-comment">삭제</button>
+									</p>
+
+									<p class="content">
+										좋은 리뷰 잘 봤습니다. 저도 빨리 동참해야 겠네요!<br>저도 빨리 동참해야 겠네요!
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="comment-reply-item">
+									<span class="name">NU***</span>
+									<time datetime="2016-06-09 11:11">2016.06.09 11:11</time>
+
+									<p class="content">
+										좋은 리뷰 잘 봤습니다. 저도 빨리 동참해야 겠네요!
+									</p>
+								</div>
+							</li>
+						</ul>
+
+						<fieldset class="write-comment-reply">
+							<legend>댓글에 답글</legend>
+							
+							<label for="">Po***</label>
+							<input type="text" id="" name="" placeholder="댓글을 등록하세요">
+							<button type="submit" class="btn-write">등록</button>
+						</fieldset>
+					</li>
+				</ul>
+
+				<fieldset class="write-comment">
+					<legend>댓글 등록</legend>
+
+					<input type="text" id="" name="" placeholder="댓글을 등록하세요">
+					<button type="submit" class="btn-write">댓글등록</button>
+				</fieldset>
+			</div>
+			<!--// 댓글 목록 -->
+
+
 			<div class="tbl-bbs-navigation">
 				<p class="page-btns">
-					<a href="#" class="btn submit">답변작성</a>
-					<a href="#" class="btn submit">답변처리완료</a>
-					<a href="#" class="btn">취소</a>
+					<!-- <a href="#" class="btn submit">답변작성</a> -->
+					<a href="#" class="btn submit">답변완료처리</a>
+					<!-- <a href="#" class="btn">취소</a> -->
 				</p>
 
 				<p class="page-btns right">
-					<a href="#" class="btn">수정</a>
-					<a href="#" class="btn">삭제</a>
+					<!-- <a href="#" class="btn">수정</a> -->
+					<!-- <a href="#" class="btn">삭제</a> -->
 					<a href="#" class="btn em">목록</a>
 				</p>
 			</div>

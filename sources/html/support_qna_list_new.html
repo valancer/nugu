@@ -1,0 +1,121 @@
+@@include('./head.html')
+<body class="support">
+
+	<!-- 상단 영역 -->
+	@@include('./header.html', {"menu": "support"})
+
+
+	<!-- 본문 영역 -->
+	<main role="main">
+		<div class="layout-contents">
+
+			<h1 class="page-title">1:1 문의 및 제안</h1>
+
+			<!-- 필터 -->
+			<fieldset class="filter-container">
+				<legend>게시판 카테고리 및 검색 필터</legend>
+
+				<fieldset class="search-container">
+					<legend>검색 필터</legend>
+					
+					<select name="" id="">
+						<option value="">전체</option>
+						<option value="">제목</option>
+						<option value="">내용</option>
+					</select>
+					<p>
+						<input type="text" name="" id="">
+					</p>
+					<input type="submit" value="검색" class="btn-submit">
+				</fieldset>
+
+
+				<fieldset class="category-container">
+					<legend>게시판 카테고리</legend>
+
+					<!-- 모바일 용 -->
+					<select name="" id="" class="btn-category">
+						<option value="">전체보기</option>
+						<option value="">나의 작성글 확인</option>
+					</select>
+
+					<!-- 데스크탑 용 -->
+					<ul class="list-category">
+						<li class="is-selected"><a href="#">전체보기</a></li>
+						<li><a href="#">나의 작성글 확인</a></li>
+					</ul>
+				</fieldset>
+			</fieldset>
+			
+
+			<!--  -->
+			<ul class="list-bbs qna">
+				<li>
+					<a href="#" class="list-bbs-item">
+						<article class="item-info qna">
+							<h2 class="title">
+								SK텔레콤 가입자만 이용할 수 있나요?
+								<span class="lock">비밀글입니다.</span>
+							</h2>
+
+							<p class="options">
+								<em class="name">NUGU****</em>
+								<time datetime="2016-09-05">2016.09.05</time>
+								<em class="number hit"><span>조회수</span> 1</em>
+								<em class="number recommend"><span>댓글수</span> 2</em>
+							</p>
+						</article>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="list-bbs-item">
+						<article class="item-info qna">
+							<h2 class="title">
+								SK텔레콤 가입자만 이용할 수 있나요?
+							</h2>
+
+							<p class="options">
+								<em class="name">NUGU****</em>
+								<time datetime="2016-09-05">2016.09.05</time>
+								<em class="number hit"><span>조회수</span> 1</em>
+								<em class="number recommend"><span>댓글수</span> 2</em>
+							</p>
+						</article>
+					</a>
+				</li>
+			</ul>
+
+
+			<div class="list-bbs-navigation">
+				<!-- 모바일 용 -->
+				<a href="#" class="btn-more">더보기</a>
+
+				<!-- 데스크탑 용 -->
+				<div class="only-desktop">
+					<a href="#" class="btns first">처음 페이지로 이동</a>
+					<a href="#" class="btns prev">이전 페이지로 이동</a>
+					<a href="#" class="is-selected">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="btns next">다음 페이지로 이동</a>
+					<a href="#" class="btns last">마지막 페이지로 이동</a>
+				</div>
+
+				<a href="#" class="btn-in-bbs btn-write">1:1 문의 및 제안하기</a>
+			</div>
+		</div>
+	</main>
+
+	
+	<!-- 하단 영역 -->
+	@@include('./footer.html')
+
+</body>
+</html>
