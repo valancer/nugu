@@ -1107,33 +1107,33 @@
 		}
 	}
 	@include desktop {
-		padding: 0;
+		margin: 0; padding: 0;
 		.on { padding-top: 160px; }
-		.title { position: absolute; top: 0; padding: 127px 0 12px; width: 280px; height: 21px; border-bottom-width: 1px; font-size: 0.875rem; line-height: 1.3125rem; text-align: center; }
-		.title::before { top: 16px; left: 50%; width: 56px; height: 86px; background-size: 240px 200px; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0);
+		.title { position: absolute; top: 0; padding: 122px 0 16px; width: 280px; height: 21px; border-bottom-width: 1px; font-size: 0.875rem; line-height: 1.3125rem; text-align: center; }
+		.title::before { top: 19px; left: 50%; width: 56px; height: 86px; background-size: 240px 200px; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0);
 		}
 		.description { border: 0; }
 		.got-id {
-			.title { left: 0; 
-				&::before { background-position: 0 0; }
+			.title { left: 0; padding-left: 70px; width: 210px;
+				&::before { left: calc(50% + 35px); background-position: 0 0; }
 			}
 			.description { padding-top: 63.2%; background-image: url('/assets/images/desktop/img_gotid.jpg'); background-repeat: no-repeat; }
 		}
 		.no-id {
-			.title { left: 280px; padding-left: 27px;
-				&::before { background-position: -60px 0; }
+			.title { left: 280px; padding-left: 36px; width: 254px;
+				&::before { left: calc(50% + 18px); background-position: -60px 0; }
 			}
 			.description { padding-top: 67.4%; background-image: url('/assets/images/desktop/img_noid.jpg'); background-repeat: no-repeat; }
 		}
 		.forgot-id {
 			.title { left: 560px; 
-				&::before { background-position: -120px 0; }
+				&::before { background-position: -120px 6px; }
 			}
 			.description { padding-top: 64.4%; background-image: url('/assets/images/desktop/img_forgotid.jpg'); background-repeat: no-repeat; }
 		}
 		.lost-id {
-			.title { left: 840px; padding-right: 27px;
-				&::before { background-position: -180px 0; }
+			.title { left: 840px; padding-right: 70px; width: 210px;
+				&::before { left: calc(50% - 35px); background-position: -180px 6px; }
 			}
 			.description { padding-top: 68.6%; background-image: url('/assets/images/desktop/img_lostid.jpg'); background-repeat: no-repeat; }
 		}
@@ -1146,10 +1146,10 @@
 				.title::before { background-position: -60px -100px; }	
 			}
 			&.forgot-id {
-				.title::before { background-position: -120px -100px; }
+				.title::before { background-position: -120px -94px; }
 			}
 			&.lost-id {
-				.title::before { background-position: -180px -100px; }
+				.title::before { background-position: -180px -94px; }
 			}
 		}
 	}
