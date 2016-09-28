@@ -916,6 +916,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         height: 40px;
         width: 156px;
         font-size: 1.250rem;
+        color: #868686;
         line-height: 40px;
         border: 2px solid #b6b6b6;
         border-radius: 40px; }
@@ -2589,7 +2590,9 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
 
 @media only screen and (min-width: 768px) {
   .list-videos {
-    overflow: hidden; }
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1120px; }
     .list-videos > li {
       float: left; }
       .list-videos > li .video {
@@ -2630,6 +2633,9 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
 /* 로그인 방법 */
 .howto-login {
   padding: 15px 15px 0; }
+  @media only screen and (min-width: 768px) {
+    .howto-login {
+      padding: 0; } }
 
 .howto-info {
   padding-top: 82.75%;
@@ -3374,7 +3380,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
       position: absolute;
       top: 0;
       left: 50%;
-      margin-left: 60px;
+      margin-left: 40px;
       padding: 173px 45px 0 0;
       height: 1024px;
       width: 680px !important; }
@@ -3519,6 +3525,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         background-size: 438px 437px; } }
   @media only screen and (min-width: 768px) {
     .main-company {
+      min-width: 1440px;
       background-color: #26abbc; }
       .main-company .layout-inner-contents {
         margin: 0 auto;
@@ -5094,6 +5101,7 @@ body {
     display: none; }
   .layout-contents.fullsize {
     padding-bottom: 0px;
+    min-width: 1440px;
     width: 100%; }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     .layout-contents .page-title {

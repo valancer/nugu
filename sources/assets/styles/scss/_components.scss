@@ -303,7 +303,7 @@
 	}
 
 	@include desktop { padding-top: 35px; text-align: center;
-		.btn-more { display: none; height: 40px; width: 156px; font-size: 1.250rem; line-height: 40px; border: 2px solid #b6b6b6; border-radius: 40px;
+		.btn-more { display: none; height: 40px; width: 156px; font-size: 1.250rem; color: #868686; line-height: 40px; border: 2px solid #b6b6b6; border-radius: 40px;
 			&:hover { color: #868686; border: 2px solid #b6b6b6; }
 		}
 
@@ -1010,7 +1010,7 @@
 		}
 	}
 
-	@include desktop { overflow: hidden;
+	@include desktop { overflow: hidden; margin: 0 auto; width: 1120px;
 		> li { float: left;
 			.video { position: relative; margin-bottom: 40px; height: 250px; width: 540px;
 				&.tutorial { background-image: url('/assets/images/desktop/thumb_video01.jpg'); }
@@ -1353,7 +1353,7 @@
 	}
 
 	@include desktop { position: relative; height: 1024px; min-width: 1440px; text-align: right; background: #e0e5e4 url('/assets/images/desktop/bg_nugu_product.jpg') center bottom no-repeat;
-		.layout-inner-contents { position: absolute; top: 0; left: 50%; margin-left: 60px; padding: 173px 45px 0 0; height: 1024px; width: 680px !important; }
+		.layout-inner-contents { position: absolute; top: 0; left: 50%; margin-left: 40px; padding: 173px 45px 0 0; height: 1024px; width: 680px !important; }
 
 		.message-benefit { font-size: 2.625rem;
 			strong { margin-bottom: 28px; font-size: 3.000rem;
@@ -1425,7 +1425,7 @@
 		}
 	}
 
-	@include desktop { background-color: #26abbc;
+	@include desktop { min-width: 1440px; background-color: #26abbc;
 		.layout-inner-contents { margin: 0 auto; padding: 75px 30px 89px 30px; width: $desktop-min-width; }
 
 		.message { font-size: 1.500rem;

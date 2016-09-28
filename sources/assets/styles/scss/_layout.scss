@@ -85,7 +85,7 @@ body { background-color: #fff;
 	.page-title { font-size: 1.500rem; font-weight: 500; color: #252525; text-align: center; }
 	.hidden-title { display: none; }
 
-	&.fullsize { padding-bottom: 0px; width: 100%; }
+	&.fullsize { padding-bottom: 0px; min-width: 1440px; width: 100%; }
 
 	@include mobile {
 		.page-title { padding-top: 24px; }
