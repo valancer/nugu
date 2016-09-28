@@ -2775,7 +2775,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         .howto-list .forgot-id .title::before {
           background-position: -120px 6px; }
       .howto-list .forgot-id .description {
-        padding-top: 64.4%;
+        padding-top: 64.2%;
         background-image: url("/assets/images/desktop/img_forgotid.jpg");
         background-repeat: no-repeat; }
       .howto-list .lost-id .title {
