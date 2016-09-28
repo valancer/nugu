@@ -2627,6 +2627,173 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
 	}
 }
 */
+/* 로그인 방법 */
+.howto-login {
+  padding: 15px 15px 0; }
+
+.howto-info {
+  padding-top: 82.75%;
+  height: 0;
+  text-indent: -9999px;
+  background: url("/assets/images/mobile/howto_info@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: contain; }
+  @media only screen and (min-width: 768px) {
+    .howto-info {
+      margin: 45px auto 0;
+      padding: 0;
+      width: 1120px;
+      height: 249px;
+      background-image: url("/assets/images/desktop/howto_info.jpg");
+      background-repeat: no-repeat; } }
+
+.howto-list {
+  position: relative;
+  margin-top: 7px; }
+  .howto-list h3, .howto-list p, .howto-list ol {
+    height: 0;
+    text-indent: -9999px; }
+  .howto-list .description {
+    overflow: hidden;
+    display: none;
+    border-bottom: 1px solid #eee;
+    background-size: contain; }
+  .howto-list .got-id .title::before {
+    background-position: 0 0; }
+  .howto-list .got-id .description {
+    padding-top: 265.9%;
+    background-image: url("/assets/images/mobile/img_gotid@2x.jpg");
+    background-repeat: no-repeat; }
+  .howto-list .no-id .title::before {
+    background-position: -30px 0; }
+  .howto-list .no-id .description {
+    padding-top: 131.7%;
+    background-image: url("/assets/images/mobile/img_noid@2x.jpg");
+    background-repeat: no-repeat; }
+  .howto-list .forgot-id .title::before {
+    background-position: -60px 0; }
+  .howto-list .forgot-id .description {
+    padding-top: 293.4%;
+    background-image: url("/assets/images/mobile/img_forgotid@2x.jpg");
+    background-repeat: no-repeat; }
+  .howto-list .lost-id .title::before {
+    background-position: -90px 0; }
+  .howto-list .lost-id .description {
+    padding-top: 374.3%;
+    background-image: url("/assets/images/mobile/img_lostid@2x.jpg");
+    background-repeat: no-repeat; }
+  .howto-list .on .title {
+    color: #40c3d5; }
+  .howto-list .on .description {
+    display: block; }
+  .howto-list .on.got-id .title::before {
+    background-position: 0 -50px; }
+  .howto-list .on.no-id .title::before {
+    background-position: -30px -50px; }
+  .howto-list .on.forgot-id .title::before {
+    background-position: -60px -50px; }
+  .howto-list .on.lost-id .title::before {
+    background-position: -90px -50px; }
+  .howto-list .title {
+    position: relative;
+    display: block;
+    padding: 15px 0 9px 57px;
+    height: 30px;
+    border-bottom: 2px solid #eee;
+    color: #c9c9c9;
+    font-size: 0.75rem;
+    line-height: 1.875rem; }
+    .howto-list .title::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left: 15px;
+      width: 28px;
+      height: 43px;
+      background-image: url("/assets/images/mobile/ico_howto_list.png");
+      background-repeat: no-repeat;
+      background-size: 120px 100px;
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  @media only screen and (min-width: 768px) {
+    .howto-list {
+      margin: 0;
+      padding: 0; }
+      .howto-list .on {
+        padding-top: 160px; }
+      .howto-list .title {
+        position: absolute;
+        top: 0;
+        padding: 122px 0 16px;
+        width: 280px;
+        height: 21px;
+        border-bottom-width: 1px;
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+        text-align: center; }
+      .howto-list .title::before {
+        top: 19px;
+        left: 50%;
+        width: 56px;
+        height: 86px;
+        background-size: 240px 200px;
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+      .howto-list .description {
+        border: 0; }
+      .howto-list .got-id .title {
+        left: 0;
+        padding-left: 70px;
+        width: 210px; }
+        .howto-list .got-id .title::before {
+          left: calc(50% + 35px);
+          background-position: 0 0; }
+      .howto-list .got-id .description {
+        padding-top: 63.2%;
+        background-image: url("/assets/images/desktop/img_gotid.jpg");
+        background-repeat: no-repeat; }
+      .howto-list .no-id .title {
+        left: 280px;
+        padding-left: 36px;
+        width: 254px; }
+        .howto-list .no-id .title::before {
+          left: calc(50% + 18px);
+          background-position: -60px 0; }
+      .howto-list .no-id .description {
+        padding-top: 67.4%;
+        background-image: url("/assets/images/desktop/img_noid.jpg");
+        background-repeat: no-repeat; }
+      .howto-list .forgot-id .title {
+        left: 560px; }
+        .howto-list .forgot-id .title::before {
+          background-position: -120px 6px; }
+      .howto-list .forgot-id .description {
+        padding-top: 64.4%;
+        background-image: url("/assets/images/desktop/img_forgotid.jpg");
+        background-repeat: no-repeat; }
+      .howto-list .lost-id .title {
+        left: 840px;
+        padding-right: 70px;
+        width: 210px; }
+        .howto-list .lost-id .title::before {
+          left: calc(50% - 35px);
+          background-position: -180px 6px; }
+      .howto-list .lost-id .description {
+        padding-top: 68.6%;
+        background-image: url("/assets/images/desktop/img_lostid.jpg");
+        background-repeat: no-repeat; }
+      .howto-list .on .description {
+        display: block; }
+      .howto-list .on.got-id .title::before {
+        background-position: 0 -100px; }
+      .howto-list .on.no-id .title::before {
+        background-position: -60px -100px; }
+      .howto-list .on.forgot-id .title::before {
+        background-position: -120px -94px; }
+      .howto-list .on.lost-id .title::before {
+        background-position: -180px -94px; } }
+
 /* 메인 : 영상 영역 */
 .main-video-container {
   position: relative;
