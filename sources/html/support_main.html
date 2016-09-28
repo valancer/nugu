@@ -76,6 +76,67 @@
 					</div>
 				</li>
 			</ul>
+
+			<div class="howto-login">
+				<dl class="howto-info">
+					<dt>누구보다 쉽게 NUGU에 로그인하는 방법</dt>
+					<dd>
+						NUGU앱은 T아이디로 로그인이 가능합니다.
+						T아이디는 SK텔레콤의 서비스를 이용할 수 있는 통합 계쩡입니다.
+						T아이디가 없으시거나, 기억이 나지 않으세요?
+						지금, 아래 탭 중에서 해당하는 것을 클릭해주세요
+					</dd>
+				</dl>
+				<ul class="howto-list">
+					<li class="got-id">
+						<a class="title" role="button">T월드 아이디가 있어요</a>
+						<div class="description">
+							<h3>T월드 아이디가 있어요</h3>
+							<p>T월드 ID가 있으시면,약관 동의를 통해 T아이디로 전환해서 사용하실 수 있습니다</p>	
+							<ol>
+								<li>T월드 ID로 로그인</li>
+								<li>T아이디 약관동의</li>
+								<li>T아이디 전환 완료</li>
+							</ol>
+						</div>
+					</li>
+					<li class="no-id">
+						<a class="title" role="button">T월드 아이디가 없어요</a>
+						<div class="description">
+							<h3>T월드 아이디가 없어요</h3>
+							<p>'T아이디 가입하기'를 선택하시면, 통신사에 관계없이 신규 가입을 하실 수 있습니다.</p>
+							<ol>
+								<li>T아이디 가입하기 선택</li>
+							</ol>
+						</div>
+					</li>
+					<li class="forgot-id">
+						<a class="title" role="button">아이디가 기억이 안나요</a>
+						<div class="description">
+							<h3>아이디가 기억이 안나요</h3>
+							<p>본인 인증을 통해, T아이디를 찾아보세요</p>
+							<ol>
+								<li>아이디 찾기 선택</li>
+								<li>본인 인증</li>
+								<li>ID 찾기 완료</li>
+							</ol>
+						</div>
+					</li>
+					<li class="lost-id">
+						<a class="title" role="button">아이디를 도저히 못찾겠어요 ㅠ.ㅜ</a>
+						<div class="description">
+							<h3>아이디를 도저히 못찾겠어요 ㅠ.ㅜ</h3>
+							<p>아이디를 아무리 찾아도 모르겠으면, 본인 인증 없이 신규 가입을 진행해보세요</p>
+							<ol>
+								<li>T아이디 가입하기 선택</li>
+								<li>아니오 선택</li>
+								<li>약관 동의</li>
+								<li>ID/비밀번호/개인 정보 입력</li>
+							</ol>
+						</div>
+					</li>
+				</ul>
+			</div>
 			<script>
 			$(document).ready(function() {
 				$('.btn-play').on('click', function(e) {
@@ -96,6 +157,24 @@
 						}
 					});
 					$('#popup-video').popup('show');
+				});
+
+				var $window = $(window),
+						$rootElement = $("html, body");
+
+				if($window.width()>=768) {
+					$(".howto-list li").eq(0).addClass("on");
+				}
+
+				$(".howto-list .title").on("click", function(){
+					var	$listItem = $(this).parent("li");
+							
+					$(".howto-list li").removeClass("on");
+					$listItem.addClass("on");
+					if($window.width()<768) {
+						var $listOffsetTop = $listItem.offset().top - 80;
+						$rootElement.animate({scrollTop: $listOffsetTop}, 300);
+					}
 				});
 			});
 			</script>
