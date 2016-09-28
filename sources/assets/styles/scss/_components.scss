@@ -12,14 +12,14 @@
 	@include mobile-header { font-size: 0.750rem; color: #666; }
 }
 
-.btn-user { display: block; font-family: $font-roboto-stack; font-size: 0.750rem; color: #868686; 
+.btn-user { display: block; font-family: $font-roboto-stack; font-size: 0.750rem; color: #868686;
 	@include mobile-header { text-align: center;
 		&:before { content: ''; display: block; margin: 0 auto 8px auto; @include retina-sprite($sm-icon-user-group); }
 	}
 
 	@include desktop-header { font-size: 1.125rem; background-color: #fff;
 		&:after { content: ''; display: inline-block; margin-left: 10px; vertical-align: middle; @include sprite($sd-icon-user); }
-	}	
+	}
 }
 
 
@@ -89,7 +89,7 @@
 	.btn-submit { display: block; position: absolute; top: 50%; right: 6.122448979592%; margin-top: -$sm-icon-search-height/2; text-indent: -9999px; }
 
 	@include mobile {
-		.btn-submit { @include retina-sprite($sm-icon-search-group); }	
+		.btn-submit { @include retina-sprite($sm-icon-search-group); }
 	}
 
 	@include desktop { padding: 0 30px 0 20px; height: 56px; width: 430px; border-radius: 56px;
@@ -161,7 +161,7 @@
 
 
 /* bbs */
-.item-info { 
+.item-info {
 	.category { display: block; position: relative; margin-top: 0px; height: 28px; font-size: 0.750rem; font-weight: 500; color: #ed7d7d;
 		&:after { content: ''; display: block; position: absolute; bottom: 0; height: 1px; width: 20px; background-color: #ccc; }
 	}
@@ -184,12 +184,12 @@
 		.new { @include retina-sprite($sm-icon-new-group); }
 		.lock { @include retina-sprite($sm-icon-lock-group); }
 		.options { font-family: $font-roboto-stack;
-			.name { 
+			.name {
 				+ time {
 					&:before { display: inline-block; margin: -2px 10px 0 0; height: 11px; width: 1px; background-color: #f2f2f2; }
 				}
 			}
-			.number { line-height: 11px; 
+			.number { line-height: 11px;
 				&:before { display: inline-block; margin: -2px 10px 0 0; height: 11px; width: 1px; background-color: #f2f2f2; }
 				> span { display: inline-block; margin-top: -2px; margin-right: 1px; text-indent: -9999px; vertical-align: middle; }
 
@@ -216,7 +216,7 @@
 		}
 
 
-		.list-by-admin & { 
+		.list-by-admin & {
 			.title { display: block; height: 56px; text-overflow: none; white-space: normal; }
 			.options { margin-left: 0; }
 		}
@@ -345,7 +345,7 @@
 		}
 	}
 
-	@include desktop { margin: 30px auto 0 auto; width: 186px; font-size: 1.000rem; color: #646464; line-height: 60px; 
+	@include desktop { margin: 30px auto 0 auto; width: 186px; font-size: 1.000rem; color: #646464; line-height: 60px;
 		.recommend { margin-right: 22px; font-family: $font-roboto-stack; font-size: 1.000rem; font-weight: 400; color: #ed6829;
 			> span { display: inline-block; text-indent: -9999px; margin-top: -4px; vertical-align: middle; @include sprite($sd-icon-recommend-02); }
 		}
@@ -379,7 +379,7 @@
 		.title { margin-top: 8px; }
 		.lock { @include retina-sprite($sm-icon-lock-group); }
 		.options { margin-top: 7px; font-family: $font-roboto-stack;
-			.number { line-height: 13px; 
+			.number { line-height: 13px;
 				&:before { display: inline-block; margin: -2px 10px 0 0; height: 12px; width: 1px; background-color: #f2f2f2; }
 				> span { display: inline-block; margin-top: -2px; margin-right: 1px; text-indent: -9999px; vertical-align: middle; }
 
@@ -437,7 +437,7 @@
 }
 
 .btn-in-bbs { display: block; font-size: 0.875rem; font-weight: 500; color: #fff; text-align: left; line-height: 2.286em; border-radius: 32px;
-	@include mobile { display: inline-block; min-width: 90px; text-align: center; background-color: #ed6829; }	
+	@include mobile { display: inline-block; min-width: 90px; text-align: center; background-color: #ed6829; }
 	@include desktop { display: inline-block; padding-right: 30px; padding-left: 30px; min-width: 135px; font-size: 1.125rem; text-align: center; line-height: 46px; border-radius: 46px; background-color: #ed6829; }
 
 	&.cancel { background-color: #959595; }
@@ -559,7 +559,7 @@
 	.btn-write { display: block; float: right; height: 44px; width: 80px; font-size: 0.875rem; line-height: 42px; text-align: center; background-color: #d9d9d9; }
 
 	@include mobile {
-		label { 
+		label {
 			&:before { @include retina-sprite($sm-icon-reply-group); }
 		}
 	}
@@ -663,14 +663,14 @@
 	}
 */
 	input[type=text],
-	input[type=search] { width: 100%; box-sizing: border-box; font-size: 1.000rem; 
+	input[type=search] { width: 100%; box-sizing: border-box; font-size: 1.000rem;
 		@include mobile { padding: 0 0 0 15px; height: 47px; line-height: 47px; }
 		@include desktop { padding-left: 15px; height: 44px; line-height: 44px; border: 1px solid #ddd;
 			&::placeholder { color: #fff; }
 		}
 	}
 
-	textarea { display: block; box-sizing: border-box; width: 100%; font-size: 1.000rem; 
+	textarea { display: block; box-sizing: border-box; width: 100%; font-size: 1.000rem;
 		@include mobile { padding: 15px 15px; height: 288px; border: 0px; }
 		@include desktop { padding: 15px 15px; border: 1px solid #ddd;
 			&::placeholder { color: #fff; }
@@ -704,7 +704,7 @@
 		@include mobile {
 			&:before { @include retina-sprite($sm-icon-iks-group); }
 		}
-		@include desktop { padding: 10px 0 5px 20px; font-size: 1.000rem; 
+		@include desktop { padding: 10px 0 5px 20px; font-size: 1.000rem;
 			&:before { top: 12px; left: 0; @include sprite($sd-icon-iks); }
 		}
 	}
@@ -756,7 +756,7 @@
 			&:before { margin: 0 auto 17px auto; @include retina-sprite($sm-icon-message-group); }
 			em { margin-bottom: 5px; }
 		}
-		@include desktop { margin-top: 40px; padding: 140px 0 140px 476px; font-size: 1.125rem; text-align: left; 
+		@include desktop { margin-top: 40px; padding: 140px 0 140px 476px; font-size: 1.125rem; text-align: left;
 			&:before { position: absolute; top: 50%; left: 310px; margin-top: -$sd-icon-message-height/2; @include sprite($sd-icon-message); }
 			em { margin-bottom: 9px; font-size: 1.500rem; }
 		}
@@ -794,7 +794,7 @@
 				}
 			}
 		}
-		@include desktop { 
+		@include desktop {
 			> a { padding: 26px 60px 28px 130px;;
 				&:after { margin-top: -$sd-icon-accordion-down-height/2; @include sprite($sd-icon-accordion-down); }
 
@@ -830,7 +830,7 @@
 
 		@include mobile { }
 		@include desktop { padding: 37px 60px 38px 100px;  font-size: 1.000rem; line-height: 1.625em; }
-		
+
 		.desc { padding-left: 35px;
 			@include mobile { line-height: 2.000em; }
 			@include desktop { padding-left: 30px; line-height: 2.000em; }
@@ -855,7 +855,7 @@
 
 		.answer { position: relative; margin-top: 10px; padding: 15px 0 0 35px;
 			&:before { content: ''; display: block; position: absolute; top: 18px; left: 17px; height: 8px; width: 8px; border-bottom: 1px solid #aaa; border-left: 1px solid #aaa; }
-			
+
 			time { display: block; }
 
 			@include mobile { line-height: 1.385em; }
@@ -911,7 +911,7 @@
 
 		strong { display: block; font-size: 1.500rem; font-weight: 500; }
 		p { display: block; margin-top: 7px; font-size: 0.750rem; }
-	}	
+	}
 
 	@include mobile { background: url('/assets/images/mobile/bg_support@2x.jpg') center top no-repeat; background-size: cover;
 		ul {
@@ -974,11 +974,11 @@
 
 
 /* 튜토리얼 */
-.tutorial { 
+.tutorial {
 	.video { padding: 0 15px; height: 160px;
 		+ .video { margin-top: 50px; }
 	}
-	@include desktop { 
+	@include desktop {
 		.video { padding: 0; height: 400px;
 			+ .video { margin-top: 80px; }
 		}
@@ -988,7 +988,7 @@
 /* 영상 목록 */
 .list-videos {
 	> li {
-		.video { background-position: center center; background-repeat: no-repeat; background-size: 100%; 
+		.video { background-position: center center; background-repeat: no-repeat; background-size: 100%;
 			.title { display: none; }
 			.btn-play { position: absolute; top: 0; right: 0; bottom: 0; left: 0; text-indent: -9999px; }
 		}
@@ -1022,7 +1022,7 @@
 	}
 }
 /*
-.tutorial { box-sizing: border-box; padding: 34px 0 0 0; height: 160px; background: url('/assets/images/mobile/bg_tutorial@2x.jpg') center center no-repeat; background-size: cover; 
+.tutorial { box-sizing: border-box; padding: 34px 0 0 0; height: 160px; background: url('/assets/images/mobile/bg_tutorial@2x.jpg') center center no-repeat; background-size: cover;
 	.title { display: block; margin: 0 auto; text-indent: -9999px; }
 	.detail { margin-top: 25px; font-size: 1.125rem; font-weight: 300; color: #fff; line-height: 1.444em; }
 	.btn-play { display: block; margin: 25px auto 0 auto; text-indent: -9999px; }
@@ -1042,12 +1042,21 @@
 
 
 /* 메인 : 영상 영역 */
-.main-video-container { background-color: rgba(0, 0, 0, 0.8);
+.main-video-container { position: relative; background-color: rgba(0, 0, 0, 0.8);
 
-	@include mobile { margin-bottom: -3px; height: 300px; }
+	@include mobile { margin-bottom: -3px; height: 300px;
+		.swiper-pagination-bullets { bottom: -24px; width: 100%; }
+		.swiper-pagination-bullet { width: 9px; height: 9px; margin: 0 3px; }
+	}
 	@include desktop { height: 800px; min-width: 1440px;
 		#player { margin: auto; }
+		.swiper-pagination-bullets { bottom: -45px; width: 100%; }
+		.swiper-pagination-bullet { width: 18px; height: 18px; margin: 0 7px; }
 	}
+	.swiper-container,
+	.main-video-container { height: 100%; }
+	.swiper-pagination-bullet { opacity: 1; background-color: #e8e8e9; }
+	.swiper-pagination-bullet-active { background-color: #ef7b0b; }
 }
 
 /* 메인 : 배너게이트 */
@@ -1067,7 +1076,7 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	.main-link-direct{width:100%;}
 	.main-link-direct .inner {min-width:inherit; max-width:none; width:100%; margin:0; text-align:center; overflow:hidden;}
-	.main-link-direct .title {width:260px; height:40px; margin:40px auto 15px; background-position:0 -175px; background-size:300px auto; }
+	.main-link-direct .title {width:260px; height:40px; margin:65px auto 15px; background-position:0 -175px; background-size:300px auto; }
 	.main-link-direct .title + .description{margin-bottom:35px; font-size:0.8125rem;}
 	.main-link-direct br.mobile{display:inline;}
 	.main-link-direct .row {width:100%;}
@@ -1122,7 +1131,7 @@
 					&:before { content: ''; display: block; position: absolute; top: 2px; left: 0; @include retina-sprite($sm-dq-left-group); }
 					&:after { content: ''; display: block; position: absolute; bottom: 7px; right: 0; @include retina-sprite($sm-dq-right-group); }
 				}
-				
+
 				&.melon {
 					&:after { margin-top: -$sm-icon-featured01-height/2; @include retina-sprite($sm-icon-featured01-group); }
 
@@ -1209,7 +1218,7 @@
 		.price { display: block; margin-bottom: 3px; font-family: $font-roboto-stack; font-size: 2.875rem; font-weight: bold; color: #ff802b;
 			span { font-size: 1.250rem; font-weight: 400; color: #fff; }
 		}
-		
+
 		small { display: block; margin-top: 10px; font-size: 0.750rem; }
 	}
 
@@ -1238,7 +1247,7 @@
 			.price { margin-bottom: 3px; font-size: 5.750rem;
 				span { font-size: 2.500rem; }
 			}
-			
+
 			small { margin-top: 5px; font-size: 1.313rem; }
 		}
 
@@ -1248,7 +1257,7 @@
 
 
 /* 메인 : 왓츠뉴 */
-.main-whats-new { 
+.main-whats-new {
 	.list-by-admin { border-top: 0px; }
 
 	@include mobile { padding-bottom: 40px;
@@ -1277,7 +1286,7 @@
 			.say-hello { margin-top: 8px; font-size: 0.750rem; font-weight: 400; color: #fff; line-height: 1.333em;
 				&:before { content: ''; display: inline-block; margin-top: -70px; vertical-align: middle; }
 				&:after { content: ''; display: inline-block; margin-bottom: -4px; }
-					
+
 				span { display: inline-block; margin-bottom: 5px; }
 				strong { font-weight: 700; }
 			}
@@ -1311,7 +1320,7 @@
 				.say-hello { margin-top: 33px; font-size: 1.375rem; line-height: 1.455em;
 					&:before { margin-top: -130px; @include sprite($sd-dq-left-02); }
 					&:after { margin-bottom: 4px; @include sprite($sd-dq-right-02); }
-						
+
 					span { margin-bottom: 10px; }
 				}
 			}
@@ -1341,7 +1350,7 @@ body.company {
 	.item-2{margin-top:60px;}
 	.youtube {width:860px; height:484px; margin:60px auto 90px;-webkit-box-shadow: 47px 50px 100px -20px rgba(0,0,0,0.3); -moz-box-shadow: 47px 50px 100px -20px rgba(0,0,0,0.3); box-shadow: 47px 50px 100px -20px rgba(0,0,0,0.3);}
 	.kongdoo {margin-bottom:60px; color:#555; font-size:1.375rem; }
-	.kongdoo .say-hello {font-size:2.5rem; line-height: 1.5; margin-bottom:35px; }	
+	.kongdoo .say-hello {font-size:2.5rem; line-height: 1.5; margin-bottom:35px; }
 
 	.btn {display:inline-block; margin:0 5px; padding:10px 20px; color:#767676; border:2px solid #767676; border-radius:20px; }
 
@@ -1419,7 +1428,7 @@ body.product {
 		// 특장점 type 01
 		.featured { text-align: center;
 			.title { font-size: 1.563rem; font-weight: 500; color: #ed6627; }
-			.description { font-size: 0.750rem; color: #666; line-height: 1.667em; 
+			.description { font-size: 0.750rem; color: #666; line-height: 1.667em;
 				&:after { content: ''; display: block; margin: 0 auto; height: 1px; width: 50px; background-color: #999; }
 
 				.guide { font-weight: 300;
@@ -1465,7 +1474,7 @@ body.product {
 
 			.featured { box-sizing: border-box; position: relative; height: 560px; text-align: left;
 				.title { font-size: 2.875rem; line-height: 1.217em; }
-				.description { margin-top: 27px; font-size: 1.000rem; line-height: 1.750em; 
+				.description { margin-top: 27px; font-size: 1.000rem; line-height: 1.750em;
 					&:after { content: ''; display: block; position: absolute; bottom: 0; margin: 0; height: 1px; width: 70px; background-color: #999; }
 				}
 				.example {
@@ -1527,7 +1536,7 @@ body.product {
 			}
 
 			@include desktop { margin: 0 auto; padding: 0; width: 1120px;
-				figcaption { padding: 0; 
+				figcaption { padding: 0;
 					.title { font-size: 2.875rem; line-height: 1.239em; }
 					.description { margin-top: 23px; font-size: 1.000rem; line-height: 1.750em;
 						span { display: inline-block; font-size: 1.000rem; line-height: 1.750em; }
@@ -1611,14 +1620,14 @@ body.product {
 
 
 	/* 소개 영상 */
-	.intro-video { 
+	.intro-video {
 		.video { margin-top: 50px; height: 211px; }
 
-		@include desktop { 
+		@include desktop {
 			.video { margin: 100px auto 0 auto; height: 560px; width: 1120px; }
 		}
 	}
-/*	
+/*
 	.intro-video { box-sizing: border-box; margin-top: 100px; padding-top: 47px; height: 228px; text-align: center;
 		.title { font-size: 1.438rem; font-weight: 500; color: #fff;
 			.txt-nugu { display: inline-block; margin: -4px 6px 0 0; text-indent: -9999px; vertical-align: middle; background-color: transparent; }
@@ -1635,7 +1644,7 @@ body.product {
 		}
 
 		@include desktop { margin: 100px auto 0 auto; padding-top: 154px; height: 560px; width: 1120px; background: url('/assets/images/desktop/bg_intro_video.jpg') center center no-repeat;
-			.title { font-size: 3.625rem; font-weight: 300; 
+			.title { font-size: 3.625rem; font-weight: 300;
 				.txt-nugu { margin: -12px 6px 0 0; @include sprite($sd-txt-nugu-04); }
 			}
 
@@ -1680,7 +1689,7 @@ body.product {
 
 			.description { margin-top: 25px; margin-bottom: 72px; font-size: 1.125rem; }
 			.useful-case { @include aspect-ratio(1120, 3440); background: url('/assets/images/desktop/bg_useful.jpg') center top no-repeat; background-size: 100%; }
-			.guide { padding: 37px 0 53px 0; 
+			.guide { padding: 37px 0 53px 0;
 				> li { margin-top: 0; padding-left: 11px; font-size: 1.000rem; line-height: 1.625em;
 					&:before { top: 12px; height: 4px; width: 4px; border-radius: 2px; }
 				}
@@ -1720,7 +1729,7 @@ body.product {
 			}
 			.description { margin-top: 53px; font-size: 1.125rem; line-height: 1.556em; }
 			.btns { padding-top: 32px;
-				a { display: inline-block; margin: 0; height: 44px; width: 196px; font-size: 1.250rem; font-weight: 500; line-height: 44px; border: 2px solid #fff; border-radius: 44px; 
+				a { display: inline-block; margin: 0; height: 44px; width: 196px; font-size: 1.250rem; font-weight: 500; line-height: 44px; border: 2px solid #fff; border-radius: 44px;
 					+ a { margin-left: 16px; }
 				}
 			}
@@ -1823,7 +1832,7 @@ body.product {
 			}
 		}
 
-		@include mobile { padding: 29px 15px 47px 15px; 
+		@include mobile { padding: 29px 15px 47px 15px;
 
 		}
 
@@ -1881,7 +1890,7 @@ body.product {
 /* error page */
 body.error {
 	main { background-color: #f5f5f5; }
-	.layout-contents { text-align: center; 
+	.layout-contents { text-align: center;
 		.title { padding-top: 40px; font-size: 1.000rem; font-weight: 500; color: #222;
 			&:before { content: ''; display: block; margin: 0 auto 27px auto; }
 		}
@@ -1903,5 +1912,3 @@ body.error {
 		}
 	}
 }
-
-
