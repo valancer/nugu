@@ -2611,7 +2611,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           background-image: url("/assets/images/desktop/thumb_video04.jpg"); } }
 
 /*
-.tutorial { box-sizing: border-box; padding: 34px 0 0 0; height: 160px; background: url('/assets/images/mobile/bg_tutorial@2x.jpg') center center no-repeat; background-size: cover; 
+.tutorial { box-sizing: border-box; padding: 34px 0 0 0; height: 160px; background: url('/assets/images/mobile/bg_tutorial@2x.jpg') center center no-repeat; background-size: cover;
 	.title { display: block; margin: 0 auto; text-indent: -9999px; }
 	.detail { margin-top: 25px; font-size: 1.125rem; font-weight: 300; color: #fff; line-height: 1.444em; }
 	.btn-play { display: block; margin: 25px auto 0 auto; text-indent: -9999px; }
@@ -2629,17 +2629,40 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
 */
 /* 메인 : 영상 영역 */
 .main-video-container {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.8); }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     .main-video-container {
       margin-bottom: -3px;
-      height: 300px; } }
+      height: 300px; }
+      .main-video-container .swiper-pagination-bullets {
+        bottom: -24px;
+        width: 100%; }
+      .main-video-container .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        margin: 0 3px; } }
   @media only screen and (min-width: 768px) {
     .main-video-container {
       height: 800px;
       min-width: 1440px; }
       .main-video-container #player {
-        margin: auto; } }
+        margin: auto; }
+      .main-video-container .swiper-pagination-bullets {
+        bottom: -45px;
+        width: 100%; }
+      .main-video-container .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+        margin: 0 7px; } }
+  .main-video-container .swiper-container,
+  .main-video-container .main-video-container {
+    height: 100%; }
+  .main-video-container .swiper-pagination-bullet {
+    opacity: 1;
+    background-color: #e8e8e9; }
+  .main-video-container .swiper-pagination-bullet-active {
+    background-color: #ef7b0b; }
 
 /* 메인 : 배너게이트 */
 .main-link-direct {
@@ -2722,7 +2745,7 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
   .main-link-direct .title {
     width: 260px;
     height: 40px;
-    margin: 40px auto 15px;
+    margin: 65px auto 15px;
     background-position: 0 -175px;
     background-size: 300px auto; }
   .main-link-direct .title + .description {
@@ -3524,7 +3547,7 @@ body.product {
   /* featured */
   /* voice command */
   /* 소개 영상 */
-  /*	
+  /*
 	.intro-video { box-sizing: border-box; margin-top: 100px; padding-top: 47px; height: 228px; text-align: center;
 		.title { font-size: 1.438rem; font-weight: 500; color: #fff;
 			.txt-nugu { display: inline-block; margin: -4px 6px 0 0; text-indent: -9999px; vertical-align: middle; background-color: transparent; }
@@ -3541,7 +3564,7 @@ body.product {
 		}
 
 		@include desktop { margin: 100px auto 0 auto; padding-top: 154px; height: 560px; width: 1120px; background: url('/assets/images/desktop/bg_intro_video.jpg') center center no-repeat;
-			.title { font-size: 3.625rem; font-weight: 300; 
+			.title { font-size: 3.625rem; font-weight: 300;
 				.txt-nugu { margin: -12px 6px 0 0; @include sprite($sd-txt-nugu-04); }
 			}
 
