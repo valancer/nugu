@@ -1040,7 +1040,11 @@
 */
 
 /* 로그인 방법 */
-.howto-login { padding: 15px 15px 0; }
+.howto-login { padding: 15px 15px 0; 
+	@include desktop {
+		padding: 0;
+	}
+}
 .howto-info { padding-top: 82.75%; height: 0; text-indent: -9999px; background: url('/assets/images/mobile/howto_info@2x.jpg'); background-repeat: no-repeat; background-size: contain;
 	@include desktop {
 		margin: 45px auto 0; padding: 0; width: 1120px; height: 249px;
