@@ -1333,7 +1333,7 @@
 		}
 	}
 
-	.info { margin-top: 191px; font-size: 1.000rem; font-weight: 400; color: #fff;
+	.info { margin-top: 173px; font-size: 1.000rem; font-weight: 400; color: #fff;
 		.price { display: block; margin-bottom: 3px; font-family: $font-roboto-stack; font-size: 2.875rem; font-weight: bold; color: #ff802b;
 			span { font-size: 1.250rem; font-weight: 400; color: #fff; }
 		}
@@ -1341,6 +1341,9 @@
 		small { display: block; margin-top: 10px; font-size: 0.750rem; }
 	}
 
+	.solitary { font-size: 0.875em; color: #fff;
+		&:before { content: ''; display: inline-block; vertical-align: middle; }
+	}
 	.btn-more { display: inline-block; margin-top: 25px; height: 30px; width: 168px; font-size: 0.875rem; color: #fff; line-height: 28px; text-align: center; border: 1px solid #fff; border-radius: 30px; }
 
 	@include mobile { text-align: center; background: url('/assets/images/mobile/bg_nugu_product@2x.jpg') center top no-repeat; background-size: cover;
@@ -1349,6 +1352,12 @@
 			strong {
 				.txt-nugu { @include retina-sprite($sm-txt-nugu-02-group); }
 			}
+		}
+
+		.solitary { display: block; margin-top: 10px;
+			&:before { margin: -2px 0 0 0; @include retina-sprite($sm-icon-arrow01-group); }
+
+			&.only-desktop { display: none; }
 		}
 	}
 
@@ -1370,6 +1379,9 @@
 			small { margin-top: 5px; font-size: 1.313rem; }
 		}
 
+		.solitary { font-size: 1.250em;
+			&:after { content: ''; display: inline-block; vertical-align: middle; margin: -2px 20px 0 10px; @include sprite($sd-icon-arrow01); }
+		}
 		.btn-more { margin-top: 70px; height: 44px; width: 196px; font-size: 1.250rem; font-weight: 500; line-height: 44px; border: 2px solid #fff; border-radius: 44px; }
 	}
 }
@@ -1511,6 +1523,9 @@ body.product {
 		.description { padding: 20px 0 16px 0; font-size: 0.750rem; color: #666; line-height: 1.667em; text-align: center; }
 		.btns { text-align: center;
 			a { display: inline-block; height: 30px; width: 168px; font-size: 0.875rem; color: #868686; text-align: center; line-height: 30px; border: 1px solid #b6b6b6; border-radius: 30px; }
+			.solitary { display: block; margin-top: 10px; font-size: 0.875rem; color: #4f4f4f;
+				&:before { content: ''; display: inline-block; margin: -2px 6px 0 0; vertical-align: middle; }
+			}
 		}
 
 		@include mobile { height: auto; background: url('/assets/images/mobile/bg_product_header@2x.jpg') center top repeat-x; background-size: 320px 517px;
@@ -1519,6 +1534,9 @@ body.product {
 			}
 			.btns {
 				a { margin-top: 15px; color: #fff; background-color: #4f4f4f; }
+				.solitary {
+					&:before { @include retina-sprite($sm-icon-arrow02-group); }
+				}
 			}
 		}
 		@include desktop { padding: 0; min-width: 1280px; background: url('/assets/images/desktop/bg_product_header.jpg') center top repeat-x;
@@ -1531,6 +1549,9 @@ body.product {
 			.btns { padding: 59px 0 0 25px; text-align: left;
 				a { height: 44px; width: 196px; font-size: 1.250rem; font-weight: 500; color: #fff; line-height: 44px; border: 2px solid #fff; border-radius: 44px;
 					+ a { margin-left: 16px; }
+				}
+				.solitary { margin-top: 15px; margin-left: 10px; font-size: 1.250rem; color: #fff;
+					&:before { margin: -4px 10px 0 0; @include sprite($sd-icon-arrow03); }
 				}
 			}
 		}
@@ -1834,10 +1855,15 @@ body.product {
 		.description { margin-top: 40px; font-size: 0.750rem; color: #fff; line-height: 1.750em; }
 		.btns { padding-top: 10px;
 			a { display: block; margin: 15px auto 0 auto; height: 30px; width: 168px; font-size: 0.875rem; color: #fff; text-align: center; line-height: 30px; border: 1px solid #fff; border-radius: 30px;  }
+			.solitary { display: block; margin-top: 10px; font-size: 0.875rem; color: #fff;
+				&:before { content: ''; display: inline-block; vertical-align: middle; }
+			}
 		}
 
 		@include mobile { padding: 34px 0 0 0; height: 365px; background: url('/assets/images/mobile/bg_pre_order@2x.jpg') center center no-repeat; background-size: cover;
-
+			.solitary { 
+				&:before { margin: -2px 6px 0 0; @include retina-sprite($sm-icon-arrow01-group); }
+			}
 		}
 
 		@include desktop { margin: 0 auto; padding: 70px 0 0 0; height: 503px; background: url('/assets/images/desktop/bg_pre_order.jpg') center center no-repeat; background-size: cover;
@@ -1850,6 +1876,9 @@ body.product {
 			.btns { padding-top: 32px;
 				a { display: inline-block; margin: 0; height: 44px; width: 196px; font-size: 1.250rem; font-weight: 500; line-height: 44px; border: 2px solid #fff; border-radius: 44px;
 					+ a { margin-left: 16px; }
+				}
+				.solitary { margin-top: 15px; font-size: 1.250rem;
+					&:before { margin: -2px 6px 0 0; @include sprite($sd-icon-arrow03); }
 				}
 			}
 		}
