@@ -5101,7 +5101,6 @@ body {
     display: none; }
   .layout-contents.fullsize {
     padding-bottom: 0px;
-    min-width: 1440px;
     width: 100%; }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     .layout-contents .page-title {
@@ -5127,7 +5126,9 @@ body {
       transition: padding 0.3s; }
       .layout-contents .layout-inner-contents {
         margin: 0 auto;
-        width: 1120px; } }
+        width: 1120px; }
+      .layout-contents.fullsize {
+        min-width: 1440px; } }
 
 /* customer */
 .layout-customer {
