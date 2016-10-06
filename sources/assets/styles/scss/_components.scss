@@ -181,6 +181,7 @@
 	}
 
 	@include mobile {
+		.title { overflow: hidden; max-height: 42px; }
 		.new { @include retina-sprite($sm-icon-new-group); }
 		.lock { @include retina-sprite($sm-icon-lock-group); }
 		.options { font-family: $font-roboto-stack;

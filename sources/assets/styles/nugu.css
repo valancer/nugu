@@ -677,6 +677,9 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
         vertical-align: middle;
         background-color: #f2f2f2; }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .item-info .title {
+      overflow: hidden;
+      max-height: 42px; }
     .item-info .new {
       background-image: url(../images/mobile/sprites.png);
       background-position: -321px -265px;
