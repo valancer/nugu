@@ -27,6 +27,7 @@ body {
   font-size: 100%;
   line-height: 1.3em;
   font-family: "Malgun Gothic", "맑은고딕", sans-serif;
+  word-break: break-all;
   -ms-text-size-adjust: 100%;
       text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -712,7 +713,7 @@ body.login {
     display: block;
     box-sizing: border-box;
     float: left;
-    width: 16.667%;
+    width: 16.66%;
     font-size: 16px;
     color: #222;
     line-height: 46px;

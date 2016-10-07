@@ -28,6 +28,7 @@ body {
   font-size: 100%;
   line-height: 1.3em;
   font-family: "Noto Sans KR", sans-serif;
+  word-break: break-all;
   -ms-text-size-adjust: 100%;
       text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -739,6 +740,16 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
           height: 11px; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
         .item-info .options .number.recommend > span {
+          background-image: url(../images/mobile/sprites@2x.png);
+          background-size: 438px 437px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+        .item-info .options .number.comment > span {
+          background-image: url(../images/mobile/sprites.png);
+          background-position: -265px -188px;
+          width: 17px;
+          height: 13px; } }
+      @media only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) {
+        .item-info .options .number.comment > span {
           background-image: url(../images/mobile/sprites@2x.png);
           background-size: 438px 437px; } }
   @media only screen and (min-width: 768px) {

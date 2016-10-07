@@ -196,6 +196,7 @@
 
 				&.hit { > span { @include retina-sprite($sm-icon-hit-group); } }
 				&.recommend { > span { @include retina-sprite($sm-icon-recommend-group); } }
+				&.comment { > span { @include retina-sprite($sm-icon-reply-02-group); } }
 			}
 		}
 	}

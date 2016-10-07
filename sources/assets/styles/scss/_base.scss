@@ -5,7 +5,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, font, img, ins, q, s, samp, strike, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend { line-height: 1.3em; border: 0 none; }
-body { position: relative; min-height: 320px; margin: 0 auto; font-size: 100%; line-height: 1.3em; font-family: $font-base-stack;
+body { position: relative; min-height: 320px; margin: 0 auto; font-size: 100%; line-height: 1.3em; font-family: $font-base-stack; word-break: break-all; 
 	text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }

@@ -82,7 +82,7 @@ body.login { min-height: 600px; min-width: auto; }
 }
 
 .search-tab { overflow: hidden; margin-top: 50px; width: 100%; border-top: 1px solid #424242;
-	a { display: block; box-sizing: border-box; float: left; width: 16.667%; font-size: 16px; color: #222; line-height: 46px; text-align: center; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;
+	a { display: block; box-sizing: border-box; float: left; width: 16.66%; font-size: 16px; color: #222; line-height: 46px; text-align: center; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;
 		&.is-selected { color: #fff; border-top: 1px solid #4a4a4a; border-bottom: 1px solid #4a4a4a; background-color: #4a4a4a; }
 
 		+ a { border-left: 1px solid #ddd; }
